@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Net;
-using unirest_net;
-using System.Threading.Tasks;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Windows.Forms;
+using System.Threading.Tasks;
 using RestSharp;
 
 namespace BarcodEZ_Software
@@ -18,26 +18,23 @@ namespace BarcodEZ_Software
     }
     class ClasseAPI
     {
-        var unirest = require("unirest");
+        public void ReqAsin()
+        {
+            bool permesso = false;
+            if (!permesso)
+                throw new Exception("Troppe richieste");
 
-        var req = unirest("GET", "https://amazon-price1.p.rapidapi.com/eanToAsin");
+            var client = new RestClient("https://amazon-price1.p.rapidapi.com/priceReport?asin=%3CREQUIRED%3E&marketplace=ES");
+            var request = new RestRequest(Method.GET);
+            request.AddHeader("x-rapidapi-key", "e3a9ddf2d3mshdc71524468db118p1d82edjsnb5391767148e");
+            request.AddHeader("x-rapidapi-host", "amazon-price1.p.rapidapi.com");
+            IRestResponse response = client.Execute(request);
 
-        req.query({
-	"marketplace": "ES",
-	"ean": "<REQUIRED>"
-});
-
-req.headers({
-	"x-rapidapi-key": "e3a9ddf2d3mshdc71524468db118p1d82edjsnb5391767148e",
-	"x-rapidapi-host": "amazon-price1.p.rapidapi.com",
-	"useQueryString": true
-});
-
-
-req.end(function(res) {
-    if (res.error) throw new Error(res.error);
-
-    console.log(res.body);
-});
+            var quo = (Risposta)JsonConvert.DeserializeObject<Risposta>(response.Content);
+        }
+        public class Risposta
+        {
+            public string Asin { get; set; }
+        }
     }
 }
