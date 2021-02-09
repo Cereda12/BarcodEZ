@@ -16,5 +16,12 @@ namespace BarcodEZ_Software
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            string Asin = ClasseAPI.ReqAsin(textBox1.Text);
+
+        }
     }
 }
