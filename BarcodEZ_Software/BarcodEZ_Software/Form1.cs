@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MaterialSkin;
+using MaterialSkin.Controls;
 
 namespace BarcodEZ_Software
 {
-    public partial class Form1 : Form
+    public partial class BarcodEZ : MaterialForm
     {
-        public Form1()
+        public BarcodEZ()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Green800, Primary.Green800, Primary.Green800, Accent.LightBlue200, TextShade.WHITE);
         }
     }
 }
