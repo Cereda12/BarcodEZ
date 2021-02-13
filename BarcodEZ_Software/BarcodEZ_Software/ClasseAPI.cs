@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Windows.Forms;
-using System.Threading.Tasks;
 using RestSharp;
 
 namespace BarcodEZ_Software
@@ -18,9 +17,10 @@ namespace BarcodEZ_Software
     }
     public class ClasseAPI
     {
+        static bool permesso = false;
+
         public static string ReqAsin(string ean)
         {
-            bool permesso = false;
             if (!permesso)
                 throw new Exception("Troppe richieste");
 
@@ -31,11 +31,18 @@ namespace BarcodEZ_Software
             IRestResponse response = client.Execute(request);
 
             var Risp = (Risposta)JsonConvert.DeserializeObject<Risposta>(response.Content);
+            if (string.IsNullOrEmpty(Risp.Asin))
+                return "Prodotto non trovato";
             return Risp.Asin;
         }
         public class Risposta
         {
             public string Asin { get; set; }
+        }
+
+        public string ReqLink(string asin)
+        {
+            return $"https://www.amazon.es/dp/{asin}";
         }
     }
 }
