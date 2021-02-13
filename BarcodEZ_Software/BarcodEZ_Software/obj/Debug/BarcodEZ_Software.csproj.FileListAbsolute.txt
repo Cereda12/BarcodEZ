@@ -10,3 +10,15 @@ C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Softwa
 C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
 C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
 C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe.config
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.pdb
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\MaterialSkin.dll
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csprojAssemblyReference.cache
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.BarcodEZ.resources
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Properties.Resources.resources
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.GenerateResource.cache
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CoreCompileInputs.cache
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
+C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb

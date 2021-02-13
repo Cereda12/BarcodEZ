@@ -21,6 +21,14 @@ namespace BarcodEZ_Software
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green800, Primary.Green800, Primary.Green800, Accent.LightBlue200, TextShade.WHITE);
+
+            pWebcam.Visible = true;
+            //pGallery.Visible = false;
+        }
+
+        private void btStart_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
