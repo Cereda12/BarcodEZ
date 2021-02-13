@@ -1,0 +1,14 @@
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\obj\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.csprojAssemblyReference.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\obj\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.AssemblyInfoInputs.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\obj\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.AssemblyInfo.cs
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\HtmlAgilityPack.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\obj\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.csproj.CopyComplete
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.deps.json
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.runtimeconfig.json
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.runtimeconfig.dev.json
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\obj\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\DemoConsoleAmazonScraping\DemoConsoleAmazonScraping\obj\Debug\netcoreapp3.1\DemoConsoleAmazonScraping.pdb
