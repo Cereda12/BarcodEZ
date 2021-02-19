@@ -39,7 +39,6 @@ namespace DemoConsoleAmazonScraping
                 .Where(n => n.Name == "script" || n.Name == "style")
                 .ToList()
                 .ForEach(n => n.Remove());
-
             try
             {
                 Details = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']").InnerText.ToString();
@@ -55,7 +54,10 @@ namespace DemoConsoleAmazonScraping
             }
             Price.Remove(Price.IndexOf(','), 2);
             
-
+            if(string.Compare(Asin, String.Empty)==0)
+            {
+                Asin = "empty";
+            }
             return new
             {
                 asin = Asin,

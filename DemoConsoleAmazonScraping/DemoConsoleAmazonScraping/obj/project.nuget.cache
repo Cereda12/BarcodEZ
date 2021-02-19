@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8evdcHnvyZEKOvYcVavCLVfoe4qJQfTmM1wc09rSDaOaCX4sQJK84gqe3CdwOM8hU9jEsZrqdiqZTxZtxQEHYg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\utente\\.nuget\\packages\\htmlagilitypack\\1.11.30\\htmlagilitypack.1.11.30.nupkg.sha512",
+    "C:\\Users\\utente\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
