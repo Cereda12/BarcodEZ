@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj": {}
+    "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj": {
+    "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+        "projectUniqueName": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
         "projectName": "Test",
-        "projectPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
-        "packagesPath": "C:\\Users\\cereda.17119\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\obj\\",
+        "projectPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+        "packagesPath": "C:\\Users\\gabry\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\cereda.17119\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
@@ -61,7 +65,7 @@
               "version": "[2.4.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
