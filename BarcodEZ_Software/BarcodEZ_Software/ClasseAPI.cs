@@ -11,10 +11,6 @@ using RestSharp;
 
 namespace BarcodEZ_Software
 {
-    class Json
-    {
-        string Asin { get; }
-    }
     public class ClasseAPI
     {
         static bool permesso = false;

@@ -8,6 +8,20 @@
           "build/netstandard1.0/coverlet.collector.targets": {}
         }
       },
+      "FluentAssertions/5.10.3": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Configuration",
+          "System.Xml",
+          "System.Xml.Linq"
+        ],
+        "compile": {
+          "lib/net47/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/net47/FluentAssertions.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/16.7.1": {
         "type": "package",
         "compile": {
@@ -32,6 +46,18 @@
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.NET.Test.Sdk.props": {}
+        }
+      },
+      "RestSharp/106.11.7": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "System.Web"
+        ],
+        "compile": {
+          "lib/net452/RestSharp.dll": {}
+        },
+        "runtime": {
+          "lib/net452/RestSharp.dll": {}
         }
       },
       "xunit/2.4.1": {
@@ -143,6 +169,42 @@
         "coverlet.collector.nuspec"
       ]
     },
+    "FluentAssertions/5.10.3": {
+      "sha512": "gVPEVp1hLVqcv+7Q2wiDf7kqCNn7+bQcQ0jbJ2mcRT6CeRoZl1tNkqvzSIhvekyldDptk77j1b03MXTTRIqqpg==",
+      "type": "package",
+      "path": "fluentassertions/5.10.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "FluentAssertions.png",
+        "fluentassertions.5.10.3.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net45/FluentAssertions.dll",
+        "lib/net45/FluentAssertions.pdb",
+        "lib/net45/FluentAssertions.xml",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/netcoreapp2.0/FluentAssertions.dll",
+        "lib/netcoreapp2.0/FluentAssertions.pdb",
+        "lib/netcoreapp2.0/FluentAssertions.xml",
+        "lib/netcoreapp2.1/FluentAssertions.dll",
+        "lib/netcoreapp2.1/FluentAssertions.pdb",
+        "lib/netcoreapp2.1/FluentAssertions.xml",
+        "lib/netstandard1.3/FluentAssertions.dll",
+        "lib/netstandard1.3/FluentAssertions.pdb",
+        "lib/netstandard1.3/FluentAssertions.xml",
+        "lib/netstandard1.6/FluentAssertions.dll",
+        "lib/netstandard1.6/FluentAssertions.pdb",
+        "lib/netstandard1.6/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml",
+        "lib/netstandard2.1/FluentAssertions.dll",
+        "lib/netstandard2.1/FluentAssertions.pdb",
+        "lib/netstandard2.1/FluentAssertions.xml"
+      ]
+    },
     "Microsoft.CodeCoverage/16.7.1": {
       "sha512": "PhSppbk+kvAyD9yGJIcBRJ/XYwY+21YK88l22PGTtixaxNdjnx1idVKh88LCGwKaTL8HhlnQ41VmBiBdZJzIQw==",
       "type": "package",
@@ -197,6 +259,22 @@
         "buildMultiTargeting/Microsoft.NET.Test.Sdk.props",
         "microsoft.net.test.sdk.16.7.1.nupkg.sha512",
         "microsoft.net.test.sdk.nuspec"
+      ]
+    },
+    "RestSharp/106.11.7": {
+      "sha512": "NzndH096CTulvq+ihr7u1mBJ29oukdi9A8bypQJk+kaHxbRzTTrtgsEEQAb04ptTUZmQa7cgo7uF5z7NuEPX1Q==",
+      "type": "package",
+      "path": "restsharp/106.11.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net452/RestSharp.dll",
+        "lib/net452/RestSharp.xml",
+        "lib/netstandard2.0/RestSharp.dll",
+        "lib/netstandard2.0/RestSharp.xml",
+        "restsharp.106.11.7.nupkg.sha512",
+        "restsharp.nuspec",
+        "restsharp.png"
       ]
     },
     "xunit/2.4.1": {
@@ -337,7 +415,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
+      "FluentAssertions >= 5.10.3",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
+      "RestSharp >= 106.11.7",
       "coverlet.collector >= 1.3.0",
       "xunit >= 2.4.1",
       "xunit.runner.visualstudio >= 2.4.3"
@@ -387,9 +467,17 @@
       "net472": {
         "targetAlias": "net472",
         "dependencies": {
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[5.10.3, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[16.7.1, )"
+          },
+          "RestSharp": {
+            "target": "Package",
+            "version": "[106.11.7, )"
           },
           "coverlet.collector": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
