@@ -9,6 +9,11 @@ namespace DemoConsoleAmazonScraping
 {
     class AmazonScraping
     {
+        /// <summary>
+        /// Metodo che estrapola l'HTML della pagina di cui si passa l'URL
+        /// </summary>
+        /// <param name="url">L'URL della pagina web da cui si vuole estrapolare l'HTML</param>
+        /// <returns></returns>
         public static string GetRequest(string url)
         {
             string strhtml = string.Empty;
@@ -25,6 +30,11 @@ namespace DemoConsoleAmazonScraping
             }
             return strhtml;
         }
+        /// <summary>
+        /// Metodo che estrae i dati dall'HTML e restituisce un Json contenente vari elementi della pagina Amazon
+        /// </summary>
+        /// <param name="strHtml">L'HTML estrapolato dalla funzione AmazonScraping.GetRequest</param>
+        /// <returns></returns>
         public static object DataParse(string strHtml)
         {
             string Details = string.Empty;
@@ -33,6 +43,7 @@ namespace DemoConsoleAmazonScraping
             string Price = string.Empty;
             string Description = string.Empty;
 
+            //Uso HTML Agility pack
             HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
             htmlDocument.LoadHtml(strHtml);
             htmlDocument.DocumentNode.Descendants()
