@@ -424,25 +424,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gabry\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\cereda.17119\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
-      "packagesPath": "C:\\Users\\gabry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\obj\\",
+      "projectPath": "C:\\Users\\cereda.17119\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+      "packagesPath": "C:\\Users\\cereda.17119\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cereda.17119\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\cereda.17119\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net472"
@@ -453,7 +448,6 @@
       },
       "frameworks": {
         "net472": {
-          "targetAlias": "net472",
           "projectReferences": {}
         }
       },
@@ -465,7 +459,6 @@
     },
     "frameworks": {
       "net472": {
-        "targetAlias": "net472",
         "dependencies": {
           "FluentAssertions": {
             "target": "Package",
@@ -496,7 +489,7 @@
             "version": "[2.4.3, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

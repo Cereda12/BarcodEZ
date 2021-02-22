@@ -17,11 +17,17 @@ namespace BarcodEZ_Software
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Ricerca(object sender, EventArgs e)
         {
-
+            textBox2.Clear();
             string Asin = ClasseAPI.ReqAsin(textBox1.Text);
 
+            if(Asin=="Prodotto non trovato")
+            {
+                MessageBox.Show(Asin);
+                return;
+            }
+            textBox2.Text = ClasseAPI.ReqLink(Asin);
         }
     }
 }

@@ -13,22 +13,30 @@ namespace BarcodEZ_Software
 {
     public class ClasseAPI
     {
-        static bool permesso = false;
+        #region Chiave API
+        private static string key = "e3a9ddf2d3mshdc71524468db118p1d82edjsnb5391767148e";
+        #endregion
+
+        public static int ricerche = 0;
 
         public static string ReqAsin(string ean)
         {
-            if (!permesso)
+            if (ricerche > 5)
                 throw new Exception("Troppe richieste");
 
             var client = new RestClient($"https://amazon-price1.p.rapidapi.com/upcToAsin?upc={ean}&marketplace=ES");
             var request = new RestRequest(Method.GET);
-            request.AddHeader("x-rapidapi-key", "e3a9ddf2d3mshdc71524468db118p1d82edjsnb5391767148e");
+            request.AddHeader("x-rapidapi-key", key);
             request.AddHeader("x-rapidapi-host", "amazon-price1.p.rapidapi.com");
             IRestResponse response = client.Execute(request);
 
+            ricerche++;
+
             var Risp = (Risposta)JsonConvert.DeserializeObject<Risposta>(response.Content);
+
             if (string.IsNullOrEmpty(Risp.Asin))
                 return "Prodotto non trovato";
+
             return Risp.Asin;
         }
         public class Risposta
@@ -36,7 +44,7 @@ namespace BarcodEZ_Software
             public string Asin { get; set; }
         }
 
-        public string ReqLink(string asin)
+        public static string ReqLink(string asin)
         {
             return $"https://www.amazon.es/dp/{asin}";
         }
