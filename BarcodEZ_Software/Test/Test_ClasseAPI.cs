@@ -8,6 +8,9 @@ namespace Test
 {
     public class Test_ClasseAPI
     {
+        /// <summary>
+        /// Prova a pingare il sito di RapidApi
+        /// </summary>
         [Fact]
         public void Ping_sito()
         {

@@ -16,7 +16,7 @@ namespace BarcodEZ_Software
         {
             InitializeComponent();
         }
-
+        
         private void Ricerca(object sender, EventArgs e)
         {
             textBox2.Clear();
