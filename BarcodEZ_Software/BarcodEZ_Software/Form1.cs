@@ -17,8 +17,8 @@ namespace BarcodEZ_Software
         public Form1()
         {
             InitializeComponent();
-        }
-                
+        }                
+
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
 
@@ -32,7 +32,10 @@ namespace BarcodEZ_Software
 
             comboBox1.SelectedIndex = 0;
         }
-
+        
+        /// <summary>
+        /// Analizza i vari frame del video della webcam e prova a rilevare il codeice attraverso ZXing
+        /// </summary>
         private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
