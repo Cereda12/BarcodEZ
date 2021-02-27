@@ -37,10 +37,9 @@ namespace DemoConsoleAmazonScraping
         /// <returns></returns>
         public static object DataParse(string strHtml)
         {
-            string Details = string.Empty;
-            string Asin = string.Empty;
             string Name = string.Empty;
-            string Price = string.Empty;
+            string PriceNotDiscount = string.Empty;
+            string PriceDiscount = string.Empty;
             string Description = string.Empty;
 
             //Uso HTML Agility pack
@@ -50,30 +49,24 @@ namespace DemoConsoleAmazonScraping
                 .Where(n => n.Name == "script" || n.Name == "style")
                 .ToList()
                 .ForEach(n => n.Remove());
+            
+            Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();            
+            PriceDiscount = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
+            Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p").InnerText.Trim();
             try
             {
-                Details = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']").InnerText.ToString();
-                Asin = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']").InnerText.ToString().Substring(Details.IndexOf("ASIN\n:\n") + 8, 10);
-                Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
-                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
-                Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p").InnerText.Trim();
+                PriceNotDiscount = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='priceBlockStrikePriceString a-text-strike']").InnerText.Trim();
             }
             catch
             {
-                Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
-                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
+                PriceNotDiscount = "Il prodotto non è scontato";
             }
-            Price.Remove(Price.IndexOf(','), 2);
-            
-            if(string.Compare(Asin, String.Empty)==0)
-            {
-                Asin = "empty";
-            }
+
             return new
             {
-                asin = Asin,
                 name = Name,
-                price = Price,
+                priceDiscount = PriceDiscount,
+                priceNotDiscount = PriceNotDiscount,
                 description=Description
             };
         }
