@@ -429,11 +429,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cereda.17119\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+      "projectUniqueName": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "C:\\Users\\cereda.17119\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+      "projectPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\cereda.17119\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cereda.17119\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\Test\\obj\\",
+      "outputPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\cereda.17119\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -448,6 +448,7 @@
       },
       "frameworks": {
         "net472": {
+          "targetAlias": "net472",
           "projectReferences": {}
         }
       },
@@ -459,6 +460,7 @@
     },
     "frameworks": {
       "net472": {
+        "targetAlias": "net472",
         "dependencies": {
           "FluentAssertions": {
             "target": "Package",
@@ -489,7 +491,7 @@
             "version": "[2.4.3, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
