@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "HgxgA9rbn6GyoyhtEiaCCqTC8Aa8Yh18RH3nNmzWwgzJiNSvAgdfVrfBPYFS0eO97jchjWQuV3LDDvOAB9Q7Zg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\Test\\Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\coverlet.collector\\1.3.0\\coverlet.collector.1.3.0.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\microsoft.codecoverage\\16.7.1\\microsoft.codecoverage.16.7.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\microsoft.net.test.sdk\\16.7.1\\microsoft.net.test.sdk.16.7.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit\\2.4.1\\xunit.2.4.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.abstractions\\2.0.3\\xunit.abstractions.2.0.3.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.analyzers\\0.10.0\\xunit.analyzers.0.10.0.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.assert\\2.4.1\\xunit.assert.2.4.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.core\\2.4.1\\xunit.core.2.4.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.extensibility.core\\2.4.1\\xunit.extensibility.core.2.4.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.extensibility.execution\\2.4.1\\xunit.extensibility.execution.2.4.1.nupkg.sha512",
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\xunit.runner.visualstudio\\2.4.3\\xunit.runner.visualstudio.2.4.3.nupkg.sha512"
+  ],
+  "logs": []
+}
