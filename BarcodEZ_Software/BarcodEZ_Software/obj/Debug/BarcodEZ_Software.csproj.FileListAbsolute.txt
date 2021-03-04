@@ -22,3 +22,15 @@ C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Sof
 C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
 C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
 C:\Users\brozzoni.17118\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe.config
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.pdb
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\MaterialSkin.dll
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csprojAssemblyReference.cache
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.BarcodEZ.resources
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Properties.Resources.resources
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.GenerateResource.cache
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CoreCompileInputs.cache
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb

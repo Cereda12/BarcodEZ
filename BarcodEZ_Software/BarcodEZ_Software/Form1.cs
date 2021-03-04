@@ -24,5 +24,14 @@ namespace BarcodEZ_Software
 
             //pGallery.Visible = false;
         }
+
+        private void panelStart_Paint(object sender, PaintEventArgs e)
+        {
+            if (cmbCamera.Text == "Gallery")
+            {
+                panelStart.Enabled = false;
+                panelGallery.Show();
+            }
+        }
     }
 }
