@@ -1,0 +1,4 @@
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csprojAssemblyReference.cache
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.AssemblyInfoInputs.cache
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.AssemblyInfo.cs
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\obj\Debug\netcoreapp3.1\XUnitTest.csproj.CoreCompileInputs.cache

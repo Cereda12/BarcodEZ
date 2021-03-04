@@ -1,15 +1,13 @@
 using System;
+using System.Net;
 using Xunit;
 
 namespace XUnitTest
 {
     public class TestClasseAPI
     {
-        /// <summary>
-        /// Prova a pingare il sito di RapidApi
-        /// </summary>
         [Fact]
-        public void Test1()
+        public void Ping_sito()
         {
             //Arrange
             var ping = new System.Net.NetworkInformation.Ping();
