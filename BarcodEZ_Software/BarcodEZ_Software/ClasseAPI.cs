@@ -4,15 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
-using System.Net.Http;
-using System.Net.Http.Headers;
-using System.Windows.Forms;
 using RestSharp;
 
 namespace BarcodEZ_Software
 {
-    public class ClasseAPI
+    class ClasseAPI
     {
+
         #region Chiave API
         private static string key = "e3a9ddf2d3mshdc71524468db118p1d82edjsnb5391767148e";
         #endregion
