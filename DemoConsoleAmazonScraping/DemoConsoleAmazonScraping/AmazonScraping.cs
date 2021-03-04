@@ -4,9 +4,10 @@ using System.Net;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Newtonsoft.Json;
 
 namespace DemoConsoleAmazonScraping
-{
+{     
     class AmazonScraping
     {
         /// <summary>
@@ -37,8 +38,6 @@ namespace DemoConsoleAmazonScraping
         /// <returns></returns>
         public static object DataParse(string strHtml)
         {
-            AmazonProduct product;
-
             string Name = string.Empty;
             string Price = string.Empty;
             string Description = string.Empty;
@@ -54,57 +53,9 @@ namespace DemoConsoleAmazonScraping
             Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
             Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
             Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p").InnerText.Trim();
+            AmazonProduct result = new AmazonProduct(Name, Price, Description);
 
-            product = new AmazonProduct(Name, Price, Description);
-
-            return product;
+            return result;
         }
-    }
-    class AmazonProduct
-    {
-        private string _name;
-        public string name
-        {
-            get { return _name; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Stringa non valida");
-                _name = value;
-            }
-        }
-        private string _price;
-        public string price
-        {
-            get { return _price; }
-            set
-            {
-                decimal result;
-                if (!decimal.TryParse(value, out result))
-                    throw new Exception("Stringa non valida");
-                if (result <= 0)
-                    throw new Exception("Prezzo non valido");
-                _price = result.ToString();
-            }
-        }
-        private string _description;
-        public string description
-        {
-            get { return _description; }
-            set
-            {
-                if (string.IsNullOrEmpty(value))
-                    throw new Exception("Stringa non valida");
-                _description = value;
-            }
-        }
-        public AmazonProduct(string Name, string Price, string Description)
-        {
-            if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Price) || string.IsNullOrEmpty(Description))
-                throw new Exception("Stringa non valida");
-            this.name = Name;
-            this.price = Price;
-            this.description = Description;
-        }
-    }
+    }    
 }
