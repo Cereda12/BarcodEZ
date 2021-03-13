@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 
-namespace DemoConsoleAmazonScraping
+namespace DemoConsoleScraping
 {
     class AmazonScraping
     {
@@ -35,11 +35,13 @@ namespace DemoConsoleAmazonScraping
         /// </summary>
         /// <param name="strHtml">L'HTML estrapolato dalla funzione AmazonScraping.GetRequest</param>
         /// <returns></returns>
-        public static object DataParse(string strHtml)
+        public static AmazonProduct DataParse(string strHtml)
         {
             string Name = string.Empty;
             string Price = string.Empty;
             string Description = string.Empty;
+            decimal FinalPrice = 0;
+            string[] price = new string[2];
 
             //Uso HTML Agility pack
             HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
@@ -52,13 +54,11 @@ namespace DemoConsoleAmazonScraping
             Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
             Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
             Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p").InnerText.Trim();
+            price=Price.Split((char)160);
+            FinalPrice = decimal.Parse(price[0]);
+            AmazonProduct result = new AmazonProduct(Name, FinalPrice, Description);
 
-            return new
-            {
-                name = Name,
-                price = Price,
-                description=Description
-            };
+            return result;
         }
     }
 }

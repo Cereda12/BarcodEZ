@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "w5+h/XNMpwzYLcStQjAU2gZC+4Vk/vuJdmiSOpOp/3T8V4xPOWbAyVQoRCvwuf9pLmh0RqKUmOf5TZB2sWzylA==",
+  "dgSpecHash": "3g+9OSqsRJF++A2Z2mVH+dU8XKNFxGngX+8sKQKcvDslQO8rjiYtyQaeyFR1YizwBC+QmMb93QYPdFEHX8+eHA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping.csproj",
+  "projectFilePath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleScraping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\utente\\.nuget\\packages\\coverlet.collector\\3.0.3\\coverlet.collector.3.0.3.nupkg.sha512",
     "C:\\Users\\utente\\.nuget\\packages\\fluentassertions\\5.10.3\\fluentassertions.5.10.3.nupkg.sha512",

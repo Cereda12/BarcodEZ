@@ -549,9 +549,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping.csproj",
-      "projectName": "DemoConsoleAmazonScraping",
-      "projectPath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping.csproj",
+      "projectUniqueName": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleScraping.csproj",
+      "projectName": "DemoConsoleScraping",
+      "projectPath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\DemoConsoleScraping.csproj",
       "packagesPath": "C:\\Users\\utente\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\DemoConsoleAmazonScraping\\obj\\",
       "projectStyle": "PackageReference",

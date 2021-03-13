@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DemoConsoleAmazonScraping
+namespace DemoConsoleScraping
 {
     public class AmazonProduct
     {
@@ -19,18 +19,15 @@ namespace DemoConsoleAmazonScraping
                 _name = value;
             }
         }
-        private string _price;
-        public string price
+        private decimal _price;
+        public decimal price
         {
             get { return _price; }
             set
             {
-                decimal result;
-                if (!decimal.TryParse(value, out result))
-                    throw new Exception("Stringa non valida");
-                if (result <= 0)
+                if (value <= 0)
                     throw new Exception("Prezzo non valido");
-                _price = result.ToString();
+                _price = value;
             }
         }
         private string _description;
@@ -44,9 +41,9 @@ namespace DemoConsoleAmazonScraping
                 _description = value;
             }
         }
-        public AmazonProduct(string Name, string Price, string Description)
+        public AmazonProduct(string Name, decimal Price, string Description)
         {
-            if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Price) || string.IsNullOrEmpty(Description))
+            if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Description))
                 throw new Exception("Stringa non valida");
             this.name = Name;
             this.price = Price;
