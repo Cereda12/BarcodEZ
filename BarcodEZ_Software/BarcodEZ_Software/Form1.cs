@@ -22,16 +22,46 @@ namespace BarcodEZ_Software
             materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green800, Primary.Green800, Primary.Green800, Accent.LightBlue200, TextShade.WHITE);
 
-            //pGallery.Visible = false;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            panelMenù.Visible = true;
         }
 
-        private void panelStart_Paint(object sender, PaintEventArgs e)
+        private void cmbCamera_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cmbCamera.Text == "Gallery")
             {
-                panelStart.Enabled = false;
+                panelLive.Visible = false;
                 panelGallery.Show();
             }
+        }
+
+        private void btGallery_Click(object sender, EventArgs e)
+        {
+            panelLive.Visible = false;
+            panelGallery.Visible = true;
+            panelMenù.Visible = false;
+        }
+
+        private void btReturnGallery_Click(object sender, EventArgs e)
+        {
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            panelMenù.Visible = true;
+        }
+
+        private void btReturnLive_Click(object sender, EventArgs e)
+        {
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            panelMenù.Visible = true;
+        }
+
+        private void btLive_Click(object sender, EventArgs e)
+        {
+            panelLive.Visible = true;
+            panelGallery.Visible = false;
+            panelMenù.Visible = false;
         }
     }
 }

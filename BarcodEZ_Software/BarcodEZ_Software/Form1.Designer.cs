@@ -30,39 +30,131 @@ namespace BarcodEZ_Software
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.panelLive = new System.Windows.Forms.Panel();
+            this.btReturnLive = new System.Windows.Forms.Button();
+            this.btStartLive = new MaterialSkin.Controls.MaterialFlatButton();
+            this.txStart = new System.Windows.Forms.TextBox();
+            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
+            this.cmbCamera = new System.Windows.Forms.ComboBox();
+            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialFlatButton1 = new MaterialSkin.Controls.MaterialFlatButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
-            this.panelStart = new System.Windows.Forms.Panel();
-            this.btStart = new MaterialSkin.Controls.MaterialFlatButton();
-            this.txStart = new System.Windows.Forms.TextBox();
-            this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictStart = new System.Windows.Forms.PictureBox();
-            this.cmbCamera = new System.Windows.Forms.ComboBox();
-            this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
+            this.panelMenù = new System.Windows.Forms.Panel();
+            this.btLive = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.btGallery = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.lbMenù = new System.Windows.Forms.Label();
             this.panelGallery = new System.Windows.Forms.Panel();
-            this.materialFlatButton3 = new MaterialSkin.Controls.MaterialFlatButton();
+            this.btStartGallery = new MaterialSkin.Controls.MaterialFlatButton();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelStart.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictStart)).BeginInit();
+            this.btReturnGallery = new System.Windows.Forms.Button();
+            this.pictStart = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.flowLayoutPanel1.SuspendLayout();
+            this.panelLive.SuspendLayout();
+            this.panelMenù.SuspendLayout();
             this.panelGallery.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictStart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(12, 79);
+            this.flowLayoutPanel1.Controls.Add(this.panelLive);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(4, 68);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(699, 524);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(699, 519);
             this.flowLayoutPanel1.TabIndex = 0;
+            // 
+            // panelLive
+            // 
+            this.panelLive.Controls.Add(this.btReturnLive);
+            this.panelLive.Controls.Add(this.btStartLive);
+            this.panelLive.Controls.Add(this.txStart);
+            this.panelLive.Controls.Add(this.materialLabel3);
+            this.panelLive.Controls.Add(this.pictStart);
+            this.panelLive.Controls.Add(this.cmbCamera);
+            this.panelLive.Controls.Add(this.materialLabel4);
+            this.panelLive.Location = new System.Drawing.Point(3, 3);
+            this.panelLive.Name = "panelLive";
+            this.panelLive.Size = new System.Drawing.Size(691, 512);
+            this.panelLive.TabIndex = 43;
+            // 
+            // btReturnLive
+            // 
+            this.btReturnLive.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReturnLive.Location = new System.Drawing.Point(5, 7);
+            this.btReturnLive.Name = "btReturnLive";
+            this.btReturnLive.Size = new System.Drawing.Size(103, 51);
+            this.btReturnLive.TabIndex = 43;
+            this.btReturnLive.Text = "<==";
+            this.btReturnLive.UseVisualStyleBackColor = true;
+            this.btReturnLive.Click += new System.EventHandler(this.btReturnLive_Click);
+            // 
+            // btStartLive
+            // 
+            this.btStartLive.AutoSize = true;
+            this.btStartLive.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btStartLive.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btStartLive.Depth = 0;
+            this.btStartLive.Location = new System.Drawing.Point(567, 464);
+            this.btStartLive.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btStartLive.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btStartLive.Name = "btStartLive";
+            this.btStartLive.Primary = false;
+            this.btStartLive.Size = new System.Drawing.Size(66, 36);
+            this.btStartLive.TabIndex = 41;
+            this.btStartLive.Text = "START";
+            this.btStartLive.UseVisualStyleBackColor = false;
+            // 
+            // txStart
+            // 
+            this.txStart.Location = new System.Drawing.Point(190, 471);
+            this.txStart.Margin = new System.Windows.Forms.Padding(4);
+            this.txStart.Name = "txStart";
+            this.txStart.Size = new System.Drawing.Size(277, 22);
+            this.txStart.TabIndex = 40;
+            // 
+            // materialLabel3
+            // 
+            this.materialLabel3.AutoSize = true;
+            this.materialLabel3.Depth = 0;
+            this.materialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel3.Location = new System.Drawing.Point(72, 469);
+            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel3.Name = "materialLabel3";
+            this.materialLabel3.Size = new System.Drawing.Size(86, 24);
+            this.materialLabel3.TabIndex = 39;
+            this.materialLabel3.Text = "Barcode:";
+            // 
+            // cmbCamera
+            // 
+            this.cmbCamera.FormattingEnabled = true;
+            this.cmbCamera.Location = new System.Drawing.Point(287, 27);
+            this.cmbCamera.Margin = new System.Windows.Forms.Padding(4);
+            this.cmbCamera.Name = "cmbCamera";
+            this.cmbCamera.Size = new System.Drawing.Size(346, 24);
+            this.cmbCamera.TabIndex = 37;
+            this.cmbCamera.SelectedIndexChanged += new System.EventHandler(this.cmbCamera_SelectedIndexChanged);
+            // 
+            // materialLabel4
+            // 
+            this.materialLabel4.AutoSize = true;
+            this.materialLabel4.Depth = 0;
+            this.materialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel4.Location = new System.Drawing.Point(146, 26);
+            this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel4.Name = "materialLabel4";
+            this.materialLabel4.Size = new System.Drawing.Size(81, 24);
+            this.materialLabel4.TabIndex = 36;
+            this.materialLabel4.Text = "Camera:";
             // 
             // materialFlatButton1
             // 
@@ -102,15 +194,6 @@ namespace BarcodEZ_Software
             this.materialLabel1.TabIndex = 39;
             this.materialLabel1.Text = "Barcode:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(14, 76);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(576, 314);
-            this.pictureBox1.TabIndex = 38;
-            this.pictureBox1.TabStop = false;
-            // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
@@ -120,7 +203,7 @@ namespace BarcodEZ_Software
             this.comboBox1.Location = new System.Drawing.Point(190, 20);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(346, 25);
+            this.comboBox1.Size = new System.Drawing.Size(346, 24);
             this.comboBox1.TabIndex = 37;
             // 
             // materialLabel2
@@ -137,121 +220,79 @@ namespace BarcodEZ_Software
             this.materialLabel2.TabIndex = 36;
             this.materialLabel2.Text = "Camera:";
             // 
-            // panelStart
+            // panelMenù
             // 
-            this.panelStart.Controls.Add(this.btStart);
-            this.panelStart.Controls.Add(this.txStart);
-            this.panelStart.Controls.Add(this.materialLabel3);
-            this.panelStart.Controls.Add(this.pictStart);
-            this.panelStart.Controls.Add(this.cmbCamera);
-            this.panelStart.Controls.Add(this.materialLabel4);
-            this.panelStart.Location = new System.Drawing.Point(15, 79);
-            this.panelStart.Name = "panelStart";
-            this.panelStart.Size = new System.Drawing.Size(694, 517);
-            this.panelStart.TabIndex = 43;
-            this.panelStart.Paint += new System.Windows.Forms.PaintEventHandler(this.panelStart_Paint);
+            this.panelMenù.Controls.Add(this.btLive);
+            this.panelMenù.Controls.Add(this.btGallery);
+            this.panelMenù.Controls.Add(this.lbMenù);
+            this.panelMenù.Location = new System.Drawing.Point(4, 171);
+            this.panelMenù.Name = "panelMenù";
+            this.panelMenù.Size = new System.Drawing.Size(694, 413);
+            this.panelMenù.TabIndex = 44;
             // 
-            // btStart
+            // btLive
             // 
-            this.btStart.AutoSize = true;
-            this.btStart.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btStart.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btStart.Depth = 0;
-            this.btStart.Location = new System.Drawing.Point(567, 464);
-            this.btStart.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.btStart.MouseState = MaterialSkin.MouseState.HOVER;
-            this.btStart.Name = "btStart";
-            this.btStart.Primary = false;
-            this.btStart.Size = new System.Drawing.Size(66, 36);
-            this.btStart.TabIndex = 41;
-            this.btStart.Text = "START";
-            this.btStart.UseVisualStyleBackColor = false;
+            this.btLive.Depth = 0;
+            this.btLive.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLive.Location = new System.Drawing.Point(93, 234);
+            this.btLive.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btLive.Name = "btLive";
+            this.btLive.Primary = true;
+            this.btLive.Size = new System.Drawing.Size(191, 71);
+            this.btLive.TabIndex = 3;
+            this.btLive.Text = "LIVE";
+            this.btLive.UseVisualStyleBackColor = true;
+            this.btLive.Click += new System.EventHandler(this.btLive_Click);
             // 
-            // txStart
+            // btGallery
             // 
-            this.txStart.Location = new System.Drawing.Point(190, 471);
-            this.txStart.Margin = new System.Windows.Forms.Padding(4);
-            this.txStart.Name = "txStart";
-            this.txStart.Size = new System.Drawing.Size(277, 22);
-            this.txStart.TabIndex = 40;
+            this.btGallery.Depth = 0;
+            this.btGallery.Location = new System.Drawing.Point(388, 234);
+            this.btGallery.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btGallery.Name = "btGallery";
+            this.btGallery.Primary = true;
+            this.btGallery.Size = new System.Drawing.Size(191, 71);
+            this.btGallery.TabIndex = 2;
+            this.btGallery.Text = "GALLERY";
+            this.btGallery.UseVisualStyleBackColor = true;
+            this.btGallery.Click += new System.EventHandler(this.btGallery_Click);
             // 
-            // materialLabel3
+            // lbMenù
             // 
-            this.materialLabel3.AutoSize = true;
-            this.materialLabel3.Depth = 0;
-            this.materialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel3.Location = new System.Drawing.Point(72, 469);
-            this.materialLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.Size = new System.Drawing.Size(85, 24);
-            this.materialLabel3.TabIndex = 39;
-            this.materialLabel3.Text = "Barcode:";
-            // 
-            // pictStart
-            // 
-            this.pictStart.Location = new System.Drawing.Point(14, 76);
-            this.pictStart.Margin = new System.Windows.Forms.Padding(4);
-            this.pictStart.Name = "pictStart";
-            this.pictStart.Size = new System.Drawing.Size(576, 314);
-            this.pictStart.TabIndex = 38;
-            this.pictStart.TabStop = false;
-            // 
-            // cmbCamera
-            // 
-            this.cmbCamera.FormattingEnabled = true;
-            this.cmbCamera.Items.AddRange(new object[] {
-            "Gallery",
-            "Camera"});
-            this.cmbCamera.Location = new System.Drawing.Point(190, 20);
-            this.cmbCamera.Margin = new System.Windows.Forms.Padding(4);
-            this.cmbCamera.Name = "cmbCamera";
-            this.cmbCamera.Size = new System.Drawing.Size(346, 24);
-            this.cmbCamera.TabIndex = 37;
-            // 
-            // materialLabel4
-            // 
-            this.materialLabel4.AutoSize = true;
-            this.materialLabel4.Depth = 0;
-            this.materialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel4.Location = new System.Drawing.Point(49, 19);
-            this.materialLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.Size = new System.Drawing.Size(80, 24);
-            this.materialLabel4.TabIndex = 36;
-            this.materialLabel4.Text = "Camera:";
+            this.lbMenù.AutoSize = true;
+            this.lbMenù.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMenù.Location = new System.Drawing.Point(215, 93);
+            this.lbMenù.Name = "lbMenù";
+            this.lbMenù.Size = new System.Drawing.Size(241, 29);
+            this.lbMenù.TabIndex = 0;
+            this.lbMenù.Text = "Premi per iniziare...";
             // 
             // panelGallery
             // 
-            this.panelGallery.Controls.Add(this.materialFlatButton3);
+            this.panelGallery.Controls.Add(this.btReturnGallery);
+            this.panelGallery.Controls.Add(this.btStartGallery);
             this.panelGallery.Controls.Add(this.textBox3);
             this.panelGallery.Controls.Add(this.materialLabel5);
-            this.panelGallery.Controls.Add(this.pictureBox3);
-            this.panelGallery.Controls.Add(this.comboBox3);
-            this.panelGallery.Controls.Add(this.materialLabel6);
-            this.panelGallery.Location = new System.Drawing.Point(12, 79);
+            this.panelGallery.Location = new System.Drawing.Point(12, 74);
             this.panelGallery.Name = "panelGallery";
-            this.panelGallery.Size = new System.Drawing.Size(694, 517);
+            this.panelGallery.Size = new System.Drawing.Size(686, 513);
             this.panelGallery.TabIndex = 44;
             // 
-            // materialFlatButton3
+            // btStartGallery
             // 
-            this.materialFlatButton3.AutoSize = true;
-            this.materialFlatButton3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.materialFlatButton3.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.materialFlatButton3.Depth = 0;
-            this.materialFlatButton3.Location = new System.Drawing.Point(567, 464);
-            this.materialFlatButton3.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
-            this.materialFlatButton3.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialFlatButton3.Name = "materialFlatButton3";
-            this.materialFlatButton3.Primary = false;
-            this.materialFlatButton3.Size = new System.Drawing.Size(66, 36);
-            this.materialFlatButton3.TabIndex = 41;
-            this.materialFlatButton3.Text = "START";
-            this.materialFlatButton3.UseVisualStyleBackColor = false;
+            this.btStartGallery.AutoSize = true;
+            this.btStartGallery.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btStartGallery.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.btStartGallery.Depth = 0;
+            this.btStartGallery.Location = new System.Drawing.Point(551, 464);
+            this.btStartGallery.Margin = new System.Windows.Forms.Padding(5, 7, 5, 7);
+            this.btStartGallery.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btStartGallery.Name = "btStartGallery";
+            this.btStartGallery.Primary = false;
+            this.btStartGallery.Size = new System.Drawing.Size(66, 36);
+            this.btStartGallery.TabIndex = 41;
+            this.btStartGallery.Text = "START";
+            this.btStartGallery.UseVisualStyleBackColor = false;
             // 
             // textBox3
             // 
@@ -265,69 +306,66 @@ namespace BarcodEZ_Software
             // 
             this.materialLabel5.AutoSize = true;
             this.materialLabel5.Depth = 0;
-            this.materialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.materialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel5.Location = new System.Drawing.Point(72, 469);
             this.materialLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.Size = new System.Drawing.Size(85, 24);
+            this.materialLabel5.Size = new System.Drawing.Size(86, 24);
             this.materialLabel5.TabIndex = 39;
             this.materialLabel5.Text = "Barcode:";
             // 
-            // comboBox3
+            // btReturnGallery
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
-            "Gallery",
-            "Camera"});
-            this.comboBox3.Location = new System.Drawing.Point(190, 20);
-            this.comboBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(346, 24);
-            this.comboBox3.TabIndex = 37;
+            this.btReturnGallery.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.mezza_bandiera;
+            this.btReturnGallery.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btReturnGallery.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btReturnGallery.Location = new System.Drawing.Point(3, 4);
+            this.btReturnGallery.Name = "btReturnGallery";
+            this.btReturnGallery.Size = new System.Drawing.Size(135, 119);
+            this.btReturnGallery.TabIndex = 42;
+            this.btReturnGallery.UseVisualStyleBackColor = true;
+            this.btReturnGallery.Click += new System.EventHandler(this.btReturnGallery_Click);
             // 
-            // materialLabel6
+            // pictStart
             // 
-            this.materialLabel6.AutoSize = true;
-            this.materialLabel6.Depth = 0;
-            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
-            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel6.Location = new System.Drawing.Point(49, 19);
-            this.materialLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialLabel6.Name = "materialLabel6";
-            this.materialLabel6.Size = new System.Drawing.Size(80, 24);
-            this.materialLabel6.TabIndex = 36;
-            this.materialLabel6.Text = "Camera:";
+            this.pictStart.Location = new System.Drawing.Point(28, 80);
+            this.pictStart.Margin = new System.Windows.Forms.Padding(4);
+            this.pictStart.Name = "pictStart";
+            this.pictStart.Size = new System.Drawing.Size(576, 314);
+            this.pictStart.TabIndex = 38;
+            this.pictStart.TabStop = false;
             // 
-            // pictureBox3
+            // pictureBox1
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(14, 76);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(576, 314);
-            this.pictureBox3.TabIndex = 38;
-            this.pictureBox3.TabStop = false;
+            this.pictureBox1.Location = new System.Drawing.Point(14, 76);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(576, 314);
+            this.pictureBox1.TabIndex = 38;
+            this.pictureBox1.TabStop = false;
             // 
             // BarcodEZ
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 608);
+            this.ClientSize = new System.Drawing.Size(703, 589);
+            this.Controls.Add(this.panelMenù);
             this.Controls.Add(this.panelGallery);
-            this.Controls.Add(this.panelStart);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BarcodEZ";
             this.Text = "BarcodEZ";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelStart.ResumeLayout(false);
-            this.panelStart.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictStart)).EndInit();
+            this.flowLayoutPanel1.ResumeLayout(false);
+            this.panelLive.ResumeLayout(false);
+            this.panelLive.PerformLayout();
+            this.panelMenù.ResumeLayout(false);
+            this.panelMenù.PerformLayout();
             this.panelGallery.ResumeLayout(false);
             this.panelGallery.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictStart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -341,20 +379,23 @@ namespace BarcodEZ_Software
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
-        private System.Windows.Forms.Panel panelStart;
-        private MaterialSkin.Controls.MaterialFlatButton btStart;
-        private System.Windows.Forms.TextBox txStart;
-        private MaterialSkin.Controls.MaterialLabel materialLabel3;
-        private System.Windows.Forms.PictureBox pictStart;
+        private System.Windows.Forms.Panel panelLive;
         private System.Windows.Forms.ComboBox cmbCamera;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private System.Windows.Forms.Panel panelGallery;
-        private MaterialSkin.Controls.MaterialFlatButton materialFlatButton3;
+        private MaterialSkin.Controls.MaterialFlatButton btStartGallery;
         private System.Windows.Forms.TextBox textBox3;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private MaterialSkin.Controls.MaterialLabel materialLabel6;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panelMenù;
+        private System.Windows.Forms.Label lbMenù;
+        private MaterialSkin.Controls.MaterialFlatButton btStartLive;
+        private System.Windows.Forms.TextBox txStart;
+        private MaterialSkin.Controls.MaterialLabel materialLabel3;
+        private System.Windows.Forms.PictureBox pictStart;
+        private MaterialSkin.Controls.MaterialRaisedButton btLive;
+        private MaterialSkin.Controls.MaterialRaisedButton btGallery;
+        private System.Windows.Forms.Button btReturnGallery;
+        private System.Windows.Forms.Button btReturnLive;
     }
 }
 
