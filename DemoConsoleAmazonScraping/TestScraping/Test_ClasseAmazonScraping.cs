@@ -1,4 +1,3 @@
-using System.Net;
 using Xunit;
 using FluentAssertions;
 using DemoConsoleScraping;
@@ -27,8 +26,7 @@ namespace TestScraping
             
             //Act
             string html = AmazonScraping.GetRequest(url);
-            AmazonProduct result = AmazonScraping.DataParse(html) as AmazonProduct;
-            
+            AmazonProduct result = AmazonScraping.DataParse(html);            
 
             //Assert
             result.name.Should().Be("Eastpak Oval Single Astuccio, 22 Cm, Nero (Black)");
@@ -43,8 +41,7 @@ namespace TestScraping
 
             //Act
             string html = AmazonScraping.GetRequest(url);
-            AmazonProduct result = AmazonScraping.DataParse(html) as AmazonProduct;
-
+            AmazonProduct result = AmazonScraping.DataParse(html);
 
             //Assert
             //result.name.Should().Be("cjixnji Fascia da Capitano Junior, Elasticizzata, per Bambini, con Chiusura in Velcro per Regolare la Misura, Adatte per molteplici Sport con Palla,  Fasce da Capitano per Calcio");

@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace DemoConsoleScraping
 {
-    class AmazonScraping
+    class EbayScraping
     {
         /// <summary>
         /// Metodo che estrapola l'HTML della pagina di cui si passa l'URL
@@ -28,11 +28,11 @@ namespace DemoConsoleScraping
             return strhtml;
         }
         /// <summary>
-        /// Metodo che estrae i dati dall'HTML e restituisce un oggetto AmazonProduct contenente vari elementi della pagina Amazon
+        /// Metodo che estrae i dati dall'HTML e restituisce un oggetto EbayProduct contenente vari elementi della pagina Amazon
         /// </summary>
-        /// <param name="strHtml">L'HTML estrapolato dalla funzione AmazonScraping.GetRequest</param>
-        /// <returns>Oggetto AmazonProduct</returns>
-        public static AmazonProduct DataParse(string strHtml)
+        /// <param name="strHtml">L'HTML estrapolato dalla funzione EbayScraping.GetRequest</param>
+        /// <returns>Oggetto EbayProduct</returns>
+        public static EbayProduct DataParse(string strHtml)
         {
             string Name = string.Empty;
             string Price = string.Empty;
@@ -48,12 +48,11 @@ namespace DemoConsoleScraping
                 .ToList()
                 .ForEach(n => n.Remove());
 
-            Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
-            Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
-            Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p").InnerText.Trim();
-            price=Price.Split((char)160);
-            FinalPrice = decimal.Parse(price[0]);
-            AmazonProduct result = new AmazonProduct(Name, FinalPrice, Description);
+            Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='vi-lkhdr-itmTitl']").InnerText.Trim();
+            Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='prcIsum']").InnerText.Trim();
+            price = Price.Split((char)32);
+            FinalPrice = decimal.Parse(price[1]);
+            EbayProduct result = new EbayProduct(Name, FinalPrice);
 
             return result;
         }

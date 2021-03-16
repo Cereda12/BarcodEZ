@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Net;
+﻿using System.Net;
 using System.IO;
 using System.Linq;
-using System.Text;
-using Newtonsoft.Json;
 
 namespace DemoConsoleScraping
 {     
@@ -14,7 +10,7 @@ namespace DemoConsoleScraping
         /// Metodo che estrapola l'HTML della pagina di cui si passa l'URL
         /// </summary>
         /// <param name="url">L'URL della pagina web da cui si vuole estrapolare l'HTML</param>
-        /// <returns></returns>
+        /// <returns>La stringa dell'html corrispondente</returns>
         public static string GetRequest(string url)
         {
             string strhtml = string.Empty;
@@ -32,10 +28,10 @@ namespace DemoConsoleScraping
             return strhtml;
         }
         /// <summary>
-        /// Metodo che estrae i dati dall'HTML e restituisce un Json contenente vari elementi della pagina Amazon
+        /// Metodo che estrae i dati dall'HTML e restituisce un oggetto AmazonProduct contenente vari elementi della pagina Amazon
         /// </summary>
         /// <param name="strHtml">L'HTML estrapolato dalla funzione AmazonScraping.GetRequest</param>
-        /// <returns></returns>
+        /// <returns>Oggetto AmazonProduct</returns>
         public static AmazonProduct DataParse(string strHtml)
         {
             string Name = string.Empty;
