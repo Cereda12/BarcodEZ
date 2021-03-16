@@ -1,9 +1,10 @@
 using System;
 using Xunit;
+using FluentAssertions;
 
 namespace XUnitTest
 {
-    public class UnitTest1
+    public class XUnitTest1
     {
         /// <summary>
         /// Prova a pingare il sito di RapidApi
