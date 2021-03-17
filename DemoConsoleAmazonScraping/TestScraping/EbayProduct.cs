@@ -30,12 +30,27 @@ namespace DemoConsoleScraping
                 _price = value;
             }
         }
-        public EbayProduct(string Name, decimal Price)
+        private decimal _fullprice;
+        public decimal fullprice
+        {
+            get { return _fullprice; }
+            set
+            {
+                if (value <= 0)
+                {
+                    _fullprice = -1;
+                    return;
+                }
+                _fullprice = value;
+            }
+        }
+        public EbayProduct(string Name, decimal Price, decimal FullPrice)
         {
             if (string.IsNullOrEmpty(Name))
                 throw new Exception("Stringa non valida");
             this.name = Name;
             this.price = Price;
+            this.fullprice = FullPrice;
         }
     }
 }

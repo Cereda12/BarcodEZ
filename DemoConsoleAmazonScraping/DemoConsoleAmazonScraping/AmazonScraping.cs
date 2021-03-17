@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.IO;
 using System.Linq;
+using System;
 
 namespace DemoConsoleScraping
 {     
@@ -36,9 +37,12 @@ namespace DemoConsoleScraping
         {
             string Name = string.Empty;
             string Price = string.Empty;
+            string FullPrice = string.Empty;
             string Description = string.Empty;
             decimal FinalPrice = 0;
+            decimal FinalFullPrice = 0;
             string[] price = new string[2];
+            string[] fullprice = new string[2];
 
             //Uso HTML Agility pack
             HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
@@ -49,11 +53,35 @@ namespace DemoConsoleScraping
                 .ForEach(n => n.Remove());
 
             Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
-            Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']").InnerText.Trim();
-            Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p").InnerText.Trim();
+
+            Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='priceblock_ourprice']")?.InnerText.Trim();
+            if (Price == null) 
+            {
+                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='priceblock_dealprice']")?.InnerText.Trim();
+                if (Price == null) 
+                {
+                    Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']")?.InnerText.Trim();
+                }
+                else
+                {
+                    FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='priceBlockStrikePriceString a-text-strike']")?.InnerText.Trim();
+                }
+            }      
+
+            Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p")?.InnerText.Trim();
+            if (Description == null)
+            {
+                Description = "Descrizione non disponibile. Visitare la pagina del prodotto";
+            }
+
             price = Price.Split((char)160);
             FinalPrice = decimal.Parse(price[0]);
-            AmazonProduct result = new AmazonProduct(Name, FinalPrice, Description);
+            if(!(string.Compare(FullPrice, "")==0))
+            {
+                fullprice = FullPrice.Split((char)160);
+                FinalFullPrice = decimal.Parse(fullprice[0]);
+            }            
+            AmazonProduct result = new AmazonProduct(Name, FinalPrice, Description, FinalFullPrice);
 
             return result;
         }

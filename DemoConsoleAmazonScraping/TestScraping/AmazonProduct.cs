@@ -41,13 +41,28 @@ namespace DemoConsoleScraping
                 _description = value;
             }
         }
-        public AmazonProduct(string Name, decimal Price, string Description)
+        private decimal _fullprice;
+        public decimal fullprice
+        {
+            get { return _fullprice; }
+            set
+            {
+                if (value <= 0)
+                {
+                    _fullprice = -1;
+                    return;
+                }
+                _fullprice = value;
+            }
+        }
+        public AmazonProduct(string Name, decimal Price, string Description, decimal FullPrice)
         {
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Description))
                 throw new Exception("Stringa non valida");
             this.name = Name;
             this.price = Price;
             this.description = Description;
+            this.fullprice = FullPrice;
         }
     }
 }

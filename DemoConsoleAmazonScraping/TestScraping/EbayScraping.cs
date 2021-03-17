@@ -36,9 +36,12 @@ namespace DemoConsoleScraping
         {
             string Name = string.Empty;
             string Price = string.Empty;
+            string FullPrice = string.Empty;
             string Description = string.Empty;
             decimal FinalPrice = 0;
+            decimal FinalFullPrice = 0;
             string[] price = new string[2];
+            string[] fullprice = new string[2];
 
             //Uso HTML Agility pack
             HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
@@ -50,9 +53,16 @@ namespace DemoConsoleScraping
 
             Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='vi-lkhdr-itmTitl']").InnerText.Trim();
             Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='prcIsum']").InnerText.Trim();
+            FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='orgPrc']")?.InnerText.Trim();
+
             price = Price.Split((char)32);
             FinalPrice = decimal.Parse(price[1]);
-            EbayProduct result = new EbayProduct(Name, FinalPrice);
+            if (!(string.Compare(FullPrice, null) == 0))
+            {
+                fullprice = FullPrice.Split((char)32);
+                FinalFullPrice = decimal.Parse(fullprice[1]);
+            }
+            EbayProduct result = new EbayProduct(Name, FinalPrice, FinalFullPrice);
 
             return result;
         }
