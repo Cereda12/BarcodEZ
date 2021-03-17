@@ -58,3 +58,42 @@ C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4
 C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
 C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb
 C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Form.resources
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe.config
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.pdb
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\FluentAssertions.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\MaterialSkin.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\RestSharp.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.abstractions.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.assert.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.core.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.execution.desktop.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.presentation.dll
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\FluentAssertions.pdb
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\FluentAssertions.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\RestSharp.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.abstractions.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.assert.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.core.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.execution.desktop.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.presentation.xml
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csprojAssemblyReference.cache
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Form.resources
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Properties.Resources.resources
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.GenerateResource.cache
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CoreCompileInputs.cache
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
+C:\Users\gabry\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb

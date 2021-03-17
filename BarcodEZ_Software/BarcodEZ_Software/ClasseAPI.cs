@@ -54,7 +54,7 @@ namespace BarcodEZ_Software
         /// <returns>Link di ricerca amazon del prodotto</returns>
         public static string ReqLink(string asin)
         {
-            return $"https://www.amazon.es/dp/{asin}";
+            return $"https://www.amazon.it/dp/{asin}";
         }
     }
 }
