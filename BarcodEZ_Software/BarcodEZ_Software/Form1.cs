@@ -9,28 +9,38 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
 using ZXing;
+using MaterialSkin;
+using MaterialSkin.Controls;
+using System.Timers;
 
 namespace BarcodEZ_Software
 {
-    public partial class Form1 : Form
+    public partial class Form : MaterialForm
     { 
-        public Form1()
+        public Form()
         {
             InitializeComponent();
+            var materialSkinManager = MaterialSkinManager.Instance;
+            materialSkinManager.AddFormToManage(this);
+            materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green600, Primary.Green600, Accent.LightBlue200, TextShade.WHITE);
+
+            panelMenù.Visible = true;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
         }                
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form_Load(object sender, EventArgs e)
         {
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo device in filterInfoCollection)
             {
-                comboBox1.Items.Add(device.Name);
+                cmbLive.Items.Add(device.Name);
             }
-
-            comboBox1.SelectedIndex = 0;
+            cmbLive.SelectedIndex = 0;
         }
         
         /// <summary>
@@ -43,15 +53,15 @@ namespace BarcodEZ_Software
             var result = reader.Decode(bitmap);
             if (result != null)
             {
-                textBox1.Invoke(new MethodInvoker(delegate ()
+                txLive.Invoke(new MethodInvoker(delegate ()
                 {
-                    textBox1.Text = result.ToString();
+                    txLive.Text = result.ToString();
                 }));
             }
-            pictureBox1.Image = bitmap;
+            pbLive.Image = bitmap;
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (videoCaptureDevice != null)
             {
@@ -60,11 +70,39 @@ namespace BarcodEZ_Software
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnStartLive_Click(object sender, EventArgs e)
         {
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[comboBox1.SelectedIndex].MonikerString);
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
             videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
             videoCaptureDevice.Start();
+        }
+
+        private void btLiveMenù_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = false;
+            panelLive.Visible = true;
+            panelGallery.Visible = false;
+        }
+
+        private void btGalleryMenù_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = false;
+            panelLive.Visible = false;
+            panelGallery.Visible = true;
+        }
+
+        private void btreturnLive_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = true;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+        }
+
+        private void btreturnGallery_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = true;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
         }
     }
 }
