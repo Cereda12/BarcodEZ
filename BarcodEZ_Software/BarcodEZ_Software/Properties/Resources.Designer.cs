@@ -73,9 +73,59 @@ namespace BarcodEZ_Software.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap mezza_bandiera {
+            get {
+                object obj = ResourceManager.GetObject("mezza-bandiera", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mezza_bandiera1 {
+            get {
+                object obj = ResourceManager.GetObject("mezza-bandiera1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap right_blue_arrow_clip_art_56240 {
             get {
                 object obj = ResourceManager.GetObject("right-blue-arrow-clip-art-56240", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_blue_arrow_clip_art_562401 {
+            get {
+                object obj = ResourceManager.GetObject("right-blue-arrow-clip-art-562401", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_blue_arrow_clip_art_562402 {
+            get {
+                object obj = ResourceManager.GetObject("right-blue-arrow-clip-art-562402", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_blue_arrow_clip_art_562403 {
+            get {
+                object obj = ResourceManager.GetObject("right-blue-arrow-clip-art-562403", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

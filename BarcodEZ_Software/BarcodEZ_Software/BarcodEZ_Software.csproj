@@ -138,6 +138,21 @@
   <ItemGroup>
     <None Include="Resources\right-blue-arrow-clip-art-56240.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-blue-arrow-clip-art-56240.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-blue-arrow-clip-art-562401.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right-blue-arrow-clip-art-562402.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mezza-bandiera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mezza-bandiera1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
