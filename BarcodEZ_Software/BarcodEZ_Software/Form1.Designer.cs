@@ -40,8 +40,9 @@ namespace BarcodEZ_Software
             this.lbBarcodeLive = new System.Windows.Forms.Label();
             this.txLive = new System.Windows.Forms.TextBox();
             this.panelGallery = new System.Windows.Forms.Panel();
+            this.btGallery = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btreturnGallery = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureGallery = new System.Windows.Forms.PictureBox();
             this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -50,11 +51,12 @@ namespace BarcodEZ_Software
             this.btLiveMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btGalleryMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lbMenù = new System.Windows.Forms.Label();
+            this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).BeginInit();
             this.panelGallery.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureGallery)).BeginInit();
             this.panelMenù.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +82,7 @@ namespace BarcodEZ_Software
             this.panelLive.Controls.Add(this.txLive);
             this.panelLive.Location = new System.Drawing.Point(3, 3);
             this.panelLive.Name = "panelLive";
-            this.panelLive.Size = new System.Drawing.Size(496, 413);
+            this.panelLive.Size = new System.Drawing.Size(495, 413);
             this.panelLive.TabIndex = 2;
             this.panelLive.UseWaitCursor = true;
             // 
@@ -170,8 +172,9 @@ namespace BarcodEZ_Software
             // 
             // panelGallery
             // 
+            this.panelGallery.Controls.Add(this.btGallery);
             this.panelGallery.Controls.Add(this.btreturnGallery);
-            this.panelGallery.Controls.Add(this.pictureBox1);
+            this.panelGallery.Controls.Add(this.pictureGallery);
             this.panelGallery.Controls.Add(this.materialRaisedButton1);
             this.panelGallery.Controls.Add(this.label2);
             this.panelGallery.Controls.Add(this.textBox1);
@@ -180,6 +183,20 @@ namespace BarcodEZ_Software
             this.panelGallery.Size = new System.Drawing.Size(469, 413);
             this.panelGallery.TabIndex = 3;
             this.panelGallery.UseWaitCursor = true;
+            // 
+            // btGallery
+            // 
+            this.btGallery.Depth = 0;
+            this.btGallery.Location = new System.Drawing.Point(352, 54);
+            this.btGallery.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btGallery.Name = "btGallery";
+            this.btGallery.Primary = true;
+            this.btGallery.Size = new System.Drawing.Size(78, 26);
+            this.btGallery.TabIndex = 9;
+            this.btGallery.Text = "START";
+            this.btGallery.UseVisualStyleBackColor = true;
+            this.btGallery.UseWaitCursor = true;
+            this.btGallery.Click += new System.EventHandler(this.btGallery_Click);
             // 
             // btreturnGallery
             // 
@@ -200,15 +217,15 @@ namespace BarcodEZ_Software
             this.btreturnGallery.UseWaitCursor = true;
             this.btreturnGallery.Click += new System.EventHandler(this.btreturnGallery_Click);
             // 
-            // pictureBox1
+            // pictureGallery
             // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureBox1.Location = new System.Drawing.Point(59, 81);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(374, 234);
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.UseWaitCursor = true;
+            this.pictureGallery.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pictureGallery.Location = new System.Drawing.Point(59, 94);
+            this.pictureGallery.Name = "pictureGallery";
+            this.pictureGallery.Size = new System.Drawing.Size(374, 234);
+            this.pictureGallery.TabIndex = 6;
+            this.pictureGallery.TabStop = false;
+            this.pictureGallery.UseWaitCursor = true;
             // 
             // materialRaisedButton1
             // 
@@ -307,13 +324,17 @@ namespace BarcodEZ_Software
             this.lbMenù.Text = "Premi per iniziare ...";
             this.lbMenù.UseWaitCursor = true;
             // 
+            // OpenGallery
+            // 
+            this.OpenGallery.FileName = "OpenGallery";
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.Immagine;
-            this.ClientSize = new System.Drawing.Size(500, 500);
+            this.ClientSize = new System.Drawing.Size(494, 488);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -330,7 +351,7 @@ namespace BarcodEZ_Software
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).EndInit();
             this.panelGallery.ResumeLayout(false);
             this.panelGallery.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureGallery)).EndInit();
             this.panelMenù.ResumeLayout(false);
             this.panelMenù.PerformLayout();
             this.ResumeLayout(false);
@@ -352,13 +373,15 @@ namespace BarcodEZ_Software
         private MaterialSkin.Controls.MaterialRaisedButton btLiveMenù;
         private MaterialSkin.Controls.MaterialRaisedButton btGalleryMenù;
         private System.Windows.Forms.Panel panelGallery;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureGallery;
         private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btreturnLive;
         private System.Windows.Forms.Label lbTitoloMenù;
         private System.Windows.Forms.Button btreturnGallery;
+        private System.Windows.Forms.OpenFileDialog OpenGallery;
+        private MaterialSkin.Controls.MaterialRaisedButton btGallery;
     }
 }
 

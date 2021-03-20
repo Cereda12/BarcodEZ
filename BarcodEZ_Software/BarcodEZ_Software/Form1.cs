@@ -12,6 +12,7 @@ using ZXing;
 using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Timers;
+using System.Runtime.CompilerServices;
 
 namespace BarcodEZ_Software
 {
@@ -28,7 +29,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-        }                
+        }
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
@@ -103,6 +104,32 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
+        }
+
+        private void btGallery_Click(object sender, EventArgs e)
+        {
+            this.OpenGallery= new OpenFileDialog
+            {
+                InitialDirectory = @"C: \",
+                Title = "Sfoglia file di testo",
+
+                CheckFileExists = true,
+                CheckPathExists = true,
+
+                DefaultExt = "PNG",
+                Filter = "* .BMP; *. JPG; *. GIF, *. PNG, *. TIFF) | * .BMP; *. JPG; *. GIF; *. PNG; *. TIFF ",
+                
+                FilterIndex = 2, 
+                RestoreDirectory = true ,  
+  
+                ReadOnlyChecked = true ,  
+                ShowReadOnly = true
+            };
+
+            if (OpenGallery.ShowDialog() == DialogResult.OK)
+            {
+                pictureGallery.Image = new Bitmap(OpenGallery.FileName);
+            }
         }
     }
 }
