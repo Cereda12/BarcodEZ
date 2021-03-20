@@ -40,6 +40,7 @@ namespace BarcodEZ_Software
             this.lbBarcodeLive = new System.Windows.Forms.Label();
             this.txLive = new System.Windows.Forms.TextBox();
             this.panelGallery = new System.Windows.Forms.Panel();
+            this.lbGallery = new System.Windows.Forms.Label();
             this.btGallery = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btreturnGallery = new System.Windows.Forms.Button();
             this.pictureGallery = new System.Windows.Forms.PictureBox();
@@ -52,7 +53,6 @@ namespace BarcodEZ_Software
             this.btGalleryMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lbMenù = new System.Windows.Forms.Label();
             this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
-            this.lbGallery = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).BeginInit();
@@ -186,6 +186,18 @@ namespace BarcodEZ_Software
             this.panelGallery.TabIndex = 3;
             this.panelGallery.UseWaitCursor = true;
             // 
+            // lbGallery
+            // 
+            this.lbGallery.AutoSize = true;
+            this.lbGallery.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGallery.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbGallery.Location = new System.Drawing.Point(31, 48);
+            this.lbGallery.Name = "lbGallery";
+            this.lbGallery.Size = new System.Drawing.Size(318, 16);
+            this.lbGallery.TabIndex = 5;
+            this.lbGallery.Text = "Premi APRI per selezionare la tua immagine ...";
+            this.lbGallery.UseWaitCursor = true;
+            // 
             // btGallery
             // 
             this.btGallery.Depth = 0;
@@ -242,6 +254,7 @@ namespace BarcodEZ_Software
             this.btnStartGallery.Text = "AVVIA";
             this.btnStartGallery.UseVisualStyleBackColor = true;
             this.btnStartGallery.UseWaitCursor = true;
+            this.btnStartGallery.Click += new System.EventHandler(this.btnStartGallery_Click);
             // 
             // label2
             // 
@@ -330,18 +343,6 @@ namespace BarcodEZ_Software
             // OpenGallery
             // 
             this.OpenGallery.FileName = "OpenGallery";
-            // 
-            // lbGallery
-            // 
-            this.lbGallery.AutoSize = true;
-            this.lbGallery.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbGallery.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbGallery.Location = new System.Drawing.Point(31, 48);
-            this.lbGallery.Name = "lbGallery";
-            this.lbGallery.Size = new System.Drawing.Size(318, 16);
-            this.lbGallery.TabIndex = 5;
-            this.lbGallery.Text = "Premi APRI per selezionare la tua immagine ...";
-            this.lbGallery.UseWaitCursor = true;
             // 
             // Form
             // 

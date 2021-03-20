@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {}
+    "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {
+    "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
         "projectName": "XUnitTest",
-        "projectPath": "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
-        "packagesPath": "C:\\Users\\infol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\obj\\",
+        "projectPath": "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+        "packagesPath": "C:\\Users\\brozz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\infol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\brozz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -82,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

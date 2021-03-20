@@ -117,9 +117,9 @@ namespace BarcodEZ_Software
                 CheckPathExists = true,
 
                 DefaultExt = "PNG",
-                Filter = "* .BMP; *. JPG; *. GIF, *. PNG, *. TIFF) | * .BMP; *. JPG; *. GIF; *. PNG; *. TIFF ",
-                
-                FilterIndex = 2, 
+                Filter = "*. BMP; *. JPG; *. GIF, *. PNG, *. TIFF, *. JPEG | *. BMP; *. JPG; *. GIF; *. PNG; *. TIFF *. JPEG",
+
+            FilterIndex = 2, 
                 RestoreDirectory = true ,  
   
                 ReadOnlyChecked = true ,  
@@ -130,6 +130,21 @@ namespace BarcodEZ_Software
             {
                 pictureGallery.Image = new Bitmap(OpenGallery.FileName);
             }
+        }
+
+        private void btnStartGallery_Click(object sender, EventArgs e)
+        {
+            Bitmap bitmap = pictureGallery.Image as Bitmap;
+            BarcodeReader reader = new BarcodeReader();
+            var result = reader.Decode(bitmap);
+            if (result != null)
+            {
+                txLive.Invoke(new MethodInvoker(delegate ()
+                {
+                    txLive.Text = result.ToString();
+                }));
+            }
+            pbLive.Image = bitmap;
         }
     }
 }
