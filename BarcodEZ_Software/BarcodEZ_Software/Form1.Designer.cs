@@ -189,11 +189,11 @@ namespace BarcodEZ_Software
             // lbGallery
             // 
             this.lbGallery.AutoSize = true;
-            this.lbGallery.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbGallery.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbGallery.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbGallery.Location = new System.Drawing.Point(31, 48);
+            this.lbGallery.Location = new System.Drawing.Point(47, 52);
             this.lbGallery.Name = "lbGallery";
-            this.lbGallery.Size = new System.Drawing.Size(318, 16);
+            this.lbGallery.Size = new System.Drawing.Size(305, 15);
             this.lbGallery.TabIndex = 5;
             this.lbGallery.Text = "Premi APRI per selezionare la tua immagine ...";
             this.lbGallery.UseWaitCursor = true;
@@ -201,7 +201,7 @@ namespace BarcodEZ_Software
             // btGallery
             // 
             this.btGallery.Depth = 0;
-            this.btGallery.Location = new System.Drawing.Point(367, 42);
+            this.btGallery.Location = new System.Drawing.Point(365, 45);
             this.btGallery.MouseState = MaterialSkin.MouseState.HOVER;
             this.btGallery.Name = "btGallery";
             this.btGallery.Primary = true;
