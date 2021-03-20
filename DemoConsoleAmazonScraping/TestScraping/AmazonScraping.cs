@@ -20,13 +20,21 @@ namespace DemoConsoleScraping
 
             request.AutomaticDecompression = DecompressionMethods.GZip;
 
-            using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
+            try
             {
-                strhtml = reader.ReadToEnd();
+                using (HttpWebResponse response = (HttpWebResponse)request.GetResponse())
+                using (Stream stream = response.GetResponseStream())
+                using (StreamReader reader = new StreamReader(stream))
+                {
+                    strhtml = reader.ReadToEnd();
+                }
+                return strhtml;
             }
-            return strhtml;
+            catch
+            {
+                return strhtml;
+            }
+            
         }
         /// <summary>
         /// Metodo che estrae i dati dall'HTML e restituisce un oggetto AmazonProduct contenente vari elementi della pagina Amazon
