@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using Xunit;
 using FluentAssertions;
 using DemoConsoleScraping;
 
 namespace TestScraping
 {
+    //Test Coverage al 20/03: 92%
     public class Test_ClasseAmazonScraping
     {
         [Fact]
@@ -43,10 +45,29 @@ namespace TestScraping
             string html = AmazonScraping.GetRequest(url);
             AmazonProduct result = AmazonScraping.DataParse(html);
 
-            //Assert
-            //result.name.Should().Be("cjixnji Fascia da Capitano Junior, Elasticizzata, per Bambini, con Chiusura in Velcro per Regolare la Misura, Adatte per molteplici Sport con Palla,  Fasce da Capitano per Calcio");
+            //Assert            
             result.price.Should().Be(decimal.Parse("7,99"));
             result.description.Should().Be("La fascia da capitano ideale per una varietà di sport tra cui calcio, Rugby, football gaelico e molto altro ancora Colore: blu, rosso Dimensioni:23 cm*6 cm/9.1in * 2.4in Peso:13 g Materiale:poliestere Dopo il servizio:si prega di acquistare con fiducia e non esitare a contattarci in caso di qualsiasi problema, vi arriva a entro 24 ore");
         }
+        [Theory]
+        [InlineData("https://www.amazon.it/dp/B086LY2YYZ", "249,90", "279,00")]
+        [InlineData("https://www.amazon.it/dp/B013R7Y1SE", "14,99")]
+        [InlineData("https://www.amazon.it/dp/B00R3Z4FR4", "7,49")]
+        [InlineData("https://www.amazon.it/dp/B082YTW968", "24,99")]
+        [InlineData("https://www.amazon.it/dp/B005D6OKZM", "5,90")]
+        [InlineData("https://www.amazon.it/dp/B08GH2M7WL", "10,14")]
+        [InlineData("https://www.amazon.it/dp/B01MDSMHVC", "29,93", "39,90")]
+        [InlineData("https://www.amazon.it/dp/B076H8YD8W", "60,69")]
+        [InlineData("https://www.amazon.it/dp/B0851GMVQ2", "91,90")]
+        [InlineData("https://www.amazon.it/dp/B07GP882W5", "49,99")]
+        public void GenericLayoutTest(string url, string price, string fullprice="-1,00")
+        {
+            string html = AmazonScraping.GetRequest(url);
+            AmazonProduct result = AmazonScraping.DataParse(html);
+
+            result.price.Should().Be(decimal.Parse(price));
+            result.fullprice.Should().Be(decimal.Parse(fullprice));
+        }
+
     }
 }
