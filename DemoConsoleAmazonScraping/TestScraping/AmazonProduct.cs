@@ -8,6 +8,17 @@ namespace DemoConsoleScraping
 {
     public class AmazonProduct
     {
+        private string _ASIN;
+        public string ASIN
+        {
+            get { return _ASIN; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Stringa non valida");
+                _ASIN = value;
+            }
+        }
         private string _name;
         public string name
         {
@@ -55,10 +66,11 @@ namespace DemoConsoleScraping
                 _fullprice = value;
             }
         }
-        public AmazonProduct(string Name, decimal Price, string Description, decimal FullPrice)
+        public AmazonProduct(string Asin, string Name, decimal Price, string Description, decimal FullPrice)
         {
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Description))
                 throw new Exception("Stringa non valida");
+            this.ASIN = Asin;
             this.name = Name;
             this.price = Price;
             this.description = Description;

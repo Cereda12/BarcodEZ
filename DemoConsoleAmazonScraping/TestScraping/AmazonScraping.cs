@@ -34,7 +34,7 @@ namespace DemoConsoleScraping
             {
                 return strhtml;
             }
-            
+
         }
         /// <summary>
         /// Metodo che estrae i dati dall'HTML e restituisce un oggetto AmazonProduct contenente vari elementi della pagina Amazon
@@ -43,6 +43,7 @@ namespace DemoConsoleScraping
         /// <returns>Oggetto AmazonProduct</returns>
         public static AmazonProduct DataParse(string strHtml)
         {
+            string ASIN = string.Empty;
             string Name = string.Empty;
             string Price = string.Empty;
             string FullPrice = string.Empty;
@@ -59,6 +60,16 @@ namespace DemoConsoleScraping
                 .Where(n => n.Name == "script" || n.Name == "style")
                 .ToList()
                 .ForEach(n => n.Remove());
+
+            ASIN = htmlDocument.DocumentNode.SelectSingleNode("//table[@id='productDetails_techSpec_section_1']//tr[last()]//td[@class='a-size-base prodDetAttrValue']")?.InnerText.Trim();
+            if(ASIN==null || ASIN.Length!=10)
+            {
+                ASIN = htmlDocument.DocumentNode.SelectSingleNode("//table[@id='productDetails_detailBullets_sections1']//tr[1]//td[@class='a-size-base prodDetAttrValue']")?.InnerText.Trim();
+                if(ASIN == null || ASIN.Length != 10)
+                {
+                    ASIN = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']//ul//text()[contains(., 'ASIN')]/ancestor::span[2]//span[2]")?.InnerText.Trim();
+                }
+            }
 
             Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
 
@@ -89,7 +100,7 @@ namespace DemoConsoleScraping
                 fullprice = FullPrice.Split((char)160);
                 FinalFullPrice = decimal.Parse(fullprice[0]);
             }
-            AmazonProduct result = new AmazonProduct(Name, FinalPrice, Description, FinalFullPrice);
+            AmazonProduct result = new AmazonProduct(ASIN, Name, FinalPrice, Description, FinalFullPrice);
 
             return result;
         }

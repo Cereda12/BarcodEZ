@@ -8,6 +8,17 @@ namespace DemoConsoleScraping
 {
     public class AmazonProduct
     {
+        private string _ASIN;
+        public string ASIN
+        {
+            get { return _ASIN; }
+            set
+            {
+                if (string.IsNullOrEmpty(value))
+                    throw new Exception("Stringa non valida");
+                _ASIN = value;
+            }
+        }
         private string _name;
         public string name
         {
@@ -29,7 +40,7 @@ namespace DemoConsoleScraping
                     throw new Exception("Prezzo non valido");
                 _price = value;
             }
-        }        
+        }
         private string _description;
         public string description
         {
@@ -51,16 +62,17 @@ namespace DemoConsoleScraping
                 {
                     _fullprice = -1;
                     return;
-                }                    
+                }
                 _fullprice = value;
             }
         }
-        public AmazonProduct(string Name, decimal Price, string Description, decimal FullPrice)
+        public AmazonProduct(string Asin, string Name, decimal Price, string Description, decimal FullPrice)
         {
             if (string.IsNullOrEmpty(Name) || string.IsNullOrEmpty(Description))
                 throw new Exception("Stringa non valida");
+            this.ASIN = Asin;
             this.name = Name;
-            this.price = Price;            
+            this.price = Price;
             this.description = Description;
             this.fullprice = FullPrice;
         }

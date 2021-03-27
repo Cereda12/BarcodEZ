@@ -4,7 +4,7 @@ using System.Linq;
 using System;
 
 namespace DemoConsoleScraping
-{     
+{
     class AmazonScraping
     {
         /// <summary>
@@ -43,6 +43,7 @@ namespace DemoConsoleScraping
         /// <returns>Oggetto AmazonProduct</returns>
         public static AmazonProduct DataParse(string strHtml)
         {
+            string ASIN = string.Empty;
             string Name = string.Empty;
             string Price = string.Empty;
             string FullPrice = string.Empty;
@@ -60,13 +61,23 @@ namespace DemoConsoleScraping
                 .ToList()
                 .ForEach(n => n.Remove());
 
+            ASIN = htmlDocument.DocumentNode.SelectSingleNode("//table[@id='productDetails_techSpec_section_1']//tr[last()]//td[@class='a-size-base prodDetAttrValue']")?.InnerText.Trim();
+            if (ASIN == null || ASIN.Length != 10)
+            {
+                ASIN = htmlDocument.DocumentNode.SelectSingleNode("//table[@id='productDetails_detailBullets_sections1']//tr[1]//td[@class='a-size-base prodDetAttrValue']")?.InnerText.Trim();
+                if (ASIN == null || ASIN.Length != 10)
+                {
+                    ASIN = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']//ul//text()[contains(., 'ASIN')]/ancestor::span[2]//span[2]")?.InnerText.Trim();
+                }
+            }
+
             Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='productTitle']").InnerText.Trim();
 
             Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='priceblock_ourprice']")?.InnerText.Trim();
-            if (Price == null) 
+            if (Price == null)
             {
                 Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='priceblock_dealprice']")?.InnerText.Trim();
-                if (Price == null) 
+                if (Price == null)
                 {
                     Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='a-color-price']")?.InnerText.Trim();
                 }
@@ -74,7 +85,7 @@ namespace DemoConsoleScraping
                 {
                     FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='priceBlockStrikePriceString a-text-strike']")?.InnerText.Trim();
                 }
-            }      
+            }
 
             Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p")?.InnerText.Trim();
             if (Description == null)
@@ -84,14 +95,14 @@ namespace DemoConsoleScraping
 
             price = Price.Split((char)160);
             FinalPrice = decimal.Parse(price[0]);
-            if(!(string.Compare(FullPrice, "")==0))
+            if (!(string.Compare(FullPrice, "") == 0))
             {
                 fullprice = FullPrice.Split((char)160);
                 FinalFullPrice = decimal.Parse(fullprice[0]);
-            }            
-            AmazonProduct result = new AmazonProduct(Name, FinalPrice, Description, FinalFullPrice);
+            }
+            AmazonProduct result = new AmazonProduct(ASIN, Name, FinalPrice, Description, FinalFullPrice);
 
             return result;
         }
-    }    
+    }
 }

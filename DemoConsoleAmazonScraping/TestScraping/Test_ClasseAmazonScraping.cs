@@ -78,23 +78,35 @@ namespace TestScraping
             valid.Should().Be(true);
         }
         [Theory]
-        [InlineData("https://www.amazon.it/dp/B086LY2YYZ", 249.90, 279.00)]
-        [InlineData("https://www.amazon.it/dp/B013R7Y1SE", 14.99)]
-        [InlineData("https://www.amazon.it/dp/B00R3Z4FR4", 7.49)]
+        [InlineData("https://www.amazon.it/dp/B086LY2YYZ", 249.90, 255.90)]
+        [InlineData("https://www.amazon.it/dp/B013R7Y1SE", 15.21)]
+        [InlineData("https://www.amazon.it/dp/B00R3Z4FR4", 7.94)]
         [InlineData("https://www.amazon.it/dp/B082YTW968", 24.99)]
         [InlineData("https://www.amazon.it/dp/B005D6OKZM", 5.90)]
         [InlineData("https://www.amazon.it/dp/B08GH2M7WL", 10.14)]
-        [InlineData("https://www.amazon.it/dp/B01MDSMHVC", 29.93, 39.90)]
-        [InlineData("https://www.amazon.it/dp/B076H8YD8W", 60.69)]
+        [InlineData("https://www.amazon.it/dp/B01MDSMHVC", 39.90)]
+        [InlineData("https://www.amazon.it/dp/B076H8YD8W", 53.00)]
         [InlineData("https://www.amazon.it/dp/B0851GMVQ2", 91.90)]
         [InlineData("https://www.amazon.it/dp/B07GP882W5", 49.99)]
-        public void GenericLayoutTest(string url, decimal price, decimal fullprice=-1.00M)
+        public void GenericLayoutPriceTest(string url, decimal price, decimal fullprice=-1.00M)
         {
             string html = AmazonScraping.GetRequest(url);
             AmazonProduct result = AmazonScraping.DataParse(html);
 
             result.price.Should().Be(price);
             result.fullprice.Should().Be(fullprice);
+        }
+        [Theory]
+        [InlineData("https://www.amazon.it/dp/B086LY2YYZ")]
+        [InlineData("https://www.amazon.it/dp/B01MDSMHVC")]        
+        public void GenericLayoutASINTest(string url)
+        {
+            string[] splitResult = url.Split('/');
+            string UrlAsin = splitResult[4];
+            string html = AmazonScraping.GetRequest(url);
+            AmazonProduct result = AmazonScraping.DataParse(html);
+
+            result.ASIN.Should().Be(UrlAsin);
         }
 
     }
