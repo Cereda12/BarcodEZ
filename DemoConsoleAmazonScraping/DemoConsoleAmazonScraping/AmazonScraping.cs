@@ -68,6 +68,10 @@ namespace DemoConsoleScraping
                 if (ASIN == null || ASIN.Length != 10)
                 {
                     ASIN = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']//ul//text()[contains(., 'ASIN')]/ancestor::span[2]//span[2]")?.InnerText.Trim();
+                    if (ASIN == null || ASIN.Length != 10)
+                    {
+                        ASIN = "AMAZONPROD";
+                    }
                 }
             }
 
@@ -106,3 +110,4 @@ namespace DemoConsoleScraping
         }
     }
 }
+

@@ -62,12 +62,16 @@ namespace DemoConsoleScraping
                 .ForEach(n => n.Remove());
 
             ASIN = htmlDocument.DocumentNode.SelectSingleNode("//table[@id='productDetails_techSpec_section_1']//tr[last()]//td[@class='a-size-base prodDetAttrValue']")?.InnerText.Trim();
-            if(ASIN==null || ASIN.Length!=10)
+            if (ASIN == null || ASIN.Length != 10) 
             {
                 ASIN = htmlDocument.DocumentNode.SelectSingleNode("//table[@id='productDetails_detailBullets_sections1']//tr[1]//td[@class='a-size-base prodDetAttrValue']")?.InnerText.Trim();
-                if(ASIN == null || ASIN.Length != 10)
+                if (ASIN == null || ASIN.Length != 10) 
                 {
                     ASIN = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='detailBullets_feature_div']//ul//text()[contains(., 'ASIN')]/ancestor::span[2]//span[2]")?.InnerText.Trim();
+                    if (ASIN == null || ASIN.Length != 10) 
+                    {
+                        ASIN = "AMAZONPROD";
+                    }
                 }
             }
 

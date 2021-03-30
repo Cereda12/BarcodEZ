@@ -33,7 +33,7 @@ namespace TestScraping
 
             //Assert
             result.name.Should().Be("Eastpak Oval Single Astuccio, 22 Cm, Nero (Black)");
-            result.price.Should().Be(decimal.Parse("16,56"));
+            result.price.Should().Be(decimal.Parse("15,73"));
             result.description.Should().Be("Astuccio: Eastpak: Il nostro astuccio compatto ottimo per tenere tutti gli articoli da ufficio in ordine in un solo scomparto.");
         }
         [Fact]
@@ -85,7 +85,7 @@ namespace TestScraping
         [InlineData("https://www.amazon.it/dp/B005D6OKZM", 5.90)]
         [InlineData("https://www.amazon.it/dp/B08GH2M7WL", 10.14)]
         [InlineData("https://www.amazon.it/dp/B01MDSMHVC", 39.90)]
-        [InlineData("https://www.amazon.it/dp/B076H8YD8W", 53.00)]
+        [InlineData("https://www.amazon.it/dp/B076H8YD8W", 60.70)]
         [InlineData("https://www.amazon.it/dp/B0851GMVQ2", 91.90)]
         [InlineData("https://www.amazon.it/dp/B07GP882W5", 49.99)]
         public void GenericLayoutPriceTest(string url, decimal price, decimal fullprice=-1.00M)
@@ -98,15 +98,24 @@ namespace TestScraping
         }
         [Theory]
         [InlineData("https://www.amazon.it/dp/B086LY2YYZ")]
-        [InlineData("https://www.amazon.it/dp/B01MDSMHVC")]        
+        [InlineData("https://www.amazon.it/dp/B013R7Y1SE")]
+        [InlineData("https://www.amazon.it/dp/B00R3Z4FR4")]
+        [InlineData("https://www.amazon.it/dp/B082YTW968")]
+        [InlineData("https://www.amazon.it/dp/B005D6OKZM")]
+        [InlineData("https://www.amazon.it/dp/B08GH2M7WL")]
+        [InlineData("https://www.amazon.it/dp/B01MDSMHVC")]
+        [InlineData("https://www.amazon.it/dp/B0851GMVQ2")]
+        [InlineData("https://www.amazon.it/dp/B07GP882W5")]
         public void GenericLayoutASINTest(string url)
         {
-            string[] splitResult = url.Split('/');
-            string UrlAsin = splitResult[4];
+            string UrlAsin = url.Substring(url.IndexOf("dp/")+3,10);
             string html = AmazonScraping.GetRequest(url);
             AmazonProduct result = AmazonScraping.DataParse(html);
 
-            result.ASIN.Should().Be(UrlAsin);
+            if (string.Compare(result.ASIN, "AMAZONPROD") != 0)
+                result.ASIN.Should().Be(UrlAsin);
+            else
+                result.ASIN.Should().Be("AMAZONPROD");
         }
 
     }
