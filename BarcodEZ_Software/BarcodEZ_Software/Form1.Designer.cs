@@ -53,6 +53,7 @@ namespace BarcodEZ_Software
             this.btGalleryMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lbMenù = new System.Windows.Forms.Label();
             this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
+            this.btnCercaLive = new MaterialSkin.Controls.MaterialRaisedButton();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).BeginInit();
@@ -74,6 +75,7 @@ namespace BarcodEZ_Software
             // 
             // panelLive
             // 
+            this.panelLive.Controls.Add(this.btnCercaLive);
             this.panelLive.Controls.Add(this.btreturnLive);
             this.panelLive.Controls.Add(this.pbLive);
             this.panelLive.Controls.Add(this.btnStartLive);
@@ -119,7 +121,7 @@ namespace BarcodEZ_Software
             // btnStartLive
             // 
             this.btnStartLive.Depth = 0;
-            this.btnStartLive.Location = new System.Drawing.Point(352, 352);
+            this.btnStartLive.Location = new System.Drawing.Point(355, 28);
             this.btnStartLive.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartLive.Name = "btnStartLive";
             this.btnStartLive.Primary = true;
@@ -128,7 +130,6 @@ namespace BarcodEZ_Software
             this.btnStartLive.Text = "AVVIA";
             this.btnStartLive.UseVisualStyleBackColor = true;
             this.btnStartLive.UseWaitCursor = true;
-            this.btnStartLive.Click += new System.EventHandler(this.btnStartLive_Click);
             // 
             // cmbLive
             // 
@@ -138,6 +139,7 @@ namespace BarcodEZ_Software
             this.cmbLive.Size = new System.Drawing.Size(184, 24);
             this.cmbLive.TabIndex = 4;
             this.cmbLive.UseWaitCursor = true;
+            this.cmbLive.SelectedIndexChanged += new System.EventHandler(this.cmbLive_SelectedIndexChanged);
             // 
             // lbCameraLive
             // 
@@ -193,7 +195,7 @@ namespace BarcodEZ_Software
             this.lbGallery.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.lbGallery.Location = new System.Drawing.Point(47, 52);
             this.lbGallery.Name = "lbGallery";
-            this.lbGallery.Size = new System.Drawing.Size(305, 15);
+            this.lbGallery.Size = new System.Drawing.Size(275, 14);
             this.lbGallery.TabIndex = 5;
             this.lbGallery.Text = "Premi APRI per selezionare la tua immagine ...";
             this.lbGallery.UseWaitCursor = true;
@@ -344,6 +346,19 @@ namespace BarcodEZ_Software
             // 
             this.OpenGallery.FileName = "OpenGallery";
             // 
+            // btnCercaLive
+            // 
+            this.btnCercaLive.Depth = 0;
+            this.btnCercaLive.Location = new System.Drawing.Point(352, 350);
+            this.btnCercaLive.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btnCercaLive.Name = "btnCercaLive";
+            this.btnCercaLive.Primary = true;
+            this.btnCercaLive.Size = new System.Drawing.Size(78, 26);
+            this.btnCercaLive.TabIndex = 8;
+            this.btnCercaLive.Text = "AVVIA";
+            this.btnCercaLive.UseVisualStyleBackColor = true;
+            this.btnCercaLive.UseWaitCursor = true;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -398,6 +413,7 @@ namespace BarcodEZ_Software
         private System.Windows.Forms.OpenFileDialog OpenGallery;
         private MaterialSkin.Controls.MaterialRaisedButton btGallery;
         private System.Windows.Forms.Label lbGallery;
+        private MaterialSkin.Controls.MaterialRaisedButton btnCercaLive;
     }
 }
 
