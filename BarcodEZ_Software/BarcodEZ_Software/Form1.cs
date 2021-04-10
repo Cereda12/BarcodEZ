@@ -50,15 +50,12 @@ namespace BarcodEZ_Software
         private void VideoCaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
-            BarcodeReader reader = new BarcodeReader();
+            ZXing.BarcodeReader reader = new ZXing.BarcodeReader();
             var result = reader.Decode(bitmap);
-            if (result != null)
+            txLive?.Invoke(new MethodInvoker(delegate ()
             {
-                txLive.Invoke(new MethodInvoker(delegate ()
-                {
-                    txLive.Text = result.ToString();
-                }));
-            }
+               txLive.Text = result?.ToString();
+            }));
             pbLive.Image = bitmap;
         }
 
@@ -108,6 +105,7 @@ namespace BarcodEZ_Software
 
         private void btGallery_Click(object sender, EventArgs e)
         {
+            txGallery.Clear();
             this.OpenGallery= new OpenFileDialog
             {
                 InitialDirectory = @"C: \",
@@ -116,8 +114,7 @@ namespace BarcodEZ_Software
                 CheckFileExists = true,
                 CheckPathExists = true,
 
-                DefaultExt = "PNG",
-                Filter = "*. BMP; *. JPG; *. GIF, *. PNG, *. TIFF, *. JPEG | *. BMP; *. JPG; *. GIF; *. PNG; *. TIFF *. JPEG",
+                Filter = "*. BMP, *. JPG, *. GIF, *. PNG, *. TIFF, *. JPEG | *. BMP; *. JPG; *. GIF; *. PNG; *. TIFF; *. JPEG",
 
             FilterIndex = 2, 
                 RestoreDirectory = true ,  
@@ -139,19 +136,22 @@ namespace BarcodEZ_Software
             var result = reader.Decode(bitmap);
             if (result != null)
             {
-                txLive.Invoke(new MethodInvoker(delegate ()
+                pictureGallery?.Invoke(new MethodInvoker(delegate ()
                 {
-                    txLive.Text = result.ToString();
+                    txGallery.Text = result?.ToString();
                 }));
+                pictureGallery.Image = bitmap;
             }
-            pbLive.Image = bitmap;
+            else
+            {
+                MessageBox.Show("Inserire un'immagine valida");
+            }
+               
         }
 
-        private void cmbLive_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnCercaLive_Click(object sender, EventArgs e)
         {
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
-            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
+           string Link = ClasseAPI.ReqAsin(txLive.Text);
         }
     }
 }

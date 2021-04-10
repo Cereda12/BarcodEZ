@@ -40,7 +40,7 @@ namespace BarcodEZ_Software
             if (string.IsNullOrEmpty(Risp.Asin))
                 return "Prodotto non trovato";
 
-            return Risp.Asin;
+            return ReqLink(Risp.Asin);
         }
         public class Risposta
         {
