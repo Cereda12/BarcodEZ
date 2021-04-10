@@ -56,6 +56,13 @@ namespace DemoConsoleScraping
             FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='orgPrc']")?.InnerText.Trim();
 
             price = Price.Split((char)32);
+            if(string.Compare(price[0], "EUR")!=0)
+            {
+                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='convbidPrice']").InnerText.Trim();
+                price = Price.Split((char)32);
+                string price2 = price[1].Substring(0, price[1].IndexOf(',') + 3);
+                price[1] = price2;
+            }
             FinalPrice = decimal.Parse(price[1]);
             if (!(string.Compare(FullPrice, null) == 0))
             {
@@ -65,6 +72,35 @@ namespace DemoConsoleScraping
             EbayProduct result = new EbayProduct(Name, FinalPrice, FinalFullPrice);
 
             return result;
+        }
+        /// <summary>
+        /// Metodo che estra il link appartenente al primo prodotto trovato ricercando con il codice ean
+        /// </summary>
+        /// <param name="ean">Il codice ean del prodotto da ricercare</param>
+        /// <returns>L'url del prodotto corrispondente all'ean</returns>
+        public static string ExtractFirstHref(string ean)
+        {
+            string searchingUrl = string.Empty;
+            string extractedUrl = string.Empty;
+            string strHtml = string.Empty;
+
+            if (ean.Length!=13 && ean.Length!=8)
+            {
+                extractedUrl = null;
+                return extractedUrl;
+            }
+            searchingUrl = $"https://www.ebay.it/sch/{ean}";
+            strHtml = GetRequest(searchingUrl);
+
+            HtmlAgilityPack.HtmlDocument htmlDocument = new HtmlAgilityPack.HtmlDocument();
+            htmlDocument.LoadHtml(strHtml);
+            htmlDocument.DocumentNode.Descendants()
+                .Where(n => n.Name == "script" || n.Name == "style")
+                .ToList()
+                .ForEach(n => n.Remove());
+            extractedUrl = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='mainContent']//li[1]//a").Attributes["href"].Value;
+
+            return extractedUrl;
         }
     }
 }
