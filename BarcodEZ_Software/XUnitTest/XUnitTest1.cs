@@ -2,6 +2,16 @@ using System;
 using System.Collections.Generic;
 using Xunit;
 using FluentAssertions;
+using AForge.Video.DirectShow;
+using ZXing;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Timers;
+using System.Runtime.CompilerServices;
 
 namespace XUnitTest
 {
@@ -46,5 +56,29 @@ namespace XUnitTest
 
             ris.Should().Be(asin);
         }
+
+        //[Fact]
+        //public void TestGallery()
+        //{
+        //    //Arrange
+            
+        //    //Act
+
+        //    //Assert
+
+
+        //    Bitmap photo;
+        //    BarcodeReader reader = new BarcodeReader();
+        //    var result = reader.Decode(photo);
+        //    if (result != null)
+        //    {
+        //        pictureGallery?.Invoke(new MethodInvoker(delegate ()
+        //        {
+        //            txGallery.Text = result?.ToString();
+        //        }));
+        //        pictureGallery.Image = photo;
+        //    }
+            
+        //}
     }
 }

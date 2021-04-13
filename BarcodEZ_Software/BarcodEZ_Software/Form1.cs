@@ -33,16 +33,6 @@ namespace BarcodEZ_Software
 
         FilterInfoCollection filterInfoCollection;
         VideoCaptureDevice videoCaptureDevice;
-
-        private void Form_Load(object sender, EventArgs e)
-        {
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo device in filterInfoCollection)
-            {
-                cmbLive.Items.Add(device.Name);
-            }
-            cmbLive.SelectedIndex = 0;
-        }
         
         /// <summary>
         /// Analizza i vari frame del video della webcam e prova a rilevare il codeice attraverso ZXing
@@ -80,6 +70,22 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = true;
             panelGallery.Visible = false;
+
+            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo device in filterInfoCollection)
+            {
+                cmbLive.Items.Add(device.Name);
+            }
+
+            try
+            {
+                cmbLive.SelectedIndex = 0;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Nessuna webcam trovata");
+                btreturnLive.PerformClick();
+            }
         }
 
         private void btGalleryMenù_Click(object sender, EventArgs e)
@@ -131,22 +137,29 @@ namespace BarcodEZ_Software
 
         private void btnStartGallery_Click(object sender, EventArgs e)
         {
-            Bitmap bitmap = pictureGallery.Image as Bitmap;
-            BarcodeReader reader = new BarcodeReader();
-            var result = reader.Decode(bitmap);
-            if (result != null)
-            {
-                pictureGallery?.Invoke(new MethodInvoker(delegate ()
-                {
-                    txGallery.Text = result?.ToString();
-                }));
-                pictureGallery.Image = bitmap;
-            }
-            else
+            string risultato=ClasseImmagine.Gallery(pictureGallery);
+            if(string.Compare(risultato, String.Empty)==0)
             {
                 MessageBox.Show("Inserire un'immagine valida");
+                return;
             }
-               
+            txGallery.Text = risultato;
+
+            //Bitmap bitmap = pictureGallery.Image as Bitmap;
+            //BarcodeReader reader = new BarcodeReader();
+            //var result = reader.Decode(bitmap);
+            //if (result != null)
+            //{
+            //    pictureGallery?.Invoke(new MethodInvoker(delegate ()
+            //    {
+            //        txGallery.Text = result?.ToString();
+            //    }));
+            //    pictureGallery.Image = bitmap;
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Inserire un'immagine valida");
+            //}
         }
 
         private void btnCercaLive_Click(object sender, EventArgs e)
