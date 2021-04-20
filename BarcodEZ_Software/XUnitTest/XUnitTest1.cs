@@ -12,6 +12,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
 using System.Runtime.CompilerServices;
+using System.Windows.Forms;
+using BarcodEZ_Software;
 
 namespace XUnitTest
 {
@@ -57,28 +59,20 @@ namespace XUnitTest
             ris.Should().Be(asin);
         }
 
-        //[Fact]
-        //public void TestGallery()
-        //{
-        //    //Arrange
-            
-        //    //Act
+        [Theory]
+        [InlineData(@"C:\Users\gabry\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\bin\Debug\netcoreapp3.1\451279.jpeg", "9023800451279")]
+        [InlineData(@"C:\Users\gabry\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\bin\Debug\netcoreapp3.1\204932.jpeg", "8019808204932")]
+        public void TestGallery(string photo, string ean)
+        {
+            //Arrange
+            PictureBox pbphoto = new PictureBox();
+            pbphoto.Image = Image.FromFile(photo);
 
-        //    //Assert
+            //Act
+            string result = ClasseImmagine.Gallery(pbphoto);
 
-
-        //    Bitmap photo;
-        //    BarcodeReader reader = new BarcodeReader();
-        //    var result = reader.Decode(photo);
-        //    if (result != null)
-        //    {
-        //        pictureGallery?.Invoke(new MethodInvoker(delegate ()
-        //        {
-        //            txGallery.Text = result?.ToString();
-        //        }));
-        //        pictureGallery.Image = photo;
-        //    }
-            
-        //}
+            //Assert
+            result.Should().Be(ean);
+        }
     }
 }

@@ -150,6 +150,7 @@ namespace BarcodEZ_Software
             this.btnStartLive.Text = "AVVIA";
             this.btnStartLive.UseVisualStyleBackColor = true;
             this.btnStartLive.UseWaitCursor = true;
+            this.btnStartLive.Click += new System.EventHandler(this.btnStartLive_Click);
             // 
             // cmbLive
             // 

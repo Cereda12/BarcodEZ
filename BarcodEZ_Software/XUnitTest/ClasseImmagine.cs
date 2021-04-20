@@ -19,7 +19,7 @@ namespace BarcodEZ_Software
             var result = reader.Decode(bitmap);
             if (result != null)
             {
-                cod = result.ToString();
+                cod=result.ToString();
                 return cod;
             }
             else

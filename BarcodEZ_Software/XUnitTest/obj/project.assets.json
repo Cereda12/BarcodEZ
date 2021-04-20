@@ -558,20 +558,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\brozzoni.17118\\.nuget\\packages\\": {}
+    "C:\\Users\\gabry\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\brozzoni.17118\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
       "projectName": "XUnitTest",
-      "projectPath": "C:\\Users\\brozzoni.17118\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
-      "packagesPath": "C:\\Users\\brozzoni.17118\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\brozzoni.17118\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\obj\\",
+      "projectPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+      "packagesPath": "C:\\Users\\gabry\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\brozzoni.17118\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net472"
@@ -637,7 +642,7 @@
             "version": "[2.4.3, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   }

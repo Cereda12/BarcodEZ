@@ -122,7 +122,7 @@ namespace BarcodEZ_Software
 
                 Filter = "*. BMP, *. JPG, *. GIF, *. PNG, *. TIFF, *. JPEG | *. BMP; *. JPG; *. GIF; *. PNG; *. TIFF; *. JPEG",
 
-            FilterIndex = 2, 
+                FilterIndex = 2, 
                 RestoreDirectory = true ,  
   
                 ReadOnlyChecked = true ,  
@@ -145,26 +145,16 @@ namespace BarcodEZ_Software
             }
             txGallery.Text = risultato;
 
-            //Bitmap bitmap = pictureGallery.Image as Bitmap;
-            //BarcodeReader reader = new BarcodeReader();
-            //var result = reader.Decode(bitmap);
-            //if (result != null)
-            //{
-            //    pictureGallery?.Invoke(new MethodInvoker(delegate ()
-            //    {
-            //        txGallery.Text = result?.ToString();
-            //    }));
-            //    pictureGallery.Image = bitmap;
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Inserire un'immagine valida");
-            //}
         }
 
         private void btnCercaLive_Click(object sender, EventArgs e)
         {
            string Link = ClasseAPI.ReqAsin(txLive.Text);
+        }
+
+        private void btnStartLive_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
