@@ -58,12 +58,12 @@ namespace BarcodEZ_Software
             }
         }
 
-        //private void btnStartLive_Click(object sender, EventArgs e)
-        //{
-        //    videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
-        //    videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
-        //    videoCaptureDevice.Start();
-        //}
+        private void btnStartLive_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+        }
 
         private void btLiveMenù_Click(object sender, EventArgs e)
         {
@@ -150,11 +150,6 @@ namespace BarcodEZ_Software
         private void btnCercaLive_Click(object sender, EventArgs e)
         {
            string Link = ClasseAPI.ReqAsin(txLive.Text);
-        }
-
-        private void btnStartLive_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
