@@ -60,8 +60,9 @@ namespace XUnitTest
         }
 
         [Theory]
-        [InlineData(@"C:\Users\gabry\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\bin\Debug\netcoreapp3.1\451279.jpeg", "9023800451279")]
-        [InlineData(@"C:\Users\gabry\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\XUnitTest\bin\Debug\netcoreapp3.1\204932.jpeg", "8019808204932")]
+        [InlineData(@"4932.jpeg", "8019808204932")]
+        [InlineData(@"1279.jpeg", "9023800451279")]
+        [InlineData(@"4706.jpeg", "8005125314706")]
         public void TestGallery(string photo, string ean)
         {
             //Arrange
