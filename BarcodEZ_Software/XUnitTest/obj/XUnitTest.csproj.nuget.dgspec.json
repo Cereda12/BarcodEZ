@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {}
+    "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {
+    "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
         "projectName": "XUnitTest",
-        "projectPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
-        "packagesPath": "C:\\Users\\gabry\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gabry\\Desktop\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\obj\\",
+        "projectPath": "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+        "packagesPath": "C:\\Users\\brozz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\brozz\\Desktop\\GitHub\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\gabry\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\brozz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
@@ -30,7 +26,6 @@
         },
         "frameworks": {
           "net472": {
-            "targetAlias": "net472",
             "projectReferences": {}
           }
         },
@@ -42,7 +37,6 @@
       },
       "frameworks": {
         "net472": {
-          "targetAlias": "net472",
           "dependencies": {
             "AForge": {
               "target": "Package",
@@ -85,7 +79,7 @@
               "version": "[2.4.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

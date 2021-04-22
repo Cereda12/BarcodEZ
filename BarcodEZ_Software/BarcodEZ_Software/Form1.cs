@@ -49,6 +49,13 @@ namespace BarcodEZ_Software
             pbLive.Image = bitmap;
         }
 
+        private void btnStartLive_Click(object sender, EventArgs e)
+        {
+            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
+            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+            videoCaptureDevice.Start();
+        }
+
         private void Form_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (videoCaptureDevice != null)
@@ -56,14 +63,7 @@ namespace BarcodEZ_Software
                 if (videoCaptureDevice.IsRunning)
                     videoCaptureDevice.Stop();
             }
-        }
-
-        private void btnStartLive_Click(object sender, EventArgs e)
-        {
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
-            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
-        }
+        }        
 
         private void btLiveMenù_Click(object sender, EventArgs e)
         {
