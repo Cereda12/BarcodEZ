@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoConsoleScraping", "DemoConsoleAmazonScraping\DemoConsoleScraping.csproj", "{757F5AB7-3829-4E87-88CD-1B9101F01DDD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestScraping", "TestScraping\TestScraping.csproj", "{3CBB3C17-D507-4497-9840-B1A0AD89236C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{757F5AB7-3829-4E87-88CD-1B9101F01DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757F5AB7-3829-4E87-88CD-1B9101F01DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757F5AB7-3829-4E87-88CD-1B9101F01DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757F5AB7-3829-4E87-88CD-1B9101F01DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CBB3C17-D507-4497-9840-B1A0AD89236C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CBB3C17-D507-4497-9840-B1A0AD89236C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CBB3C17-D507-4497-9840-B1A0AD89236C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CBB3C17-D507-4497-9840-B1A0AD89236C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14C1E64B-E6C6-485F-8EE6-B0DF7E26D7AF}
+	EndGlobalSection
+EndGlobal
