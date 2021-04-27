@@ -32,7 +32,7 @@ namespace TestScraping
 
             //Assert
             result.name.Should().Be("Eastpak Oval Single Astuccio, 22 Cm, Nero (Black)");
-            result.price.Should().Be(decimal.Parse("10,90"));
+            result.price.Should().Be(decimal.Parse("14,90"));
             result.description.Should().Be("Astuccio: Eastpak: Il nostro astuccio compatto ottimo per tenere tutti gli articoli da ufficio in ordine in un solo scomparto.");
         }
         [Fact]
@@ -78,13 +78,13 @@ namespace TestScraping
         }
         [Theory]
         [InlineData("https://www.amazon.it/dp/B086LY2YYZ", 279.00)]
-        [InlineData("https://www.amazon.it/dp/B013R7Y1SE", 14.68)]
-        [InlineData("https://www.amazon.it/dp/B00R3Z4FR4", 7.91)]
+        [InlineData("https://www.amazon.it/dp/B013R7Y1SE", 14.37)]
+        [InlineData("https://www.amazon.it/dp/B00R3Z4FR4", 8.02)]
         [InlineData("https://www.amazon.it/dp/B082YTW968", 24.99)]
         [InlineData("https://www.amazon.it/dp/B005D6OKZM", 5.90)]
         [InlineData("https://www.amazon.it/dp/B08GH2M7WL", 10.14)]
         [InlineData("https://www.amazon.it/dp/B01MDSMHVC", 39.90)]
-        [InlineData("https://www.amazon.it/dp/B076H8YD8W", 84.65)]
+        [InlineData("https://www.amazon.it/dp/B076H8YD8W", 59.25)]
         [InlineData("https://www.amazon.it/dp/B0851GMVQ2", 91.90)]
         [InlineData("https://www.amazon.it/dp/B07GP882W5", 46.99)]
         public void GenericLayoutPriceTest(string url, decimal price, decimal fullprice=-1.00M)
