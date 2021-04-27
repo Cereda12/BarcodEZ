@@ -17,7 +17,9 @@ using System.Runtime.CompilerServices;
 namespace BarcodEZ_Software
 {
     public partial class Form : MaterialForm
-    { 
+    {
+        int oldindex = -1;
+
         public Form()
         {
             InitializeComponent();
@@ -25,7 +27,7 @@ namespace BarcodEZ_Software
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green600, Primary.Green600, Accent.LightBlue200, TextShade.WHITE);
-
+                   
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
@@ -42,18 +44,33 @@ namespace BarcodEZ_Software
             Bitmap bitmap = (Bitmap)eventArgs.Frame.Clone();
             ZXing.BarcodeReader reader = new ZXing.BarcodeReader();
             var result = reader.Decode(bitmap);
-            txLive?.Invoke(new MethodInvoker(delegate ()
+            if (result != null)
             {
-               txLive.Text = result?.ToString();
-            }));
+                txLive.Invoke(new MethodInvoker(delegate ()
+                {
+                    txLive.Text = result?.ToString();
+                }));
+            }            
             pbLive.Image = bitmap;
         }
 
         private void btnStartLive_Click(object sender, EventArgs e)
         {
-            videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
-            videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
-            videoCaptureDevice.Start();
+            int newindex = cmbLive.SelectedIndex;
+
+            if (newindex != oldindex)
+            {
+                videoCaptureDevice?.Stop();
+                videoCaptureDevice = new VideoCaptureDevice(filterInfoCollection[cmbLive.SelectedIndex].MonikerString);
+                videoCaptureDevice.NewFrame += VideoCaptureDevice_NewFrame;
+                videoCaptureDevice.Start();
+
+                oldindex = cmbLive.SelectedIndex;
+            }
+            else
+            {
+                MessageBox.Show("Webcam già in uso");
+            }
         }
 
         private void Form_FormClosing(object sender, FormClosingEventArgs e)
@@ -151,5 +168,6 @@ namespace BarcodEZ_Software
         {
            string Link = ClasseAPI.ReqAsin(txLive.Text);
         }
+
     }
 }
