@@ -87,8 +87,11 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = true;
             panelGallery.Visible = false;
-
+            
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+
+            cmbLive.Items.Clear();
+
             foreach (FilterInfo device in filterInfoCollection)
             {
                 cmbLive.Items.Add(device.Name);
@@ -117,6 +120,10 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
+            videoCaptureDevice?.Stop();
+            txLive.Clear();
+            pbLive.Image = null;
+            oldindex = -1;
         }
 
         private void btreturnGallery_Click(object sender, EventArgs e)
@@ -124,6 +131,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
+            txGallery.Clear();
         }
 
         private void btGallery_Click(object sender, EventArgs e)
