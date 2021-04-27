@@ -93,8 +93,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AmazonProduct.cs" />
+    <Compile Include="AmazonScraping.cs" />
     <Compile Include="ClasseAPI.cs" />
     <Compile Include="ClasseImmagine.cs" />
+    <Compile Include="EbayProduct.cs" />
+    <Compile Include="EbayScraping.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
