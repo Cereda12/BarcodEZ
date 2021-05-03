@@ -13,6 +13,7 @@ using MaterialSkin;
 using MaterialSkin.Controls;
 using System.Timers;
 using System.Runtime.CompilerServices;
+using DemoConsoleScraping;
 
 namespace BarcodEZ_Software
 {
@@ -31,6 +32,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
+            PanelScelta.Visible = false;
         }
 
         FilterInfoCollection filterInfoCollection;
@@ -134,6 +136,14 @@ namespace BarcodEZ_Software
             txGallery.Clear();
         }
 
+        private void btreturnScelta_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = true;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            PanelScelta.Visible = false;
+        }
+
         private void btGallery_Click(object sender, EventArgs e)
         {
             txGallery.Clear();
@@ -174,8 +184,84 @@ namespace BarcodEZ_Software
 
         private void btnCercaLive_Click(object sender, EventArgs e)
         {
-           string Link = ClasseAPI.ReqAsin(txLive.Text);
+            AmazonProduct prodottoAmazon = default(AmazonProduct);
+            EbayProduct prodottoEbay = default(EbayProduct);
+            string HtmlAmazon = string.Empty;
+            string HtmlEbay = string.Empty;
+            panelMenù.Visible = false;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            PanelScelta.Visible = true;
+            string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
+            string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
+            HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+            HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+            prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+            prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+            lbAmazonScelta.Text = prodottoAmazon.price.ToString();
+            lbEbayScelta.Text = prodottoEbay.price.ToString();
+            if (prodottoAmazon.fullprice != -1)
+            {
+                lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
+            }
+            if (prodottoAmazon.fullprice == -1)
+            {
+                lbAmazonScontoScelta.Text = $"Il prodotto non è scontato";
+            }
+            if (prodottoEbay.fullprice != -1)
+            {
+                lbEbayScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoEbay.fullprice.ToString()}";
+            }
+            if (prodottoEbay.fullprice == -1)
+            {
+                lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
+            }
         }
 
+        private void btnCercaGallery_Click(object sender, EventArgs e)
+        {
+            AmazonProduct prodottoAmazon = default(AmazonProduct);
+            EbayProduct prodottoEbay = default(EbayProduct);
+            string HtmlAmazon = string.Empty;
+            string HtmlEbay = string.Empty;
+            panelMenù.Visible = false;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            PanelScelta.Visible = true;
+            string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
+            string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
+            HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+            HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+            prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+            prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+            lbAmazonScelta.Text = prodottoAmazon.price.ToString();
+            lbEbayScelta.Text = prodottoEbay.price.ToString();
+            if (prodottoAmazon.fullprice != -1)
+            {
+                lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
+            }
+            if (prodottoAmazon.fullprice == -1)
+            {
+                lbAmazonScontoScelta.Text = $"Il prodotto non è scontato";
+            }
+            if (prodottoEbay.fullprice != -1)
+            {
+                lbEbayScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoEbay.fullprice.ToString()}";
+            }
+            if (prodottoEbay.fullprice == -1)
+            {
+                lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
+            }
+        }
+
+        private void btAmazonScelta_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("");
+        }
+
+        private void btEbayScelta_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

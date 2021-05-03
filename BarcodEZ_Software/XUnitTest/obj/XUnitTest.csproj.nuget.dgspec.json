@@ -1,25 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {}
+    "C:\\Users\\testa.17135\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {
+    "C:\\Users\\testa.17135\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+        "projectUniqueName": "C:\\Users\\testa.17135\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
         "projectName": "XUnitTest",
-        "projectPath": "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
-        "packagesPath": "C:\\Users\\infol\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\infol\\Desktop\\School\\Informatica\\GitHub\\MILESTONE MS-4.1\\MILESTONE-MS-4.1\\MILESTONE MS-4.1\\PCTO_2021_GruppoC\\BarcodEZ_Software\\XUnitTest\\obj\\",
+        "projectPath": "C:\\Users\\testa.17135\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+        "packagesPath": "C:\\Users\\testa.17135\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\testa.17135\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
-        ],
         "configFilePaths": [
-          "C:\\Users\\infol\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\testa.17135\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net472"
@@ -30,6 +26,7 @@
         },
         "frameworks": {
           "net472": {
+            "targetAlias": "net472",
             "projectReferences": {}
           }
         },
@@ -41,6 +38,7 @@
       },
       "frameworks": {
         "net472": {
+          "targetAlias": "net472",
           "dependencies": {
             "AForge": {
               "target": "Package",
@@ -83,7 +81,7 @@
               "version": "[2.4.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

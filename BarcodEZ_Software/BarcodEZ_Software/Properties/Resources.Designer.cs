@@ -73,6 +73,26 @@ namespace BarcodEZ_Software.Properties {
         /// <summary>
         ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logoamazon {
+            get {
+                object obj = ResourceManager.GetObject("logoamazon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoebay {
+            get {
+                object obj = ResourceManager.GetObject("logoebay", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap mezza_bandiera {
             get {
                 object obj = ResourceManager.GetObject("mezza-bandiera", resourceCulture);
