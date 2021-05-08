@@ -19,6 +19,7 @@ namespace BarcodEZ_Software
 {
     public partial class Form : MaterialForm
     {
+        bool schermata = false;
         int oldindex = -1;
 
         public Form()
@@ -172,6 +173,11 @@ namespace BarcodEZ_Software
 
         private void btnStartGallery_Click(object sender, EventArgs e)
         {
+            if(pictureGallery.Image==null)
+            {
+                MessageBox.Show("Seleziona un'immagine");
+                return;
+            }
             string risultato=ClasseImmagine.Gallery(pictureGallery);
             if(string.Compare(risultato, String.Empty)==0)
             {
@@ -184,6 +190,12 @@ namespace BarcodEZ_Software
 
         private void btnCercaLive_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txLive.Text))
+            {
+                MessageBox.Show("Barcode non rilevato");
+                return;
+            }
+            schermata = true;
             AmazonProduct prodottoAmazon = default(AmazonProduct);
             EbayProduct prodottoEbay = default(EbayProduct);
             string HtmlAmazon = string.Empty;
@@ -220,6 +232,12 @@ namespace BarcodEZ_Software
 
         private void btnCercaGallery_Click(object sender, EventArgs e)
         {
+            if(string.IsNullOrEmpty(txGallery.Text))
+            {
+                MessageBox.Show("Barcode non rilevato");
+                return;
+            }
+            schermata = false;
             AmazonProduct prodottoAmazon = default(AmazonProduct);
             EbayProduct prodottoEbay = default(EbayProduct);
             string HtmlAmazon = string.Empty;
@@ -256,12 +274,46 @@ namespace BarcodEZ_Software
 
         private void btAmazonScelta_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("");
+            string LinkAmazon = string.Empty;
+
+            if (schermata)
+            {
+                LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
+            }
+            if(!schermata)
+            {
+                LinkAmazon = ClasseAPI.ReqAsin(txGallery.Text);
+            }   
+            
+            if(string.IsNullOrEmpty(LinkAmazon))
+            {
+                MessageBox.Show("Link non trovato");
+                return;
+            }
+
+            System.Diagnostics.Process.Start(LinkAmazon);
         }
 
         private void btEbayScelta_Click(object sender, EventArgs e)
         {
+            string LinkEbay = string.Empty;
 
+            if (schermata)
+            {
+                LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
+            }
+            if (!schermata)
+            {
+                LinkEbay = EbayScraping.ExtractFirstHref(txGallery.Text);
+            }
+
+            if (string.IsNullOrEmpty(LinkEbay))
+            {
+                MessageBox.Show("Link non trovato");
+                return;
+            }
+
+            System.Diagnostics.Process.Start(LinkEbay);
         }
     }
 }
