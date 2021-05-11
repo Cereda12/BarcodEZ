@@ -108,6 +108,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="OggettoCronologia.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -166,6 +167,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logoebay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cattura.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cattura1.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cattura2.PNG" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

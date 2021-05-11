@@ -19,6 +19,7 @@ namespace BarcodEZ_Software
 {
     public partial class Form : MaterialForm
     {
+        List<OggettoCronologia> eleCrono = new List<OggettoCronologia>();
         bool schermata = false;
         int oldindex = -1;
 
@@ -29,7 +30,8 @@ namespace BarcodEZ_Software
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
             materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green600, Primary.Green600, Accent.LightBlue200, TextShade.WHITE);
-                   
+            eleCrono = OggettoCronologia.Deserializza();
+            
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
@@ -83,6 +85,7 @@ namespace BarcodEZ_Software
                 if (videoCaptureDevice.IsRunning)
                     videoCaptureDevice.Stop();
             }
+            OggettoCronologia.Serializza(eleCrono);
         }        
 
         private void btLiveMenù_Click(object sender, EventArgs e)
@@ -116,6 +119,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = false;
             panelGallery.Visible = true;
+            panelCronologia.Visible = false;
         }
 
         private void btreturnLive_Click(object sender, EventArgs e)
@@ -123,6 +127,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
+            panelCronologia.Visible = false;
             videoCaptureDevice?.Stop();
             txLive.Clear();
             pbLive.Image = null;
@@ -134,6 +139,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
+            panelCronologia.Visible = false;
             txGallery.Clear();
         }
 
@@ -143,6 +149,16 @@ namespace BarcodEZ_Software
             panelLive.Visible = false;
             panelGallery.Visible = false;
             PanelScelta.Visible = false;
+            panelCronologia.Visible = false;
+        }
+
+        private void btreturnCronologia_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = true;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            PanelScelta.Visible = false;
+            panelCronologia.Visible = false;
         }
 
         private void btGallery_Click(object sender, EventArgs e)
@@ -212,6 +228,7 @@ namespace BarcodEZ_Software
             prodottoEbay = EbayScraping.DataParse(HtmlEbay);
             lbAmazonScelta.Text = prodottoAmazon.price.ToString();
             lbEbayScelta.Text = prodottoEbay.price.ToString();
+            eleCrono.Add(new OggettoCronologia(txLive.Text, DateTime.Now));
             if (prodottoAmazon.fullprice != -1)
             {
                 lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
@@ -254,6 +271,7 @@ namespace BarcodEZ_Software
             prodottoEbay = EbayScraping.DataParse(HtmlEbay);
             lbAmazonScelta.Text = prodottoAmazon.price.ToString();
             lbEbayScelta.Text = prodottoEbay.price.ToString();
+            eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
             if (prodottoAmazon.fullprice != -1)
             {
                 lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
@@ -314,6 +332,17 @@ namespace BarcodEZ_Software
             }
 
             System.Diagnostics.Process.Start(LinkEbay);
+        }
+
+        private void lbCronologia_Click(object sender, EventArgs e)
+        {
+            panelMenù.Visible = false;
+            panelLive.Visible = false;
+            panelGallery.Visible = false;
+            PanelScelta.Visible = false;
+            panelCronologia.Visible = true;
+
+            GridCronologia.DataSource = eleCrono.ToList();
         }
     }
 }
