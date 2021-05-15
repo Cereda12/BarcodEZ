@@ -35,7 +35,8 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            PanelScelta.Visible = false;
+            panelScelta.Visible = false;
+            panelCronologia.Visible = false;
         }
 
         FilterInfoCollection filterInfoCollection;
@@ -148,7 +149,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            PanelScelta.Visible = false;
+            panelScelta.Visible = false;
             panelCronologia.Visible = false;
         }
 
@@ -157,7 +158,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = true;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            PanelScelta.Visible = false;
+            panelScelta.Visible = false;
             panelCronologia.Visible = false;
         }
 
@@ -219,7 +220,7 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            PanelScelta.Visible = true;
+            panelScelta.Visible = true;
             string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
             string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
             HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
@@ -255,39 +256,39 @@ namespace BarcodEZ_Software
                 return;
             }
             schermata = false;
-            AmazonProduct prodottoAmazon = default(AmazonProduct);
-            EbayProduct prodottoEbay = default(EbayProduct);
-            string HtmlAmazon = string.Empty;
-            string HtmlEbay = string.Empty;
-            panelMenù.Visible = false;
-            panelLive.Visible = false;
-            panelGallery.Visible = false;
-            PanelScelta.Visible = true;
-            string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
-            string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
-            HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
-            HtmlEbay = EbayScraping.GetRequest(LinkEbay);
-            prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
-            prodottoEbay = EbayScraping.DataParse(HtmlEbay);
-            lbAmazonScelta.Text = prodottoAmazon.price.ToString();
-            lbEbayScelta.Text = prodottoEbay.price.ToString();
+            //AmazonProduct prodottoAmazon = default(AmazonProduct);
+            //EbayProduct prodottoEbay = default(EbayProduct);
+            //string HtmlAmazon = string.Empty;
+            //string HtmlEbay = string.Empty;
+            //panelMenù.Visible = false;
+            //panelLive.Visible = false;
+            //panelGallery.Visible = false;
+            //PanelScelta.Visible = true;
+            //string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
+            //string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
+            //HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+            //HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+            //prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+            //prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+            //lbAmazonScelta.Text = prodottoAmazon.price.ToString();
+            //lbEbayScelta.Text = prodottoEbay.price.ToString();
             eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
-            if (prodottoAmazon.fullprice != -1)
-            {
-                lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
-            }
-            if (prodottoAmazon.fullprice == -1)
-            {
-                lbAmazonScontoScelta.Text = $"Il prodotto non è scontato";
-            }
-            if (prodottoEbay.fullprice != -1)
-            {
-                lbEbayScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoEbay.fullprice.ToString()}";
-            }
-            if (prodottoEbay.fullprice == -1)
-            {
-                lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
-            }
+            //if (prodottoAmazon.fullprice != -1)
+            //{
+            //    lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
+            //}
+            //if (prodottoAmazon.fullprice == -1)
+            //{
+            //    lbAmazonScontoScelta.Text = $"Il prodotto non è scontato";
+            //}
+            //if (prodottoEbay.fullprice != -1)
+            //{
+            //    lbEbayScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoEbay.fullprice.ToString()}";
+            //}
+            //if (prodottoEbay.fullprice == -1)
+            //{
+            //    lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
+            //}
         }
 
         private void btAmazonScelta_Click(object sender, EventArgs e)
@@ -339,10 +340,45 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            PanelScelta.Visible = false;
+            panelScelta.Visible = false;
             panelCronologia.Visible = true;
 
+            if (eleCrono.Count == 0) 
+            {
+                MessageBox.Show("Nessun elemento presente in cronologia ");
+                panelMenù.Visible = true;
+                panelLive.Visible = false;
+                panelGallery.Visible = false;
+                panelScelta.Visible = false;
+                panelCronologia.Visible = false;
+                return;
+            }
+
             GridCronologia.DataSource = eleCrono.ToList();
+        }
+
+        private void GridCronologia_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            OggettoCronologia item = eleCrono.Where(p => string.Compare(GridCronologia.SelectedRows[0].Cells[0].Value.ToString(), p.Ean) == 0).FirstOrDefault();
+            eleCrono.Remove(item);
+            GridCronologia.DataSource = eleCrono.ToList();
+        }
+
+        private void btCronologia_Click(object sender, EventArgs e)
+        {
+            if (eleCrono.Count == 0)
+            {
+                MessageBox.Show("Nessun elemento presente in cronologia ");
+                panelMenù.Visible = true;
+                panelLive.Visible = false;
+                panelGallery.Visible = false;
+                panelScelta.Visible = false;
+                panelCronologia.Visible = false;
+                return;
+            }
+
+            eleCrono.Clear();
+            GridCronologia.DataSource = eleCrono.ToList();        
         }
     }
 }

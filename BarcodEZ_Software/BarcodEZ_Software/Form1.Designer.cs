@@ -48,11 +48,13 @@ namespace BarcodEZ_Software
             this.btnStartGallery = new MaterialSkin.Controls.MaterialRaisedButton();
             this.txGallery = new System.Windows.Forms.TextBox();
             this.panelMenù = new System.Windows.Forms.Panel();
+            this.lbCronologia = new System.Windows.Forms.Label();
             this.lbTitoloMenù = new System.Windows.Forms.Label();
             this.btLiveMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.btGalleryMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lbMenù = new System.Windows.Forms.Label();
-            this.PanelScelta = new System.Windows.Forms.Panel();
+            this.panelScelta = new System.Windows.Forms.Panel();
+            this.btEbayScelta = new System.Windows.Forms.Button();
             this.btAmazonScelta = new System.Windows.Forms.Button();
             this.lbAmazonScontoScelta = new System.Windows.Forms.Label();
             this.lbEbayScontoScelta = new System.Windows.Forms.Label();
@@ -61,19 +63,19 @@ namespace BarcodEZ_Software
             this.lbPrezzoAmazonScelta = new System.Windows.Forms.Label();
             this.lbEbayScelta = new System.Windows.Forms.Label();
             this.lbAmazonScelta = new System.Windows.Forms.Label();
-            this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
-            this.btEbayScelta = new System.Windows.Forms.Button();
-            this.lbCronologia = new System.Windows.Forms.Label();
             this.panelCronologia = new System.Windows.Forms.Panel();
-            this.btreturnCronologia = new System.Windows.Forms.Button();
+            this.btCronologia = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.GridCronologia = new System.Windows.Forms.DataGridView();
+            this.btreturnCronologia = new System.Windows.Forms.Button();
+            this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).BeginInit();
             this.panelGallery.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureGallery)).BeginInit();
             this.panelMenù.SuspendLayout();
-            this.PanelScelta.SuspendLayout();
+            this.panelScelta.SuspendLayout();
             this.panelCronologia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCronologia)).BeginInit();
             this.SuspendLayout();
@@ -83,7 +85,7 @@ namespace BarcodEZ_Software
             this.flowLayoutPanel1.Controls.Add(this.panelLive);
             this.flowLayoutPanel1.Controls.Add(this.panelGallery);
             this.flowLayoutPanel1.Controls.Add(this.panelMenù);
-            this.flowLayoutPanel1.Controls.Add(this.PanelScelta);
+            this.flowLayoutPanel1.Controls.Add(this.panelScelta);
             this.flowLayoutPanel1.Controls.Add(this.panelCronologia);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 72);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
@@ -167,6 +169,7 @@ namespace BarcodEZ_Software
             // 
             // cmbLive
             // 
+            this.cmbLive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLive.FormattingEnabled = true;
             this.cmbLive.Location = new System.Drawing.Point(107, 23);
             this.cmbLive.Margin = new System.Windows.Forms.Padding(2);
@@ -203,6 +206,7 @@ namespace BarcodEZ_Software
             this.txLive.Location = new System.Drawing.Point(107, 290);
             this.txLive.Margin = new System.Windows.Forms.Padding(2);
             this.txLive.Name = "txLive";
+            this.txLive.ReadOnly = true;
             this.txLive.Size = new System.Drawing.Size(139, 20);
             this.txLive.TabIndex = 1;
             // 
@@ -310,8 +314,21 @@ namespace BarcodEZ_Software
             this.panelMenù.Location = new System.Drawing.Point(733, 2);
             this.panelMenù.Margin = new System.Windows.Forms.Padding(2);
             this.panelMenù.Name = "panelMenù";
-            this.panelMenù.Size = new System.Drawing.Size(364, 329);
+            this.panelMenù.Size = new System.Drawing.Size(364, 336);
             this.panelMenù.TabIndex = 1;
+            // 
+            // lbCronologia
+            // 
+            this.lbCronologia.AutoSize = true;
+            this.lbCronologia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCronologia.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbCronologia.Location = new System.Drawing.Point(113, 263);
+            this.lbCronologia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCronologia.Name = "lbCronologia";
+            this.lbCronologia.Size = new System.Drawing.Size(123, 18);
+            this.lbCronologia.TabIndex = 5;
+            this.lbCronologia.Text = "CRONOLOGIA";
+            this.lbCronologia.Click += new System.EventHandler(this.lbCronologia_Click);
             // 
             // lbTitoloMenù
             // 
@@ -365,22 +382,34 @@ namespace BarcodEZ_Software
             this.lbMenù.TabIndex = 0;
             this.lbMenù.Text = "Premi per iniziare ...";
             // 
-            // PanelScelta
+            // panelScelta
             // 
-            this.PanelScelta.Controls.Add(this.btEbayScelta);
-            this.PanelScelta.Controls.Add(this.btAmazonScelta);
-            this.PanelScelta.Controls.Add(this.lbAmazonScontoScelta);
-            this.PanelScelta.Controls.Add(this.lbEbayScontoScelta);
-            this.PanelScelta.Controls.Add(this.btreturnScelta);
-            this.PanelScelta.Controls.Add(this.lbPrezzoEbayScelta);
-            this.PanelScelta.Controls.Add(this.lbPrezzoAmazonScelta);
-            this.PanelScelta.Controls.Add(this.lbEbayScelta);
-            this.PanelScelta.Controls.Add(this.lbAmazonScelta);
-            this.PanelScelta.Location = new System.Drawing.Point(2, 342);
-            this.PanelScelta.Margin = new System.Windows.Forms.Padding(2);
-            this.PanelScelta.Name = "PanelScelta";
-            this.PanelScelta.Size = new System.Drawing.Size(364, 329);
-            this.PanelScelta.TabIndex = 5;
+            this.panelScelta.Controls.Add(this.btEbayScelta);
+            this.panelScelta.Controls.Add(this.btAmazonScelta);
+            this.panelScelta.Controls.Add(this.lbAmazonScontoScelta);
+            this.panelScelta.Controls.Add(this.lbEbayScontoScelta);
+            this.panelScelta.Controls.Add(this.btreturnScelta);
+            this.panelScelta.Controls.Add(this.lbPrezzoEbayScelta);
+            this.panelScelta.Controls.Add(this.lbPrezzoAmazonScelta);
+            this.panelScelta.Controls.Add(this.lbEbayScelta);
+            this.panelScelta.Controls.Add(this.lbAmazonScelta);
+            this.panelScelta.Location = new System.Drawing.Point(2, 342);
+            this.panelScelta.Margin = new System.Windows.Forms.Padding(2);
+            this.panelScelta.Name = "panelScelta";
+            this.panelScelta.Size = new System.Drawing.Size(371, 329);
+            this.panelScelta.TabIndex = 5;
+            // 
+            // btEbayScelta
+            // 
+            this.btEbayScelta.BackColor = System.Drawing.SystemColors.Control;
+            this.btEbayScelta.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.logoebay;
+            this.btEbayScelta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btEbayScelta.Location = new System.Drawing.Point(228, 208);
+            this.btEbayScelta.Name = "btEbayScelta";
+            this.btEbayScelta.Size = new System.Drawing.Size(103, 60);
+            this.btEbayScelta.TabIndex = 13;
+            this.btEbayScelta.UseVisualStyleBackColor = false;
+            this.btEbayScelta.Click += new System.EventHandler(this.btEbayScelta_Click);
             // 
             // btAmazonScelta
             // 
@@ -487,44 +516,60 @@ namespace BarcodEZ_Software
             this.lbAmazonScelta.TabIndex = 5;
             this.lbAmazonScelta.Text = "Prezzo Amazon";
             // 
-            // OpenGallery
-            // 
-            this.OpenGallery.FileName = "OpenGallery";
-            // 
-            // btEbayScelta
-            // 
-            this.btEbayScelta.BackColor = System.Drawing.SystemColors.Control;
-            this.btEbayScelta.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.logoebay;
-            this.btEbayScelta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btEbayScelta.Location = new System.Drawing.Point(228, 208);
-            this.btEbayScelta.Name = "btEbayScelta";
-            this.btEbayScelta.Size = new System.Drawing.Size(103, 60);
-            this.btEbayScelta.TabIndex = 13;
-            this.btEbayScelta.UseVisualStyleBackColor = false;
-            this.btEbayScelta.Click += new System.EventHandler(this.btEbayScelta_Click);
-            // 
-            // lbCronologia
-            // 
-            this.lbCronologia.AutoSize = true;
-            this.lbCronologia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCronologia.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbCronologia.Location = new System.Drawing.Point(113, 263);
-            this.lbCronologia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbCronologia.Name = "lbCronologia";
-            this.lbCronologia.Size = new System.Drawing.Size(123, 18);
-            this.lbCronologia.TabIndex = 5;
-            this.lbCronologia.Text = "CRONOLOGIA";
-            this.lbCronologia.Click += new System.EventHandler(this.lbCronologia_Click);
-            // 
             // panelCronologia
             // 
+            this.panelCronologia.Controls.Add(this.btCronologia);
+            this.panelCronologia.Controls.Add(this.label1);
             this.panelCronologia.Controls.Add(this.GridCronologia);
             this.panelCronologia.Controls.Add(this.btreturnCronologia);
-            this.panelCronologia.Location = new System.Drawing.Point(370, 342);
+            this.panelCronologia.Location = new System.Drawing.Point(377, 342);
             this.panelCronologia.Margin = new System.Windows.Forms.Padding(2);
             this.panelCronologia.Name = "panelCronologia";
-            this.panelCronologia.Size = new System.Drawing.Size(364, 329);
+            this.panelCronologia.Size = new System.Drawing.Size(352, 329);
             this.panelCronologia.TabIndex = 14;
+            // 
+            // btCronologia
+            // 
+            this.btCronologia.Depth = 0;
+            this.btCronologia.Location = new System.Drawing.Point(95, 296);
+            this.btCronologia.Margin = new System.Windows.Forms.Padding(2);
+            this.btCronologia.MouseState = MaterialSkin.MouseState.HOVER;
+            this.btCronologia.Name = "btCronologia";
+            this.btCronologia.Primary = true;
+            this.btCronologia.Size = new System.Drawing.Size(167, 24);
+            this.btCronologia.TabIndex = 6;
+            this.btCronologia.Text = "SVUOTA CRONOLOGIA";
+            this.btCronologia.UseVisualStyleBackColor = true;
+            this.btCronologia.Click += new System.EventHandler(this.btCronologia_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(59, 9);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(258, 18);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Clicca due volte per eliminare...";
+            // 
+            // GridCronologia
+            // 
+            this.GridCronologia.AllowUserToAddRows = false;
+            this.GridCronologia.AllowUserToDeleteRows = false;
+            this.GridCronologia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.GridCronologia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.GridCronologia.Location = new System.Drawing.Point(16, 32);
+            this.GridCronologia.Name = "GridCronologia";
+            this.GridCronologia.ReadOnly = true;
+            this.GridCronologia.RowHeadersVisible = false;
+            this.GridCronologia.RowHeadersWidth = 230;
+            this.GridCronologia.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.GridCronologia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.GridCronologia.Size = new System.Drawing.Size(333, 259);
+            this.GridCronologia.TabIndex = 10;
+            this.GridCronologia.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.GridCronologia_CellMouseDoubleClick);
             // 
             // btreturnCronologia
             // 
@@ -545,15 +590,9 @@ namespace BarcodEZ_Software
             this.btreturnCronologia.UseVisualStyleBackColor = false;
             this.btreturnCronologia.Click += new System.EventHandler(this.btreturnCronologia_Click);
             // 
-            // GridCronologia
+            // OpenGallery
             // 
-            this.GridCronologia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridCronologia.Location = new System.Drawing.Point(15, 44);
-            this.GridCronologia.Name = "GridCronologia";
-            this.GridCronologia.RowHeadersWidth = 129;
-            this.GridCronologia.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.GridCronologia.Size = new System.Drawing.Size(331, 271);
-            this.GridCronologia.TabIndex = 10;
+            this.OpenGallery.FileName = "OpenGallery";
             // 
             // Form
             // 
@@ -561,7 +600,7 @@ namespace BarcodEZ_Software
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.Immagine;
-            this.ClientSize = new System.Drawing.Size(1165, 786);
+            this.ClientSize = new System.Drawing.Size(377, 410);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
@@ -577,9 +616,10 @@ namespace BarcodEZ_Software
             ((System.ComponentModel.ISupportInitialize)(this.pictureGallery)).EndInit();
             this.panelMenù.ResumeLayout(false);
             this.panelMenù.PerformLayout();
-            this.PanelScelta.ResumeLayout(false);
-            this.PanelScelta.PerformLayout();
+            this.panelScelta.ResumeLayout(false);
+            this.panelScelta.PerformLayout();
             this.panelCronologia.ResumeLayout(false);
+            this.panelCronologia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GridCronologia)).EndInit();
             this.ResumeLayout(false);
 
@@ -609,7 +649,7 @@ namespace BarcodEZ_Software
         private System.Windows.Forms.OpenFileDialog OpenGallery;
         private MaterialSkin.Controls.MaterialRaisedButton btGallery;
         private MaterialSkin.Controls.MaterialRaisedButton btnCercaLive;
-        private System.Windows.Forms.Panel PanelScelta;
+        private System.Windows.Forms.Panel panelScelta;
         private MaterialSkin.Controls.MaterialRaisedButton btnCercaGallery;
         private System.Windows.Forms.Label lbPrezzoEbayScelta;
         private System.Windows.Forms.Label lbPrezzoAmazonScelta;
@@ -624,6 +664,8 @@ namespace BarcodEZ_Software
         private System.Windows.Forms.Panel panelCronologia;
         private System.Windows.Forms.Button btreturnCronologia;
         private System.Windows.Forms.DataGridView GridCronologia;
+        private MaterialSkin.Controls.MaterialRaisedButton btCronologia;
+        private System.Windows.Forms.Label label1;
     }
 }
 

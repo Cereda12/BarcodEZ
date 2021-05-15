@@ -7,39 +7,39 @@ namespace BarcodEZ_Software
 {
     class OggettoCronologia : IDisposable
     {
-        private string _EAN;
-        public string EAN
+        private string _Ean;
+        public string Ean
         {
-            get { return _EAN; }
+            get { return _Ean; }
 
             set
             {
                 if (string.IsNullOrEmpty(value))
                     throw new Exception("Valore non valido");
-                if (value.Length != 8 && value.Length != 13) 
+                if (value.Length != 8 && value.Length != 12 && value.Length != 13) 
                     throw new Exception("Valore non valido");
-                _EAN = value;
+                _Ean = value;
             }
         }
 
-        private DateTime _data;        
-        public DateTime data
+        private DateTime _Data;        
+        public DateTime Data
         {
-            get { return _data; }
+            get { return _Data; }
 
             set
             {
                 if (value > DateTime.Now)
                     throw new Exception("Valore non valido");
-                _data = value;                     
+                _Data = value;                     
             }
         }
         public OggettoCronologia(string ean, DateTime Data)
         {
             if (string.IsNullOrEmpty(ean))
                 throw new Exception("Valore non valido");
-            EAN = ean;
-            data = Data;
+            Ean = ean;
+            this.Data = Data;
         }
 
         bool disposed = false;
