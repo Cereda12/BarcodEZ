@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodEZ_Software", "BarcodEZ_Software\BarcodEZ_Software.csproj", "{88A5F0A1-815F-4D2E-B785-7F059506DD9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnitTest", "XUnitTest\XUnitTest.csproj", "{422831F1-721A-456C-8FB9-FF15453F793C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XUnitTest", "XUnitTest\XUnitTest.csproj", "{422831F1-721A-456C-8FB9-FF15453F793C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestScraping", "..\DemoConsoleAmazonScraping\TestScraping\TestScraping.csproj", "{C5FC7391-BF39-4B1E-B502-07A3F5658204}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{422831F1-721A-456C-8FB9-FF15453F793C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{422831F1-721A-456C-8FB9-FF15453F793C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{422831F1-721A-456C-8FB9-FF15453F793C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5FC7391-BF39-4B1E-B502-07A3F5658204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5FC7391-BF39-4B1E-B502-07A3F5658204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5FC7391-BF39-4B1E-B502-07A3F5658204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5FC7391-BF39-4B1E-B502-07A3F5658204}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
