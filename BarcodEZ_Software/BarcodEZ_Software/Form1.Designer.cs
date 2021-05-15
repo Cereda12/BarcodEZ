@@ -90,7 +90,7 @@ namespace BarcodEZ_Software
             this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 72);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1127, 681);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1100, 669);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panelLive
@@ -600,7 +600,7 @@ namespace BarcodEZ_Software
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.Immagine;
-            this.ClientSize = new System.Drawing.Size(377, 410);
+            this.ClientSize = new System.Drawing.Size(376, 409);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";

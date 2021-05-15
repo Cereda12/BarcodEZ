@@ -289,6 +289,8 @@ namespace BarcodEZ_Software
             //{
             //    lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
             //}
+            txGallery.Clear();
+            pictureGallery.Image = null;
         }
 
         private void btAmazonScelta_Click(object sender, EventArgs e)
