@@ -235,3 +235,6 @@ C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Softwa
 C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.xml
 C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.presentation.xml
 C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
+C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.dll
+C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.xml

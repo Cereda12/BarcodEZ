@@ -558,23 +558,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cereda.17119\\.nuget\\packages\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\utente\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+      "projectUniqueName": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
       "projectName": "XUnitTest",
-      "projectPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
-      "packagesPath": "C:\\Users\\cereda.17119\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\obj\\",
+      "projectPath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\XUnitTest.csproj",
+      "packagesPath": "C:\\Users\\utente\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\utente\\Documents\\GitHub\\BarcodEZ\\BarcodEZ_Software\\XUnitTest\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\cereda.17119\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\utente\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -586,7 +582,6 @@
       },
       "frameworks": {
         "net472": {
-          "targetAlias": "net472",
           "projectReferences": {}
         }
       },
@@ -598,7 +593,6 @@
     },
     "frameworks": {
       "net472": {
-        "targetAlias": "net472",
         "dependencies": {
           "AForge": {
             "target": "Package",
@@ -641,7 +635,7 @@
             "version": "[2.4.3, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -21,7 +21,7 @@ namespace BarcodEZ_Software
         /// Effettua una chiamata all'API richiedendo l'Asin del codice a barre dato come parametro
         /// </summary>
         /// <param name="ean">Numero del codice a barre</param>
-        /// <returns> Codice Asin dell'EAN corrispondente</returns>
+        /// <returns>Link del prodotto</returns>
         public static string ReqAsin(string ean)
         {
             if (ricerche > 5)

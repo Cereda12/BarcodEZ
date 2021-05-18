@@ -212,6 +212,11 @@ namespace BarcodEZ_Software
                 MessageBox.Show("Barcode non rilevato");
                 return;
             }
+            if (txLive.Text.Length != 8 && txLive.Text.Length != 12 && txLive.Text.Length != 13)
+            {
+                MessageBox.Show("Formato della stringa errato");
+                return;
+            }
             schermata = true;
             AmazonProduct prodottoAmazon = default(AmazonProduct);
             EbayProduct prodottoEbay = default(EbayProduct);
@@ -220,32 +225,39 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            panelScelta.Visible = true;
+            panelScelta.Visible = true;            
             string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
             string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
-            HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
-            HtmlEbay = EbayScraping.GetRequest(LinkEbay);
-            prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
-            prodottoEbay = EbayScraping.DataParse(HtmlEbay);
-            lbAmazonScelta.Text = prodottoAmazon.price.ToString();
-            lbEbayScelta.Text = prodottoEbay.price.ToString();
-            eleCrono.Add(new OggettoCronologia(txLive.Text, DateTime.Now));
-            if (prodottoAmazon.fullprice != -1)
+            if (LinkAmazon != null && LinkEbay != null)
             {
-                lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
-            }
-            if (prodottoAmazon.fullprice == -1)
-            {
-                lbAmazonScontoScelta.Text = $"Il prodotto non è scontato";
-            }
-            if (prodottoEbay.fullprice != -1)
-            {
-                lbEbayScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoEbay.fullprice.ToString()}";
-            }
-            if (prodottoEbay.fullprice == -1)
-            {
-                lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
-            }
+                HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+                HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+                prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+                prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+                lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
+                lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
+                eleCrono.Add(new OggettoCronologia(txLive.Text, DateTime.Now));
+                if (prodottoAmazon.fullprice != -1)
+                {
+                    lbPrezzoNoScontoAmazonScelta.Text = prodottoAmazon.fullprice.ToString();
+                    lbPrezzoNoScontoAmazonScelta.Visible = true;
+                }
+                if (prodottoAmazon.fullprice == -1)
+                {
+                    lbPrezzoNoScontoAmazonScelta.Text = "0";
+                    lbPrezzoNoScontoAmazonScelta.Visible = false;
+                }
+                if (prodottoEbay.fullprice != -1)
+                {
+                    lbPrezzoNoScontoEbayScelta.Text = prodottoEbay.fullprice.ToString();
+                    lbPrezzoNoScontoEbayScelta.Visible = true;
+                }
+                if (prodottoEbay.fullprice == -1)
+                {
+                    lbPrezzoNoScontoEbayScelta.Text = "0";
+                    lbPrezzoNoScontoEbayScelta.Visible = false;
+                }
+            }                
         }
 
         private void btnCercaGallery_Click(object sender, EventArgs e)
@@ -253,6 +265,11 @@ namespace BarcodEZ_Software
             if(string.IsNullOrEmpty(txGallery.Text))
             {
                 MessageBox.Show("Barcode non rilevato");
+                return;
+            }
+            if (txGallery.Text.Length != 8 && txGallery.Text.Length != 12 && txGallery.Text.Length != 13)
+            {
+                MessageBox.Show("Formato della stringa errato");
                 return;
             }
             schermata = false;
@@ -263,33 +280,40 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = false;
             panelGallery.Visible = false;
-            PanelScelta.Visible = true;
-            string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
-            string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
-            HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
-            HtmlEbay = EbayScraping.GetRequest(LinkEbay);
-            prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
-            prodottoEbay = EbayScraping.DataParse(HtmlEbay);
-            lbAmazonScelta.Text = prodottoAmazon.price.ToString();
-            lbEbayScelta.Text = prodottoEbay.price.ToString();
-            eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
-            if (prodottoAmazon.fullprice != -1)
+            panelScelta.Visible = true;
+            string LinkAmazon = ClasseAPI.ReqAsin(txGallery.Text);
+            string LinkEbay = EbayScraping.ExtractFirstHref(txGallery.Text);
+            if(LinkAmazon!=null && LinkEbay != null)
             {
-                lbAmazonScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoAmazon.fullprice.ToString()}";
-            }
-            if (prodottoAmazon.fullprice == -1)
-            {
-                lbAmazonScontoScelta.Text = $"Il prodotto non è scontato";
-            }
-            if (prodottoEbay.fullprice != -1)
-            {
-                lbEbayScontoScelta.Text = $"Il prodotto è scontato:\n {prodottoEbay.fullprice.ToString()}";
-            }
-            if (prodottoEbay.fullprice == -1)
-            {
-                lbEbayScontoScelta.Text = $"Il prodotto non è scontato";
-            }
-            txGallery.Clear();
+                HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+                HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+                prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+                prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+                lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
+                lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
+                eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
+                if (prodottoAmazon.fullprice != -1)
+                {
+                    lbPrezzoNoScontoAmazonScelta.Text = prodottoAmazon.fullprice.ToString();
+                    lbPrezzoNoScontoAmazonScelta.Visible = true;
+                }
+                if (prodottoAmazon.fullprice == -1)
+                {
+                    lbPrezzoNoScontoAmazonScelta.Text = "0";
+                    lbPrezzoNoScontoAmazonScelta.Visible = false;
+                }
+                if (prodottoEbay.fullprice != -1)
+                {
+                    lbPrezzoNoScontoEbayScelta.Text = prodottoEbay.fullprice.ToString();
+                    lbPrezzoNoScontoEbayScelta.Visible = true;
+                }
+                if (prodottoEbay.fullprice == -1)
+                {
+                    lbPrezzoNoScontoEbayScelta.Text = "0";
+                    lbPrezzoNoScontoEbayScelta.Visible = false;
+                }
+            }            
+            //txGallery.Clear();
             pictureGallery.Image = null;
         }
 
@@ -312,7 +336,7 @@ namespace BarcodEZ_Software
                 return;
             }
 
-            System.Diagnostics.Process.Start(LinkAmazon);
+            System.Diagnostics.Process.Start(LinkAmazon);            
         }
 
         private void btEbayScelta_Click(object sender, EventArgs e)

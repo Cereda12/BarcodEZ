@@ -98,7 +98,7 @@ namespace DemoConsoleScraping
                 .Where(n => n.Name == "script" || n.Name == "style")
                 .ToList()
                 .ForEach(n => n.Remove());
-            extractedUrl = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='mainContent']//li[1]//a").Attributes["href"].Value;
+            extractedUrl = htmlDocument.DocumentNode?.SelectSingleNode("//div[@id='mainContent']//li[1]//a")?.Attributes["href"].Value;
 
             return extractedUrl;
         }
