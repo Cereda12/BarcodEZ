@@ -54,6 +54,8 @@ namespace BarcodEZ_Software
             this.btGalleryMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lbMenù = new System.Windows.Forms.Label();
             this.panelScelta = new System.Windows.Forms.Panel();
+            this.lbPrezzoNoScontoEbayScelta = new System.Windows.Forms.Label();
+            this.lbPrezzoNoScontoAmazonScelta = new System.Windows.Forms.Label();
             this.btEbayScelta = new System.Windows.Forms.Button();
             this.btAmazonScelta = new System.Windows.Forms.Button();
             this.btreturnScelta = new System.Windows.Forms.Button();
@@ -67,8 +69,6 @@ namespace BarcodEZ_Software
             this.GridCronologia = new System.Windows.Forms.DataGridView();
             this.btreturnCronologia = new System.Windows.Forms.Button();
             this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
-            this.lbPrezzoNoScontoAmazonScelta = new System.Windows.Forms.Label();
-            this.lbPrezzoNoScontoEbayScelta = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).BeginInit();
@@ -399,6 +399,30 @@ namespace BarcodEZ_Software
             this.panelScelta.Size = new System.Drawing.Size(371, 329);
             this.panelScelta.TabIndex = 5;
             // 
+            // lbPrezzoNoScontoEbayScelta
+            // 
+            this.lbPrezzoNoScontoEbayScelta.AutoSize = true;
+            this.lbPrezzoNoScontoEbayScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrezzoNoScontoEbayScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbPrezzoNoScontoEbayScelta.Location = new System.Drawing.Point(261, 116);
+            this.lbPrezzoNoScontoEbayScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrezzoNoScontoEbayScelta.Name = "lbPrezzoNoScontoEbayScelta";
+            this.lbPrezzoNoScontoEbayScelta.Size = new System.Drawing.Size(18, 18);
+            this.lbPrezzoNoScontoEbayScelta.TabIndex = 17;
+            this.lbPrezzoNoScontoEbayScelta.Text = "0";
+            // 
+            // lbPrezzoNoScontoAmazonScelta
+            // 
+            this.lbPrezzoNoScontoAmazonScelta.AutoSize = true;
+            this.lbPrezzoNoScontoAmazonScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbPrezzoNoScontoAmazonScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbPrezzoNoScontoAmazonScelta.Location = new System.Drawing.Point(55, 116);
+            this.lbPrezzoNoScontoAmazonScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrezzoNoScontoAmazonScelta.Name = "lbPrezzoNoScontoAmazonScelta";
+            this.lbPrezzoNoScontoAmazonScelta.Size = new System.Drawing.Size(18, 18);
+            this.lbPrezzoNoScontoAmazonScelta.TabIndex = 16;
+            this.lbPrezzoNoScontoAmazonScelta.Text = "0";
+            // 
             // btEbayScelta
             // 
             this.btEbayScelta.BackColor = System.Drawing.SystemColors.Control;
@@ -570,37 +594,13 @@ namespace BarcodEZ_Software
             // 
             this.OpenGallery.FileName = "OpenGallery";
             // 
-            // lbPrezzoNoScontoAmazonScelta
-            // 
-            this.lbPrezzoNoScontoAmazonScelta.AutoSize = true;
-            this.lbPrezzoNoScontoAmazonScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrezzoNoScontoAmazonScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbPrezzoNoScontoAmazonScelta.Location = new System.Drawing.Point(55, 116);
-            this.lbPrezzoNoScontoAmazonScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPrezzoNoScontoAmazonScelta.Name = "lbPrezzoNoScontoAmazonScelta";
-            this.lbPrezzoNoScontoAmazonScelta.Size = new System.Drawing.Size(18, 18);
-            this.lbPrezzoNoScontoAmazonScelta.TabIndex = 16;
-            this.lbPrezzoNoScontoAmazonScelta.Text = "0";
-            // 
-            // lbPrezzoNoScontoEbayScelta
-            // 
-            this.lbPrezzoNoScontoEbayScelta.AutoSize = true;
-            this.lbPrezzoNoScontoEbayScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPrezzoNoScontoEbayScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbPrezzoNoScontoEbayScelta.Location = new System.Drawing.Point(261, 116);
-            this.lbPrezzoNoScontoEbayScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbPrezzoNoScontoEbayScelta.Name = "lbPrezzoNoScontoEbayScelta";
-            this.lbPrezzoNoScontoEbayScelta.Size = new System.Drawing.Size(18, 18);
-            this.lbPrezzoNoScontoEbayScelta.TabIndex = 17;
-            this.lbPrezzoNoScontoEbayScelta.Text = "0";
-            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.Immagine;
-            this.ClientSize = new System.Drawing.Size(377, 411);
+            this.ClientSize = new System.Drawing.Size(372, 411);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form";
