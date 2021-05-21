@@ -207,113 +207,129 @@ namespace BarcodEZ_Software
 
         private void btnCercaLive_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(txLive.Text))
+            try
             {
-                MessageBox.Show("Barcode non rilevato");
+                if (string.IsNullOrEmpty(txLive.Text))
+                {
+                    MessageBox.Show("Barcode non rilevato");
+                    return;
+                }
+                if (txLive.Text.Length != 8 && txLive.Text.Length != 12 && txLive.Text.Length != 13)
+                {
+                    MessageBox.Show("Formato della stringa errato");
+                    return;
+                }
+                schermata = true;
+                AmazonProduct prodottoAmazon = default(AmazonProduct);
+                EbayProduct prodottoEbay = default(EbayProduct);
+                string HtmlAmazon = string.Empty;
+                string HtmlEbay = string.Empty;
+                panelMenù.Visible = false;
+                panelLive.Visible = false;
+                panelGallery.Visible = false;
+                panelScelta.Visible = true;
+                string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
+                string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
+                if (LinkAmazon != null && LinkEbay != null)
+                {
+                    HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+                    HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+                    prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+                    prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+                    lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
+                    lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
+                    eleCrono.Add(new OggettoCronologia(txLive.Text, DateTime.Now));
+                    if (prodottoAmazon.fullprice != -1)
+                    {
+                        lbPrezzoNoScontoAmazonScelta.Text = prodottoAmazon.fullprice.ToString();
+                        lbPrezzoNoScontoAmazonScelta.Visible = true;
+                    }
+                    if (prodottoAmazon.fullprice == -1)
+                    {
+                        lbPrezzoNoScontoAmazonScelta.Text = "0";
+                        lbPrezzoNoScontoAmazonScelta.Visible = false;
+                    }
+                    if (prodottoEbay.fullprice != -1)
+                    {
+                        lbPrezzoNoScontoEbayScelta.Text = prodottoEbay.fullprice.ToString();
+                        lbPrezzoNoScontoEbayScelta.Visible = true;
+                    }
+                    if (prodottoEbay.fullprice == -1)
+                    {
+                        lbPrezzoNoScontoEbayScelta.Text = "0";
+                        lbPrezzoNoScontoEbayScelta.Visible = false;
+                    }
+                }
+            
+            } 
+            catch
+            {
+                MessageBox.Show("Prodotto non trovato");
                 return;
             }
-            if (txLive.Text.Length != 8 && txLive.Text.Length != 12 && txLive.Text.Length != 13)
-            {
-                MessageBox.Show("Formato della stringa errato");
-                return;
-            }
-            schermata = true;
-            AmazonProduct prodottoAmazon = default(AmazonProduct);
-            EbayProduct prodottoEbay = default(EbayProduct);
-            string HtmlAmazon = string.Empty;
-            string HtmlEbay = string.Empty;
-            panelMenù.Visible = false;
-            panelLive.Visible = false;
-            panelGallery.Visible = false;
-            panelScelta.Visible = true;            
-            string LinkAmazon = ClasseAPI.ReqAsin(txLive.Text);
-            string LinkEbay = EbayScraping.ExtractFirstHref(txLive.Text);
-            if (LinkAmazon != null && LinkEbay != null)
-            {
-                HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
-                HtmlEbay = EbayScraping.GetRequest(LinkEbay);
-                prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
-                prodottoEbay = EbayScraping.DataParse(HtmlEbay);
-                lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
-                lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
-                eleCrono.Add(new OggettoCronologia(txLive.Text, DateTime.Now));
-                if (prodottoAmazon.fullprice != -1)
-                {
-                    lbPrezzoNoScontoAmazonScelta.Text = prodottoAmazon.fullprice.ToString();
-                    lbPrezzoNoScontoAmazonScelta.Visible = true;
-                }
-                if (prodottoAmazon.fullprice == -1)
-                {
-                    lbPrezzoNoScontoAmazonScelta.Text = "0";
-                    lbPrezzoNoScontoAmazonScelta.Visible = false;
-                }
-                if (prodottoEbay.fullprice != -1)
-                {
-                    lbPrezzoNoScontoEbayScelta.Text = prodottoEbay.fullprice.ToString();
-                    lbPrezzoNoScontoEbayScelta.Visible = true;
-                }
-                if (prodottoEbay.fullprice == -1)
-                {
-                    lbPrezzoNoScontoEbayScelta.Text = "0";
-                    lbPrezzoNoScontoEbayScelta.Visible = false;
-                }
-            }                
         }
 
         private void btnCercaGallery_Click(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txGallery.Text))
+            try
             {
-                MessageBox.Show("Barcode non rilevato");
+                if (string.IsNullOrEmpty(txGallery.Text))
+                {
+                    MessageBox.Show("Barcode non rilevato");
+                    return;
+                }
+                if (txGallery.Text.Length != 8 && txGallery.Text.Length != 12 && txGallery.Text.Length != 13)
+                {
+                    MessageBox.Show("Formato della stringa errato");
+                    return;
+                }
+                schermata = false;
+                AmazonProduct prodottoAmazon = default(AmazonProduct);
+                EbayProduct prodottoEbay = default(EbayProduct);
+                string HtmlAmazon = string.Empty;
+                string HtmlEbay = string.Empty;
+                panelMenù.Visible = false;
+                panelLive.Visible = false;
+                panelGallery.Visible = false;
+                panelScelta.Visible = true;
+                string LinkAmazon = ClasseAPI.ReqAsin(txGallery.Text);
+                string LinkEbay = EbayScraping.ExtractFirstHref(txGallery.Text);
+                if (LinkAmazon != null && LinkEbay != null)
+                {
+                    HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
+                    HtmlEbay = EbayScraping.GetRequest(LinkEbay);
+                    prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
+                    prodottoEbay = EbayScraping.DataParse(HtmlEbay);
+                    lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
+                    lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
+                    eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
+                    if (prodottoAmazon.fullprice != -1)
+                    {
+                        lbPrezzoNoScontoAmazonScelta.Text = prodottoAmazon.fullprice.ToString();
+                        lbPrezzoNoScontoAmazonScelta.Visible = true;
+                    }
+                    if (prodottoAmazon.fullprice == -1)
+                    {
+                        lbPrezzoNoScontoAmazonScelta.Text = "0";
+                        lbPrezzoNoScontoAmazonScelta.Visible = false;
+                    }
+                    if (prodottoEbay.fullprice != -1)
+                    {
+                        lbPrezzoNoScontoEbayScelta.Text = prodottoEbay.fullprice.ToString();
+                        lbPrezzoNoScontoEbayScelta.Visible = true;
+                    }
+                    if (prodottoEbay.fullprice == -1)
+                    {
+                        lbPrezzoNoScontoEbayScelta.Text = "0";
+                        lbPrezzoNoScontoEbayScelta.Visible = false;
+                    }
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Prodotto non trovato");
                 return;
             }
-            if (txGallery.Text.Length != 8 && txGallery.Text.Length != 12 && txGallery.Text.Length != 13)
-            {
-                MessageBox.Show("Formato della stringa errato");
-                return;
-            }
-            schermata = false;
-            AmazonProduct prodottoAmazon = default(AmazonProduct);
-            EbayProduct prodottoEbay = default(EbayProduct);
-            string HtmlAmazon = string.Empty;
-            string HtmlEbay = string.Empty;
-            panelMenù.Visible = false;
-            panelLive.Visible = false;
-            panelGallery.Visible = false;
-            panelScelta.Visible = true;
-            string LinkAmazon = ClasseAPI.ReqAsin(txGallery.Text);
-            string LinkEbay = EbayScraping.ExtractFirstHref(txGallery.Text);
-            if(LinkAmazon!=null && LinkEbay != null)
-            {
-                HtmlAmazon = AmazonScraping.GetRequest(LinkAmazon);
-                HtmlEbay = EbayScraping.GetRequest(LinkEbay);
-                prodottoAmazon = AmazonScraping.DataParse(HtmlAmazon);
-                prodottoEbay = EbayScraping.DataParse(HtmlEbay);
-                lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
-                lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
-                eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
-                if (prodottoAmazon.fullprice != -1)
-                {
-                    lbPrezzoNoScontoAmazonScelta.Text = prodottoAmazon.fullprice.ToString();
-                    lbPrezzoNoScontoAmazonScelta.Visible = true;
-                }
-                if (prodottoAmazon.fullprice == -1)
-                {
-                    lbPrezzoNoScontoAmazonScelta.Text = "0";
-                    lbPrezzoNoScontoAmazonScelta.Visible = false;
-                }
-                if (prodottoEbay.fullprice != -1)
-                {
-                    lbPrezzoNoScontoEbayScelta.Text = prodottoEbay.fullprice.ToString();
-                    lbPrezzoNoScontoEbayScelta.Visible = true;
-                }
-                if (prodottoEbay.fullprice == -1)
-                {
-                    lbPrezzoNoScontoEbayScelta.Text = "0";
-                    lbPrezzoNoScontoEbayScelta.Visible = false;
-                }
-            }            
-            //txGallery.Clear();
             pictureGallery.Image = null;
         }
 

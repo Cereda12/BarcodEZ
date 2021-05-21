@@ -51,14 +51,18 @@ namespace DemoConsoleScraping
                 .ToList()
                 .ForEach(n => n.Remove());
 
-            Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='vi-lkhdr-itmTitl']").InnerText.Trim();
-            Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='prcIsum']").InnerText.Trim();
+            Name = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='vi-lkhdr-itmTitl']")?.InnerText.Trim();
+            Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='prcIsum']")?.InnerText.Trim();
+            if (Price == null) 
+            {
+                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='prcIsum_bidPrice']")?.InnerText.Trim();
+            }
             FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='orgPrc']")?.InnerText.Trim();
 
             price = Price.Split((char)32);
             if (string.Compare(price[0], "EUR") != 0)
             {
-                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='convbidPrice']").InnerText.Trim();
+                Price = htmlDocument.DocumentNode.SelectSingleNode("//span[@id='convbidPrice']")?.InnerText.Trim();
                 price = Price.Split((char)32);
                 string price2 = price[1].Substring(0, price[1].IndexOf(',') + 3);
                 price[1] = price2;
@@ -98,7 +102,7 @@ namespace DemoConsoleScraping
                 .Where(n => n.Name == "script" || n.Name == "style")
                 .ToList()
                 .ForEach(n => n.Remove());
-            extractedUrl = htmlDocument.DocumentNode?.SelectSingleNode("//div[@id='mainContent']//li[1]//a")?.Attributes["href"].Value;
+            extractedUrl = htmlDocument.DocumentNode?.SelectSingleNode("//div[@id='mainContent']//ul//li[1]//a")?.Attributes["href"].Value;
 
             return extractedUrl;
         }

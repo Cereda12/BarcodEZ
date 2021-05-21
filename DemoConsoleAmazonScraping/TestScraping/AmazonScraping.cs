@@ -90,6 +90,10 @@ namespace DemoConsoleScraping
                     FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='priceBlockStrikePriceString a-text-strike']")?.InnerText.Trim();
                 }
             }
+            if (FullPrice == string.Empty)
+            {
+                FullPrice = htmlDocument.DocumentNode.SelectSingleNode("//span[@class='priceBlockStrikePriceString a-text-strike']")?.InnerText.Trim();
+            }
 
             Description = htmlDocument.DocumentNode.SelectSingleNode("//div[@id='productDescription']//p")?.InnerText.Trim();
             if (Description == null)
@@ -99,7 +103,7 @@ namespace DemoConsoleScraping
 
             price = Price.Split((char)160);
             FinalPrice = decimal.Parse(price[0]);
-            if (!(string.Compare(FullPrice, "") == 0))
+            if (string.Compare(FullPrice, "") != 0 && FullPrice != null)
             {
                 fullprice = FullPrice.Split((char)160);
                 FinalFullPrice = decimal.Parse(fullprice[0]);
