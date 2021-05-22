@@ -238,3 +238,6 @@ C:\Users\testa.17135\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Softwa
 C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.dll
 C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.xml
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.dll
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.xml
