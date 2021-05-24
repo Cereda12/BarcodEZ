@@ -94,6 +94,8 @@ namespace BarcodEZ_Software
             panelMenù.Visible = false;
             panelLive.Visible = true;
             panelGallery.Visible = false;
+
+            txLive.Clear();
             
             filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
@@ -117,6 +119,7 @@ namespace BarcodEZ_Software
 
         private void btGalleryMenù_Click(object sender, EventArgs e)
         {
+            txGallery.Clear();
             panelMenù.Visible = false;
             panelLive.Visible = false;
             panelGallery.Visible = true;
@@ -238,6 +241,8 @@ namespace BarcodEZ_Software
                     prodottoEbay = EbayScraping.DataParse(HtmlEbay);
                     lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
                     lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
+                    lbTitoloAmazon.Text = prodottoAmazon.name;
+                    lbTitoloEbay.Text = prodottoEbay.name;
                     eleCrono.Add(new OggettoCronologia(txLive.Text, DateTime.Now));
                     if (prodottoAmazon.fullprice != -1)
                     {
@@ -302,6 +307,8 @@ namespace BarcodEZ_Software
                     prodottoEbay = EbayScraping.DataParse(HtmlEbay);
                     lbPrezzoAmazonScelta.Text = prodottoAmazon.price.ToString();
                     lbPrezzoEbayScelta.Text = prodottoEbay.price.ToString();
+                    lbTitoloAmazon.Text = prodottoAmazon.name;
+                    lbTitoloEbay.Text = prodottoEbay.name;
                     eleCrono.Add(new OggettoCronologia(txGallery.Text, DateTime.Now));
                     if (prodottoAmazon.fullprice != -1)
                     {
