@@ -5,7 +5,6 @@ using System.Text.RegularExpressions;
 
 namespace TestScraping
 {
-    //Test Coverage al 20/03: 45,8%
     public class Test_ClasseEbayScraping
     {
         [Fact]
@@ -50,9 +49,9 @@ namespace TestScraping
             valid.Should().Be(true);
         }
         [Theory]
-        [InlineData("https://www.ebay.it/itm/Faber-Castell-Grip-2001-Pencil/153597490820?hash=item23c31fb684:g:XVQAAOSwQkNgaBiq", 2.29)]
+        [InlineData("https://www.ebay.it/itm/Faber-Castell-Grip-2001-Pencil/153597490820?hash=item23c31fb684:g:XVQAAOSwQkNgaBiq", 2.31)]
         [InlineData("https://www.ebay.it/itm/Adidas-ADILETTE-AQUA-UOMO-DONNA-BAMBINO-art-EG4159/153968057938?var=454049278996", 19.98, 25.00)]
-        [InlineData("https://www.ebay.it/itm/CONSOLE-NINTENDO-SWITCH-GREY-JOYCON-BLUE-RED-BLU-ROSSO-GARANZIA-ITALIA/164478878906?hash=item264bb484ba:g:FmUAAOSwePdfnDGU", 329.90)]
+        [InlineData("https://www.ebay.it/itm/CONSOLE-NINTENDO-SWITCH-GREY-JOYCON-BLUE-RED-BLU-ROSSO-GARANZIA-ITALIA/164478878906?hash=item264bb484ba:g:FmUAAOSwePdfnDGU", 309.90)]
         [InlineData("https://www.ebay.it/itm/127x95-cm-Portapacchi-Universale-in-Alluminio-Auto-Portapacchi-Cesto-Cargo-NERO/252989224108?hash=item3ae75534ac:g:2e4AAOSwXeJe7G6H", 99.99)]
         [InlineData("https://www.ebay.it/itm/Einhell-Rasaerba-Pxc-18V-Ge-Cm-18-30-Li-Batteria-Inclusa/193915408552?_trkparms=5373%3A0%7C5374%3AFeatured", 159.99)]
         [InlineData("https://www.ebay.it/itm/YM-TAP-70-TAPIS-ROULANT-ELETTRICO-PIEGHEVOLE-500W-2-0-HP-PICCO-7-KM-H-COMPATTO/162429461012?_trkparms=5373%3A0%7C5374%3AFeatured", 279.99, 400.00)]
