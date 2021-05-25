@@ -359,7 +359,10 @@ namespace BarcodEZ_Software
                 return;
             }
 
-            System.Diagnostics.Process.Start(LinkAmazon);            
+            System.Diagnostics.Process.Start(LinkAmazon);
+            videoCaptureDevice?.Stop();
+            pbLive.Image = null;
+            oldindex = -1;
         }
 
         private void btEbayScelta_Click(object sender, EventArgs e)
@@ -382,6 +385,9 @@ namespace BarcodEZ_Software
             }
 
             System.Diagnostics.Process.Start(LinkEbay);
+            videoCaptureDevice?.Stop();
+            pbLive.Image = null;
+            oldindex = -1;
         }
 
         private void lbCronologia_Click(object sender, EventArgs e)

@@ -241,3 +241,44 @@ C:\Users\utente\Documents\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bi
 C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.dll
 C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.pdb
 C:\Users\infol\Desktop\School\Informatica\GitHub\MILESTONE MS-4.1\MILESTONE-MS-4.1\MILESTONE MS-4.1\PCTO_2021_GruppoC\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe.config
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\BarcodEZ_Software.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.DirectShow.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\FluentAssertions.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\MaterialSkin.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\Newtonsoft.Json.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\RestSharp.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.abstractions.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.assert.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.core.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.execution.desktop.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.presentation.dll
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\AForge.Video.DirectShow.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\FluentAssertions.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\FluentAssertions.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\HtmlAgilityPack.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\Newtonsoft.Json.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\RestSharp.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.abstractions.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.assert.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.core.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\xunit.execution.desktop.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\bin\Debug\zxing.presentation.xml
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csprojAssemblyReference.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Form.resources
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.Properties.Resources.resources
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.GenerateResource.cache
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.csproj.CopyComplete
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.exe
+C:\Users\infot\OneDrive\Desktop\GitHub\BarcodEZ\BarcodEZ_Software\BarcodEZ_Software\obj\Debug\BarcodEZ_Software.pdb

@@ -54,6 +54,8 @@ namespace BarcodEZ_Software
             this.btGalleryMenù = new MaterialSkin.Controls.MaterialRaisedButton();
             this.lbMenù = new System.Windows.Forms.Label();
             this.panelScelta = new System.Windows.Forms.Panel();
+            this.lbTitoloEbay = new System.Windows.Forms.Label();
+            this.lbTitoloAmazon = new System.Windows.Forms.Label();
             this.lbPrezzoNoScontoEbayScelta = new System.Windows.Forms.Label();
             this.lbPrezzoNoScontoAmazonScelta = new System.Windows.Forms.Label();
             this.btEbayScelta = new System.Windows.Forms.Button();
@@ -69,8 +71,6 @@ namespace BarcodEZ_Software
             this.GridCronologia = new System.Windows.Forms.DataGridView();
             this.btreturnCronologia = new System.Windows.Forms.Button();
             this.OpenGallery = new System.Windows.Forms.OpenFileDialog();
-            this.lbTitoloAmazon = new System.Windows.Forms.Label();
-            this.lbTitoloEbay = new System.Windows.Forms.Label();
             this.flowLayoutPanel1.SuspendLayout();
             this.panelLive.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbLive)).BeginInit();
@@ -89,10 +89,9 @@ namespace BarcodEZ_Software
             this.flowLayoutPanel1.Controls.Add(this.panelMenù);
             this.flowLayoutPanel1.Controls.Add(this.panelScelta);
             this.flowLayoutPanel1.Controls.Add(this.panelCronologia);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(2, 72);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(3, 111);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(1100, 669);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1650, 1029);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
             // panelLive
@@ -105,22 +104,20 @@ namespace BarcodEZ_Software
             this.panelLive.Controls.Add(this.lbCameraLive);
             this.panelLive.Controls.Add(this.lbBarcodeLive);
             this.panelLive.Controls.Add(this.txLive);
-            this.panelLive.Location = new System.Drawing.Point(2, 2);
-            this.panelLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelLive.Location = new System.Drawing.Point(3, 3);
             this.panelLive.Name = "panelLive";
-            this.panelLive.Size = new System.Drawing.Size(371, 336);
+            this.panelLive.Size = new System.Drawing.Size(556, 517);
             this.panelLive.TabIndex = 2;
             // 
             // btnCercaLive
             // 
             this.btnCercaLive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCercaLive.Depth = 0;
-            this.btnCercaLive.Location = new System.Drawing.Point(264, 289);
-            this.btnCercaLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCercaLive.Location = new System.Drawing.Point(396, 445);
             this.btnCercaLive.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCercaLive.Name = "btnCercaLive";
             this.btnCercaLive.Primary = true;
-            this.btnCercaLive.Size = new System.Drawing.Size(72, 21);
+            this.btnCercaLive.Size = new System.Drawing.Size(108, 32);
             this.btnCercaLive.TabIndex = 8;
             this.btnCercaLive.Text = "RICERCA";
             this.btnCercaLive.UseVisualStyleBackColor = true;
@@ -137,10 +134,9 @@ namespace BarcodEZ_Software
             this.btreturnLive.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btreturnLive.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btreturnLive.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btreturnLive.Location = new System.Drawing.Point(-2, -2);
-            this.btreturnLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btreturnLive.Location = new System.Drawing.Point(-3, -3);
             this.btreturnLive.Name = "btreturnLive";
-            this.btreturnLive.Size = new System.Drawing.Size(37, 25);
+            this.btreturnLive.Size = new System.Drawing.Size(56, 38);
             this.btreturnLive.TabIndex = 7;
             this.btreturnLive.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btreturnLive.UseVisualStyleBackColor = false;
@@ -149,10 +145,9 @@ namespace BarcodEZ_Software
             // pbLive
             // 
             this.pbLive.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pbLive.Location = new System.Drawing.Point(36, 55);
-            this.pbLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pbLive.Location = new System.Drawing.Point(54, 85);
             this.pbLive.Name = "pbLive";
-            this.pbLive.Size = new System.Drawing.Size(300, 220);
+            this.pbLive.Size = new System.Drawing.Size(450, 338);
             this.pbLive.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbLive.TabIndex = 6;
             this.pbLive.TabStop = false;
@@ -161,12 +156,11 @@ namespace BarcodEZ_Software
             // 
             this.btnStartLive.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartLive.Depth = 0;
-            this.btnStartLive.Location = new System.Drawing.Point(264, 23);
-            this.btnStartLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStartLive.Location = new System.Drawing.Point(396, 35);
             this.btnStartLive.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartLive.Name = "btnStartLive";
             this.btnStartLive.Primary = true;
-            this.btnStartLive.Size = new System.Drawing.Size(72, 21);
+            this.btnStartLive.Size = new System.Drawing.Size(108, 32);
             this.btnStartLive.TabIndex = 5;
             this.btnStartLive.Text = "AVVIA";
             this.btnStartLive.UseVisualStyleBackColor = true;
@@ -176,10 +170,9 @@ namespace BarcodEZ_Software
             // 
             this.cmbLive.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLive.FormattingEnabled = true;
-            this.cmbLive.Location = new System.Drawing.Point(107, 23);
-            this.cmbLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cmbLive.Location = new System.Drawing.Point(160, 35);
             this.cmbLive.Name = "cmbLive";
-            this.cmbLive.Size = new System.Drawing.Size(139, 21);
+            this.cmbLive.Size = new System.Drawing.Size(206, 28);
             this.cmbLive.TabIndex = 4;
             // 
             // lbCameraLive
@@ -187,10 +180,9 @@ namespace BarcodEZ_Software
             this.lbCameraLive.AutoSize = true;
             this.lbCameraLive.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCameraLive.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbCameraLive.Location = new System.Drawing.Point(34, 28);
-            this.lbCameraLive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCameraLive.Location = new System.Drawing.Point(51, 43);
             this.lbCameraLive.Name = "lbCameraLive";
-            this.lbCameraLive.Size = new System.Drawing.Size(52, 12);
+            this.lbCameraLive.Size = new System.Drawing.Size(76, 18);
             this.lbCameraLive.TabIndex = 3;
             this.lbCameraLive.Text = "Camera:";
             // 
@@ -199,20 +191,18 @@ namespace BarcodEZ_Software
             this.lbBarcodeLive.AutoSize = true;
             this.lbBarcodeLive.Font = new System.Drawing.Font("Arial Rounded MT Bold", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbBarcodeLive.ForeColor = System.Drawing.SystemColors.Control;
-            this.lbBarcodeLive.Location = new System.Drawing.Point(39, 293);
-            this.lbBarcodeLive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbBarcodeLive.Location = new System.Drawing.Point(58, 451);
             this.lbBarcodeLive.Name = "lbBarcodeLive";
-            this.lbBarcodeLive.Size = new System.Drawing.Size(56, 12);
+            this.lbBarcodeLive.Size = new System.Drawing.Size(82, 18);
             this.lbBarcodeLive.TabIndex = 2;
             this.lbBarcodeLive.Text = "Barcode:";
             // 
             // txLive
             // 
-            this.txLive.Location = new System.Drawing.Point(107, 290);
-            this.txLive.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txLive.Location = new System.Drawing.Point(160, 446);
             this.txLive.Name = "txLive";
             this.txLive.ReadOnly = true;
-            this.txLive.Size = new System.Drawing.Size(139, 20);
+            this.txLive.Size = new System.Drawing.Size(206, 26);
             this.txLive.TabIndex = 1;
             // 
             // panelGallery
@@ -223,22 +213,20 @@ namespace BarcodEZ_Software
             this.panelGallery.Controls.Add(this.pictureGallery);
             this.panelGallery.Controls.Add(this.btnStartGallery);
             this.panelGallery.Controls.Add(this.txGallery);
-            this.panelGallery.Location = new System.Drawing.Point(377, 2);
-            this.panelGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelGallery.Location = new System.Drawing.Point(565, 3);
             this.panelGallery.Name = "panelGallery";
-            this.panelGallery.Size = new System.Drawing.Size(352, 336);
+            this.panelGallery.Size = new System.Drawing.Size(528, 517);
             this.panelGallery.TabIndex = 3;
             // 
             // btnCercaGallery
             // 
             this.btnCercaGallery.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCercaGallery.Depth = 0;
-            this.btnCercaGallery.Location = new System.Drawing.Point(259, 289);
-            this.btnCercaGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCercaGallery.Location = new System.Drawing.Point(388, 445);
             this.btnCercaGallery.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnCercaGallery.Name = "btnCercaGallery";
             this.btnCercaGallery.Primary = true;
-            this.btnCercaGallery.Size = new System.Drawing.Size(69, 20);
+            this.btnCercaGallery.Size = new System.Drawing.Size(104, 31);
             this.btnCercaGallery.TabIndex = 10;
             this.btnCercaGallery.Text = "RICERCA";
             this.btnCercaGallery.UseVisualStyleBackColor = true;
@@ -248,12 +236,11 @@ namespace BarcodEZ_Software
             // 
             this.btGallery.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btGallery.Depth = 0;
-            this.btGallery.Location = new System.Drawing.Point(94, 23);
-            this.btGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btGallery.Location = new System.Drawing.Point(141, 35);
             this.btGallery.MouseState = MaterialSkin.MouseState.HOVER;
             this.btGallery.Name = "btGallery";
             this.btGallery.Primary = true;
-            this.btGallery.Size = new System.Drawing.Size(168, 21);
+            this.btGallery.Size = new System.Drawing.Size(252, 32);
             this.btGallery.TabIndex = 9;
             this.btGallery.Text = "SELEZIONE IMMAGINE";
             this.btGallery.UseVisualStyleBackColor = true;
@@ -270,10 +257,9 @@ namespace BarcodEZ_Software
             this.btreturnGallery.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btreturnGallery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btreturnGallery.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btreturnGallery.Location = new System.Drawing.Point(2, 2);
-            this.btreturnGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btreturnGallery.Location = new System.Drawing.Point(3, 3);
             this.btreturnGallery.Name = "btreturnGallery";
-            this.btreturnGallery.Size = new System.Drawing.Size(37, 25);
+            this.btreturnGallery.Size = new System.Drawing.Size(56, 38);
             this.btreturnGallery.TabIndex = 8;
             this.btreturnGallery.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btreturnGallery.UseVisualStyleBackColor = false;
@@ -282,10 +268,9 @@ namespace BarcodEZ_Software
             // pictureGallery
             // 
             this.pictureGallery.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.pictureGallery.Location = new System.Drawing.Point(28, 55);
-            this.pictureGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureGallery.Location = new System.Drawing.Point(42, 85);
             this.pictureGallery.Name = "pictureGallery";
-            this.pictureGallery.Size = new System.Drawing.Size(300, 220);
+            this.pictureGallery.Size = new System.Drawing.Size(450, 338);
             this.pictureGallery.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureGallery.TabIndex = 6;
             this.pictureGallery.TabStop = false;
@@ -294,12 +279,11 @@ namespace BarcodEZ_Software
             // 
             this.btnStartGallery.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStartGallery.Depth = 0;
-            this.btnStartGallery.Location = new System.Drawing.Point(28, 289);
-            this.btnStartGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnStartGallery.Location = new System.Drawing.Point(42, 445);
             this.btnStartGallery.MouseState = MaterialSkin.MouseState.HOVER;
             this.btnStartGallery.Name = "btnStartGallery";
             this.btnStartGallery.Primary = true;
-            this.btnStartGallery.Size = new System.Drawing.Size(69, 20);
+            this.btnStartGallery.Size = new System.Drawing.Size(104, 31);
             this.btnStartGallery.TabIndex = 5;
             this.btnStartGallery.Text = "RILEVA";
             this.btnStartGallery.UseVisualStyleBackColor = true;
@@ -307,10 +291,9 @@ namespace BarcodEZ_Software
             // 
             // txGallery
             // 
-            this.txGallery.Location = new System.Drawing.Point(113, 289);
-            this.txGallery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txGallery.Location = new System.Drawing.Point(170, 445);
             this.txGallery.Name = "txGallery";
-            this.txGallery.Size = new System.Drawing.Size(132, 20);
+            this.txGallery.Size = new System.Drawing.Size(196, 26);
             this.txGallery.TabIndex = 1;
             // 
             // panelMenù
@@ -320,10 +303,9 @@ namespace BarcodEZ_Software
             this.panelMenù.Controls.Add(this.btLiveMenù);
             this.panelMenù.Controls.Add(this.btGalleryMenù);
             this.panelMenù.Controls.Add(this.lbMenù);
-            this.panelMenù.Location = new System.Drawing.Point(733, 2);
-            this.panelMenù.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelMenù.Location = new System.Drawing.Point(1099, 3);
             this.panelMenù.Name = "panelMenù";
-            this.panelMenù.Size = new System.Drawing.Size(364, 336);
+            this.panelMenù.Size = new System.Drawing.Size(546, 517);
             this.panelMenù.TabIndex = 1;
             // 
             // lbCronologia
@@ -332,10 +314,9 @@ namespace BarcodEZ_Software
             this.lbCronologia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbCronologia.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbCronologia.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbCronologia.Location = new System.Drawing.Point(113, 263);
-            this.lbCronologia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbCronologia.Location = new System.Drawing.Point(170, 405);
             this.lbCronologia.Name = "lbCronologia";
-            this.lbCronologia.Size = new System.Drawing.Size(123, 18);
+            this.lbCronologia.Size = new System.Drawing.Size(180, 28);
             this.lbCronologia.TabIndex = 5;
             this.lbCronologia.Text = "CRONOLOGIA";
             this.lbCronologia.Click += new System.EventHandler(this.lbCronologia_Click);
@@ -345,10 +326,9 @@ namespace BarcodEZ_Software
             this.lbTitoloMenù.AutoSize = true;
             this.lbTitoloMenù.Font = new System.Drawing.Font("Arial Rounded MT Bold", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbTitoloMenù.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbTitoloMenù.Location = new System.Drawing.Point(31, 44);
-            this.lbTitoloMenù.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbTitoloMenù.Location = new System.Drawing.Point(46, 68);
             this.lbTitoloMenù.Name = "lbTitoloMenù";
-            this.lbTitoloMenù.Size = new System.Drawing.Size(323, 32);
+            this.lbTitoloMenù.Size = new System.Drawing.Size(481, 46);
             this.lbTitoloMenù.TabIndex = 4;
             this.lbTitoloMenù.Text = "Benvenuto in BarcodEZ";
             // 
@@ -356,12 +336,11 @@ namespace BarcodEZ_Software
             // 
             this.btLiveMenù.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btLiveMenù.Depth = 0;
-            this.btLiveMenù.Location = new System.Drawing.Point(41, 188);
-            this.btLiveMenù.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btLiveMenù.Location = new System.Drawing.Point(62, 289);
             this.btLiveMenù.MouseState = MaterialSkin.MouseState.HOVER;
             this.btLiveMenù.Name = "btLiveMenù";
             this.btLiveMenù.Primary = true;
-            this.btLiveMenù.Size = new System.Drawing.Size(106, 39);
+            this.btLiveMenù.Size = new System.Drawing.Size(159, 60);
             this.btLiveMenù.TabIndex = 3;
             this.btLiveMenù.Text = "LIVE";
             this.btLiveMenù.UseVisualStyleBackColor = true;
@@ -371,12 +350,11 @@ namespace BarcodEZ_Software
             // 
             this.btGalleryMenù.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btGalleryMenù.Depth = 0;
-            this.btGalleryMenù.Location = new System.Drawing.Point(217, 188);
-            this.btGalleryMenù.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btGalleryMenù.Location = new System.Drawing.Point(326, 289);
             this.btGalleryMenù.MouseState = MaterialSkin.MouseState.HOVER;
             this.btGalleryMenù.Name = "btGalleryMenù";
             this.btGalleryMenù.Primary = true;
-            this.btGalleryMenù.Size = new System.Drawing.Size(106, 39);
+            this.btGalleryMenù.Size = new System.Drawing.Size(159, 60);
             this.btGalleryMenù.TabIndex = 2;
             this.btGalleryMenù.Text = "GALLERIA";
             this.btGalleryMenù.UseVisualStyleBackColor = true;
@@ -387,10 +365,9 @@ namespace BarcodEZ_Software
             this.lbMenù.AutoSize = true;
             this.lbMenù.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbMenù.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbMenù.Location = new System.Drawing.Point(104, 109);
-            this.lbMenù.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbMenù.Location = new System.Drawing.Point(156, 168);
             this.lbMenù.Name = "lbMenù";
-            this.lbMenù.Size = new System.Drawing.Size(165, 18);
+            this.lbMenù.Size = new System.Drawing.Size(250, 28);
             this.lbMenù.TabIndex = 0;
             this.lbMenù.Text = "Premi per iniziare ...";
             // 
@@ -407,21 +384,43 @@ namespace BarcodEZ_Software
             this.panelScelta.Controls.Add(this.lbPrezzoAmazonScelta);
             this.panelScelta.Controls.Add(this.lbEbayScelta);
             this.panelScelta.Controls.Add(this.lbAmazonScelta);
-            this.panelScelta.Location = new System.Drawing.Point(2, 342);
-            this.panelScelta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelScelta.Location = new System.Drawing.Point(3, 526);
             this.panelScelta.Name = "panelScelta";
-            this.panelScelta.Size = new System.Drawing.Size(371, 329);
+            this.panelScelta.Size = new System.Drawing.Size(556, 506);
             this.panelScelta.TabIndex = 5;
+            // 
+            // lbTitoloEbay
+            // 
+            this.lbTitoloEbay.AutoSize = true;
+            this.lbTitoloEbay.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitoloEbay.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbTitoloEbay.Location = new System.Drawing.Point(345, 217);
+            this.lbTitoloEbay.MaximumSize = new System.Drawing.Size(154, 77);
+            this.lbTitoloEbay.Name = "lbTitoloEbay";
+            this.lbTitoloEbay.Size = new System.Drawing.Size(21, 21);
+            this.lbTitoloEbay.TabIndex = 19;
+            this.lbTitoloEbay.Text = "0";
+            // 
+            // lbTitoloAmazon
+            // 
+            this.lbTitoloAmazon.AutoSize = true;
+            this.lbTitoloAmazon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbTitoloAmazon.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbTitoloAmazon.Location = new System.Drawing.Point(62, 217);
+            this.lbTitoloAmazon.MaximumSize = new System.Drawing.Size(154, 77);
+            this.lbTitoloAmazon.Name = "lbTitoloAmazon";
+            this.lbTitoloAmazon.Size = new System.Drawing.Size(21, 21);
+            this.lbTitoloAmazon.TabIndex = 18;
+            this.lbTitoloAmazon.Text = "0";
             // 
             // lbPrezzoNoScontoEbayScelta
             // 
             this.lbPrezzoNoScontoEbayScelta.AutoSize = true;
             this.lbPrezzoNoScontoEbayScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrezzoNoScontoEbayScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbPrezzoNoScontoEbayScelta.Location = new System.Drawing.Point(254, 109);
-            this.lbPrezzoNoScontoEbayScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrezzoNoScontoEbayScelta.Location = new System.Drawing.Point(381, 168);
             this.lbPrezzoNoScontoEbayScelta.Name = "lbPrezzoNoScontoEbayScelta";
-            this.lbPrezzoNoScontoEbayScelta.Size = new System.Drawing.Size(18, 18);
+            this.lbPrezzoNoScontoEbayScelta.Size = new System.Drawing.Size(26, 28);
             this.lbPrezzoNoScontoEbayScelta.TabIndex = 17;
             this.lbPrezzoNoScontoEbayScelta.Text = "0";
             // 
@@ -430,10 +429,9 @@ namespace BarcodEZ_Software
             this.lbPrezzoNoScontoAmazonScelta.AutoSize = true;
             this.lbPrezzoNoScontoAmazonScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Strikeout, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrezzoNoScontoAmazonScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbPrezzoNoScontoAmazonScelta.Location = new System.Drawing.Point(56, 109);
-            this.lbPrezzoNoScontoAmazonScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrezzoNoScontoAmazonScelta.Location = new System.Drawing.Point(84, 168);
             this.lbPrezzoNoScontoAmazonScelta.Name = "lbPrezzoNoScontoAmazonScelta";
-            this.lbPrezzoNoScontoAmazonScelta.Size = new System.Drawing.Size(18, 18);
+            this.lbPrezzoNoScontoAmazonScelta.Size = new System.Drawing.Size(26, 28);
             this.lbPrezzoNoScontoAmazonScelta.TabIndex = 16;
             this.lbPrezzoNoScontoAmazonScelta.Text = "0";
             // 
@@ -443,9 +441,10 @@ namespace BarcodEZ_Software
             this.btEbayScelta.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.logoebay;
             this.btEbayScelta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btEbayScelta.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btEbayScelta.Location = new System.Drawing.Point(228, 208);
+            this.btEbayScelta.Location = new System.Drawing.Point(342, 320);
+            this.btEbayScelta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btEbayScelta.Name = "btEbayScelta";
-            this.btEbayScelta.Size = new System.Drawing.Size(103, 60);
+            this.btEbayScelta.Size = new System.Drawing.Size(154, 92);
             this.btEbayScelta.TabIndex = 13;
             this.btEbayScelta.UseVisualStyleBackColor = false;
             this.btEbayScelta.Click += new System.EventHandler(this.btEbayScelta_Click);
@@ -458,9 +457,10 @@ namespace BarcodEZ_Software
             this.btAmazonScelta.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.btAmazonScelta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btAmazonScelta.ForeColor = System.Drawing.SystemColors.ControlLight;
-            this.btAmazonScelta.Location = new System.Drawing.Point(44, 208);
+            this.btAmazonScelta.Location = new System.Drawing.Point(66, 320);
+            this.btAmazonScelta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btAmazonScelta.Name = "btAmazonScelta";
-            this.btAmazonScelta.Size = new System.Drawing.Size(103, 60);
+            this.btAmazonScelta.Size = new System.Drawing.Size(154, 92);
             this.btAmazonScelta.TabIndex = 12;
             this.btAmazonScelta.UseVisualStyleBackColor = false;
             this.btAmazonScelta.Click += new System.EventHandler(this.btAmazonScelta_Click);
@@ -476,10 +476,9 @@ namespace BarcodEZ_Software
             this.btreturnScelta.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btreturnScelta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btreturnScelta.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btreturnScelta.Location = new System.Drawing.Point(2, 2);
-            this.btreturnScelta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btreturnScelta.Location = new System.Drawing.Point(3, 3);
             this.btreturnScelta.Name = "btreturnScelta";
-            this.btreturnScelta.Size = new System.Drawing.Size(37, 25);
+            this.btreturnScelta.Size = new System.Drawing.Size(56, 38);
             this.btreturnScelta.TabIndex = 9;
             this.btreturnScelta.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btreturnScelta.UseVisualStyleBackColor = false;
@@ -490,10 +489,9 @@ namespace BarcodEZ_Software
             this.lbPrezzoEbayScelta.AutoSize = true;
             this.lbPrezzoEbayScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrezzoEbayScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbPrezzoEbayScelta.Location = new System.Drawing.Point(245, 74);
-            this.lbPrezzoEbayScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrezzoEbayScelta.Location = new System.Drawing.Point(368, 114);
             this.lbPrezzoEbayScelta.Name = "lbPrezzoEbayScelta";
-            this.lbPrezzoEbayScelta.Size = new System.Drawing.Size(26, 28);
+            this.lbPrezzoEbayScelta.Size = new System.Drawing.Size(39, 42);
             this.lbPrezzoEbayScelta.TabIndex = 8;
             this.lbPrezzoEbayScelta.Text = "0";
             // 
@@ -502,10 +500,9 @@ namespace BarcodEZ_Software
             this.lbPrezzoAmazonScelta.AutoSize = true;
             this.lbPrezzoAmazonScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbPrezzoAmazonScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbPrezzoAmazonScelta.Location = new System.Drawing.Point(48, 74);
-            this.lbPrezzoAmazonScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbPrezzoAmazonScelta.Location = new System.Drawing.Point(72, 114);
             this.lbPrezzoAmazonScelta.Name = "lbPrezzoAmazonScelta";
-            this.lbPrezzoAmazonScelta.Size = new System.Drawing.Size(26, 28);
+            this.lbPrezzoAmazonScelta.Size = new System.Drawing.Size(39, 42);
             this.lbPrezzoAmazonScelta.TabIndex = 7;
             this.lbPrezzoAmazonScelta.Text = "0";
             // 
@@ -514,10 +511,9 @@ namespace BarcodEZ_Software
             this.lbEbayScelta.AutoSize = true;
             this.lbEbayScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbEbayScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbEbayScelta.Location = new System.Drawing.Point(230, 44);
-            this.lbEbayScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbEbayScelta.Location = new System.Drawing.Point(345, 68);
             this.lbEbayScelta.Name = "lbEbayScelta";
-            this.lbEbayScelta.Size = new System.Drawing.Size(106, 18);
+            this.lbEbayScelta.Size = new System.Drawing.Size(157, 28);
             this.lbEbayScelta.TabIndex = 6;
             this.lbEbayScelta.Text = "Prezzo Ebay";
             // 
@@ -526,10 +522,9 @@ namespace BarcodEZ_Software
             this.lbAmazonScelta.AutoSize = true;
             this.lbAmazonScelta.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAmazonScelta.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbAmazonScelta.Location = new System.Drawing.Point(24, 44);
-            this.lbAmazonScelta.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbAmazonScelta.Location = new System.Drawing.Point(36, 68);
             this.lbAmazonScelta.Name = "lbAmazonScelta";
-            this.lbAmazonScelta.Size = new System.Drawing.Size(130, 18);
+            this.lbAmazonScelta.Size = new System.Drawing.Size(192, 28);
             this.lbAmazonScelta.TabIndex = 5;
             this.lbAmazonScelta.Text = "Prezzo Amazon";
             // 
@@ -539,22 +534,20 @@ namespace BarcodEZ_Software
             this.panelCronologia.Controls.Add(this.label1);
             this.panelCronologia.Controls.Add(this.GridCronologia);
             this.panelCronologia.Controls.Add(this.btreturnCronologia);
-            this.panelCronologia.Location = new System.Drawing.Point(377, 342);
-            this.panelCronologia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelCronologia.Location = new System.Drawing.Point(565, 526);
             this.panelCronologia.Name = "panelCronologia";
-            this.panelCronologia.Size = new System.Drawing.Size(352, 329);
+            this.panelCronologia.Size = new System.Drawing.Size(528, 506);
             this.panelCronologia.TabIndex = 14;
             // 
             // btCronologia
             // 
             this.btCronologia.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btCronologia.Depth = 0;
-            this.btCronologia.Location = new System.Drawing.Point(95, 296);
-            this.btCronologia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btCronologia.Location = new System.Drawing.Point(142, 455);
             this.btCronologia.MouseState = MaterialSkin.MouseState.HOVER;
             this.btCronologia.Name = "btCronologia";
             this.btCronologia.Primary = true;
-            this.btCronologia.Size = new System.Drawing.Size(167, 24);
+            this.btCronologia.Size = new System.Drawing.Size(250, 37);
             this.btCronologia.TabIndex = 6;
             this.btCronologia.Text = "SVUOTA CRONOLOGIA";
             this.btCronologia.UseVisualStyleBackColor = true;
@@ -565,10 +558,9 @@ namespace BarcodEZ_Software
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(59, 9);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(88, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(258, 18);
+            this.label1.Size = new System.Drawing.Size(382, 28);
             this.label1.TabIndex = 11;
             this.label1.Text = "Clicca due volte per eliminare...";
             // 
@@ -578,14 +570,15 @@ namespace BarcodEZ_Software
             this.GridCronologia.AllowUserToDeleteRows = false;
             this.GridCronologia.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.GridCronologia.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridCronologia.Location = new System.Drawing.Point(3, 32);
+            this.GridCronologia.Location = new System.Drawing.Point(4, 49);
+            this.GridCronologia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.GridCronologia.Name = "GridCronologia";
             this.GridCronologia.ReadOnly = true;
             this.GridCronologia.RowHeadersVisible = false;
             this.GridCronologia.RowHeadersWidth = 230;
             this.GridCronologia.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.GridCronologia.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.GridCronologia.Size = new System.Drawing.Size(346, 259);
+            this.GridCronologia.Size = new System.Drawing.Size(519, 398);
             this.GridCronologia.TabIndex = 10;
             this.GridCronologia.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.GridCronologia_CellMouseDoubleClick);
             // 
@@ -600,10 +593,9 @@ namespace BarcodEZ_Software
             this.btreturnCronologia.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
             this.btreturnCronologia.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btreturnCronologia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(52)))), ((int)(((byte)(52)))));
-            this.btreturnCronologia.Location = new System.Drawing.Point(2, 2);
-            this.btreturnCronologia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btreturnCronologia.Location = new System.Drawing.Point(3, 3);
             this.btreturnCronologia.Name = "btreturnCronologia";
-            this.btreturnCronologia.Size = new System.Drawing.Size(37, 25);
+            this.btreturnCronologia.Size = new System.Drawing.Size(56, 38);
             this.btreturnCronologia.TabIndex = 9;
             this.btreturnCronologia.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btreturnCronologia.UseVisualStyleBackColor = false;
@@ -613,41 +605,19 @@ namespace BarcodEZ_Software
             // 
             this.OpenGallery.FileName = "OpenGallery";
             // 
-            // lbTitoloAmazon
-            // 
-            this.lbTitoloAmazon.AutoSize = true;
-            this.lbTitoloAmazon.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitoloAmazon.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbTitoloAmazon.Location = new System.Drawing.Point(41, 141);
-            this.lbTitoloAmazon.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTitoloAmazon.MaximumSize = new System.Drawing.Size(150, 50);
-            this.lbTitoloAmazon.Name = "lbTitoloAmazon";
-            this.lbTitoloAmazon.Size = new System.Drawing.Size(18, 18);
-            this.lbTitoloAmazon.TabIndex = 18;
-            this.lbTitoloAmazon.Text = "0";
-            // 
-            // lbTitoloEbay
-            // 
-            this.lbTitoloEbay.AutoSize = true;
-            this.lbTitoloEbay.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitoloEbay.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbTitoloEbay.Location = new System.Drawing.Point(230, 141);
-            this.lbTitoloEbay.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lbTitoloEbay.MaximumSize = new System.Drawing.Size(150, 50);
-            this.lbTitoloEbay.Name = "lbTitoloEbay";
-            this.lbTitoloEbay.Size = new System.Drawing.Size(18, 18);
-            this.lbTitoloEbay.TabIndex = 19;
-            this.lbTitoloEbay.Text = "0";
-            // 
             // Form
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonShadow;
             this.BackgroundImage = global::BarcodEZ_Software.Properties.Resources.Immagine;
-            this.ClientSize = new System.Drawing.Size(377, 412);
+            this.ClientSize = new System.Drawing.Size(566, 634);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(566, 634);
+            this.MinimumSize = new System.Drawing.Size(566, 634);
             this.Name = "Form";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BarcodEZ";
