@@ -6042,27 +6042,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\infot\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\cereda.17119\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\infot\\OneDrive\\Desktop\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\TestScraping\\TestScraping.csproj",
+      "projectUniqueName": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\DemoConsoleAmazonScraping\\TestScraping\\TestScraping.csproj",
       "projectName": "TestScraping",
-      "projectPath": "C:\\Users\\infot\\OneDrive\\Desktop\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\TestScraping\\TestScraping.csproj",
-      "packagesPath": "C:\\Users\\infot\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\infot\\OneDrive\\Desktop\\GitHub\\BarcodEZ\\DemoConsoleAmazonScraping\\TestScraping\\obj\\",
+      "projectPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\DemoConsoleAmazonScraping\\TestScraping\\TestScraping.csproj",
+      "packagesPath": "C:\\Users\\cereda.17119\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\cereda.17119\\Desktop\\BarcodEZ\\DemoConsoleAmazonScraping\\TestScraping\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\infot\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\cereda.17119\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6073,6 +6066,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
           "projectReferences": {}
         }
       },
@@ -6084,6 +6078,7 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "FluentAssertions": {
             "target": "Package",
@@ -6129,7 +6124,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }
